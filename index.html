@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Over+the+Rainbow&family=Poppins:wght@100;300;400;700;900&family=Raleway:wght@100;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div>
+            Encontre as melhores ofertas de energia do país!
+         </div>
+        <h1 class="slogan">Procurou,<span id="span-slogan"> economizou!</span></h1>
+        <div class="slogan oferta">
+           <span id="text-form">Digite o valor da sua conta de luz</sp an>
+            <form action="#" class="form-pesquisa">
+                <input type="number" placeholder="1000" class="input-valor">
+                <span>Tipo:</span>
+                <select name="tipo-pessoa" class="input-valor" id="tipo-pessoa">
+                    <option value="fisica">Pessoa Física</option>
+                    <option value="juridica">Pessoa Juridica</option>
+                </select>
+                <button class="button-submit">Pesquisar</button>
+            </form>
+        </div>
+        <div class="resultado"></div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

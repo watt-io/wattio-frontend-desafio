@@ -1,0 +1,121 @@
+:root{
+    --shape: #ffffff;
+    --blue: #339cff;
+    --green: #33CC95;
+    --red: #E52E4D;
+}
+
+body{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: var(--green);
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--shape);;
+    
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 758px;
+    max-width: 100%;
+    height: 100px;
+    color: var(--blue);
+    background: var(--shape);
+    box-shadow: 0 6px 18px 0 rgb(27 22 92 / 40%);
+    -webkit-filter: drop-shadow(0 6px 18px 0 rgba(27,22,92,.4));
+    filter: drop-shadow(0 6px 18px 0 rgba(27,22,92,.4));
+}
+
+#span-slogan{
+    color: orange;
+}
+
+.oferta{
+    height: 250px;
+    flex-direction: column;
+    font-size: 1.5rem;
+    background-color: #e9e654;
+    color: rgb(1, 66, 128);
+    -webkit-clip-path: polygon(100% 0,93.404% 50%,100% 100%,0 100%,6.596% 50%,0 0);
+    clip-path: polygon(100% 0,93.404% 50%,100% 100%,0 100%,6.596% 50%,0 0);
+}
+.form-pesquisa{
+    display: flex;
+    flex-direction: column;
+}
+.input-valor{
+    margin-top: 1rem;
+    width: 500px;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+.button-submit{
+    margin-top: 1rem;
+    height: 2rem;
+    background-color: orange;
+    font-size: 1rem;
+    color: white;
+    border: 0;
+    transition: 0.25s background-color;
+    box-shadow: 0 6px 18px 0 rgb(27 22 92 / 40%);
+    -webkit-filter: drop-shadow(0 6px 18px 0 rgba(27,22,92,.4));
+    filter: drop-shadow(0 6px 18px 0 rgba(27,22,92,.4));
+}
+.button-submit:hover{
+    background-color: var(--blue);
+   
+}
+.container-respostas{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: orange;
+    background-color: var(--shape);
+    width: 500px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.opcoes{
+    color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.opcao{
+    border-bottom: 1px solid var(--red);
+}
+
+@media (max-width: 1080px) {
+    .input-valor{
+        width: 300px;
+    }
+    .container{
+        margin: 2rem;
+    }
+    
+}
+
+
+@media (max-width: 850px) {
+    #text-form{
+        font-size: 1rem;
+    }
+    
+}

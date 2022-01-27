@@ -1,0 +1,57 @@
+{
+    "empresas":[
+        {
+            "nome": "Enerfacil",
+            "valorMinimoMensal": 1000,
+            "valorMaximoMensall": 40000,
+            "desconto": "0.2"
+        },
+        {
+            "nome": "Enerlimpa",
+            "valorMinimoMensal": 0,
+            "valorMaximoMensall": 20000,
+            "desconto": "0.15"
+        },
+        {
+            "nome": "Cememp",
+            "valorMinimoMensal": 10000,
+            "valorMaximoMensall": 100000,
+            "desconto": "0.21"
+        },
+        {
+            "nome": "Ibmea",
+            "valorMinimoMensal": 5000,
+            "valorMaximoMensall": 15000,
+            "desconto": "0.17"
+        },
+        {
+            "nome": "EnerGrande",
+            "valorMinimoMensal": 1000000,
+            "valorMaximoMensall": 5000000,
+            "desconto": "0.35"
+        },
+        {
+            "nome": "Lincur",
+            "valorMinimoMensal": 600,
+            "valorMaximoMensall": 2000,
+            "desconto": "0.19"
+        },
+        {
+            "nome": "Evacour",
+            "valorMinimoMensal": 5000,
+            "valorMaximoMensall": 60000,
+            "desconto": "0.25"
+        },
+        {
+            "nome": "ItaEnergia",
+            "valorMinimoMensal": 7000,
+            "valorMaximoMensall": 90000,
+            "desconto": "0.26"
+        },
+        {
+            "nome": "EnerPlus",
+            "valorMinimoMensal": 100000,
+            "valorMaximoMensall": 200000,
+            "desconto": "0.3"
+        }]
+}

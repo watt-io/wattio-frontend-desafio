@@ -1,57 +1,88 @@
+
 {
     "empresas":[
         {
             "nome": "Enerfacil",
             "valorMinimoMensal": 1000,
             "valorMaximoMensall": 40000,
-            "desconto": "0.2"
+            "desconto": "0.2",
+            "tipo_pessoa": "juridica"
         },
         {
             "nome": "Enerlimpa",
             "valorMinimoMensal": 0,
             "valorMaximoMensall": 20000,
-            "desconto": "0.15"
+            "desconto": "0.15",
+            "tipo_pessoa": "juridica"
         },
         {
             "nome": "Cememp",
             "valorMinimoMensal": 10000,
             "valorMaximoMensall": 100000,
-            "desconto": "0.21"
+            "desconto": "0.21",
+            "tipo_pessoa": "fisica"
         },
         {
             "nome": "Ibmea",
             "valorMinimoMensal": 5000,
             "valorMaximoMensall": 15000,
-            "desconto": "0.17"
+            "desconto": "0.17",
+            "tipo_pessoa": "juridica"
         },
         {
             "nome": "EnerGrande",
             "valorMinimoMensal": 1000000,
             "valorMaximoMensall": 5000000,
-            "desconto": "0.35"
+            "desconto": "0.35",
+            "tipo_pessoa": "fisica"
         },
         {
             "nome": "Lincur",
             "valorMinimoMensal": 600,
             "valorMaximoMensall": 2000,
-            "desconto": "0.19"
+            "desconto": "0.19",
+            "tipo_pessoa": "juridica"
         },
         {
             "nome": "Evacour",
             "valorMinimoMensal": 5000,
             "valorMaximoMensall": 60000,
-            "desconto": "0.25"
+            "desconto": "0.25",
+            "tipo_pessoa": "fisica"
         },
         {
             "nome": "ItaEnergia",
             "valorMinimoMensal": 7000,
             "valorMaximoMensall": 90000,
-            "desconto": "0.26"
+            "desconto": "0.26",
+            "tipo_pessoa": "juridica"
         },
         {
             "nome": "EnerPlus",
             "valorMinimoMensal": 100000,
             "valorMaximoMensall": 200000,
-            "desconto": "0.3"
+            "desconto": "0.3",
+            "tipo_pessoa": "fisica"
+        },
+        {
+            "nome": "FisEnergy",
+            "valorMinimoMensal": 100,
+            "valorMaximoMensall": 700,
+            "desconto": "0.05",
+            "tipo_pessoa": "fisica"
+        },
+        {
+            "nome": "ValPlus",
+            "valorMinimoMensal": 10000,
+            "valorMaximoMensall": 200000,
+            "desconto": "0.3",
+            "tipo_pessoa": "juridica"
+        },
+        {
+            "nome": "JurTec",
+            "valorMinimoMensal": 1,
+            "valorMaximoMensall": 700,
+            "desconto": "0.12",
+            "tipo_pessoa": "fisica"
         }]
 }

@@ -52,6 +52,7 @@ body{
     -webkit-clip-path: polygon(100% 0,93.404% 50%,100% 100%,0 100%,6.596% 50%,0 0);
     clip-path: polygon(100% 0,93.404% 50%,100% 100%,0 100%,6.596% 50%,0 0);
 }
+
 .form-pesquisa{
     display: flex;
     flex-direction: column;
@@ -100,7 +101,17 @@ body{
 
 .opcao{
     border-bottom: 1px solid var(--red);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.contratar{
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
 
 @media (max-width: 1080px) {
     .input-valor{

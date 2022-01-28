@@ -3,6 +3,8 @@ const valor = document.querySelector(".input-valor");
 const btn = document.querySelector(".button-submit");
 const tipo = document.querySelector("#tipo-pessoa")
 const pesquisa = document.querySelector(".resultado");
+
+
 const dados = [
     {
         "nome": "Enerfacil",
@@ -80,17 +82,30 @@ const dados = [
         "valorMaximoMensall": 200000,
         "desconto": "0.3",
         "tipo_pessoa": "juridica"
+    },
+    {
+        "nome": "JurTec",
+        "valorMinimoMensal": 1,
+        "valorMaximoMensall": 700,
+        "desconto": "0.12",
+        "tipo_pessoa": "fisica"
     }
 ]
 
+// função para ordenar o array de empresas por valor de desconto
 function ordenaPorDesconto(a,b){
     if(a.desconto > b.desconto) return -1;
     if(a.desconto < b.desconto) return 1;
     return 0;
 }
 
-btn.addEventListener('click',()=>{
-    console.log(valor.value);
+// prevenir função default do formulario
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+})
+
+// faz a pesquisa e filtra os dados de acordo com o valor inserido
+btn.addEventListener('click', ()=>{
     const resultado = dados.filter((dado) => {
         return tipo.value === dado.tipo_pessoa && valor.value >= dado.valorMinimoMensal && valor.value <= dado.valorMaximoMensall;
     })
@@ -104,13 +119,20 @@ btn.addEventListener('click',()=>{
                 <div class="opcao">
                     <h3>Cooperativa: ${dado.nome}</h3>
                     <h5>Economia: ${dado.desconto * 100}%</h5>
-                    <h5>Valor a pagar(com desconto): R$ ${valor.value * (1-dado.desconto)}
-                    <h5>Valor do desconto: R$${valor.value * dado.desconto}</h5> 
+                    <h5>Valor a pagar(com desconto): R$ ${Math.round(valor.value * (1-dado.desconto))}
+                    <h5>Valor do desconto: R$${Math.round(valor.value * dado.desconto)}</h5> 
+                    <button class="button-submit contratar">Contratar</button>
                 </div>
             `
         ))}
         </opcoes>
         </div>
     `
+    const contratar = document.querySelectorAll(".contratar");
+    contratar.forEach((element)=>{
+        element.addEventListener("click", function(){
+            alert('Empresa contratada com sucesso!')
+        })
+    })
+    
 })
-

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.head
+{
+    width: 100%;
+    margin: 50px 0px;
+}
+
+.head_content
+{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.head_content_icon
+{
+    display: inline-block;
+    font-size: 70px;
+}
+
+.head_content_text
+{
+    display: inline-block;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.text_input_top
+{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.text_input_bottom
+{
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 11px;
+}
+
+.input_grupo
+{
+   text-align: center;
+   margin: 20px 0;
+   width: 100%;
+}
+
+.input_grupo .input_valor
+{
+    width: 20%;
+    height: 10vh;
+    border-radius: 5px;
+    border: 4px solid black;
+    font-size: 45px;
+    padding: 20px;
+    text-align: center;
+}
+
+.input_range
+{
+    border: 1px solid black;
+    width: 28%;
+    -webkit-appearance: none;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.input_range::-webkit-slider-thumb
+{
+    background-color: black;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    box-shadow: 0px 0 0 6px black;
+    cursor: pointer;
+}
+
+.input_range::-webkit-slider-thumb:hover
+{
+    box-shadow: 0 0 0 10px black;
+    opacity: 0.9;
+}
+
+
+.input_pj_pf
+{
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    width: 30%;
+    height: auto;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.input_pj_pf input
+{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.input_pj_pf label
+{
+    font-weight: bold;
+}
+
+.info_pj_pf
+{
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -18px;
+}
+
+
+.calcular_grupo
+{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.calcular_ofertas
+{
+    cursor: pointer;
+    width: 25%;
+    height: 10vh;
+    padding: 10px;
+    background-color: orangered;
+    border-radius: 40px;
+    border: none;
+    font-weight: bold;
+}
+
+
+.ofertas
+{
+    margin: 10px auto;
+    width: 20%;
+    text-align: center;
+    background-color: orangered;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.ofertas input
+{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.ofertas *
+{
+    color: white;
+}
+
+.div_ofertas
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.resultado
+{
+    display: block;
+    text-align: center;
+}
+
+.div_resultado
+{
+    width: 30%;
+    height: auto;
+    padding: 20px;
+    background-color: rgb(44, 165, 44);
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+.div_resultado p
+{
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+.div_resultado h2
+{
+    font-size: 45px;
+    text-align: center;
+    margin: 10px 0;
+    color: orangered;
+}
+
+.paragraph_alert
+{
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+#btn_comprar
+{
+    cursor: pointer;
+    width: 25%;
+    height: 10vh;
+    padding: 10px;
+    background-color: orangered;
+    border-radius: 40px;
+    border: none;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    
+    .input_grupo .input_valor
+    {
+        width: 65%;
+    }
+
+    .input_range
+    {
+        width: 80%;
+    }
+    .input_pj_pf
+    {
+        width: 60%;
+    }
+    .calcular_ofertas
+    {
+        width: 70%;
+    }
+    .ofertas
+    {
+        width: 65%;
+    }
+    .div_resultado
+    {
+        width: 65%;
+    }
+    #btn_comprar
+    {
+        width: 70%;
+    }
+}

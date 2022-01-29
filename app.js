@@ -44,28 +44,28 @@ const cooperativasEnergia = [
     {
         nome: 'EnerLimpa',
         valorMinimoMensal: 1000,
-        valorMaximoMensal: 80000,
+        valorMaximoMensal: 40000,
         desconto: 0.25,
         check: 0
     },
     {
         nome: 'EnerGrande',
         valorMinimoMensal: 40000,
-        valorMaximoMensal: 100000,
+        valorMaximoMensal: 50000,
         desconto: 0.3,
         check: 0
     },
     {
         nome: 'EnerRenovavel',
         valorMinimoMensal: 50000,
-        valorMaximoMensal: 100000,
+        valorMaximoMensal: 60000,
         desconto: 0.4,
         check: 0
     },
     {
         nome: 'EnerAmbiental',
         valorMinimoMensal: 55000,
-        valorMaximoMensal: 100000,
+        valorMaximoMensal: 80000,
         desconto: 0.5,
         check: 0
     },

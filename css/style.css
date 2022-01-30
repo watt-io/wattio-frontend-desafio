@@ -1,0 +1,58 @@
+body {
+
+     position: absolute;
+    inset: 0px;
+    cursor: default;
+    text-align: center;
+    background-color: rgb(78, 76, 76);
+    color: #fff;
+}
+
+
+
+  
+  button {
+    background: rgb(255, 139, 139);
+    border: 2px solid #333;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    font-family: monospace sans-serif;
+   
+   
+    
+  }
+  
+  button:hover {
+    background: rgb(248, 77, 77);
+    border: 2px solid #333;
+    color: #333;
+  }
+
+
+ input.range_value {
+  
+  width: 50%;
+
+ }
+  
+
+ .tipo{
+
+  
+margin: 8px auto;
+width: 40%;
+display: flex;
+justify-content: center;
+padding: 5px;
+height: auto;
+border-radius: 5px;
+background-color: #fff;
+color: #111;
+
+ }
+
+.tipo label {
+  margin-top: -3px;
+  
+}

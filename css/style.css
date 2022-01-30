@@ -1,3 +1,5 @@
+
+
 body {
 
      position: absolute;
@@ -11,7 +13,7 @@ body {
 
 
   
-  button {
+button {
     background: rgb(255, 139, 139);
     border: 2px solid #333;
     border-radius: 5px;
@@ -22,8 +24,10 @@ body {
    
     
   }
+
+ 
   
-  button:hover {
+button:hover {
     background: rgb(248, 77, 77);
     border: 2px solid #333;
     color: #333;

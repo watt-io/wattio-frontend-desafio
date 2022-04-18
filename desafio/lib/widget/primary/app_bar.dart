@@ -11,11 +11,15 @@ class AppBarCustom extends AppBar {
           key: key,
           elevation: 0,
           toolbarHeight: 70,
+          automaticallyImplyLeading: false,
           title: Row(
             children: [
               if (Navigator.canPop(context))
                 IconButton(
-                  icon: const Icon(Icons.arrow_back),
+                  icon: const Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                  ),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },

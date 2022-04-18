@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:desafio/enum/gradients.dart';
+import 'package:desafio/screen/simulation_screen.dart';
 import 'package:desafio/widget/button.dart';
 import 'package:flutter/material.dart';
 
@@ -55,6 +56,9 @@ class _HomeScreenState extends State<HomeScreen> {
               width: pageSize.pWidth * 40,
               text: 'Comprar',
               gradients: Gradients.green,
+              onTap: () {
+                Navigator.of(context).pushNamed(SimulationScreen.nameRoute);
+              },
             ),
             Button(
               width: pageSize.pWidth * 40,

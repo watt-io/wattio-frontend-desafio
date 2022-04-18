@@ -4,6 +4,7 @@ import 'package:desafio/class/price_input_formatter.dart';
 import 'package:desafio/enum/gradients.dart';
 import 'package:desafio/enum/person.dart';
 import 'package:desafio/mobx/simulation_store.dart';
+import 'package:desafio/screen/options_screen.dart';
 import 'package:desafio/widget/button.dart';
 import 'package:desafio/widget/primary/app_bar.dart';
 import 'package:desafio/widget/primary/application.dart';
@@ -102,10 +103,16 @@ class _SimulationScreenState extends State<SimulationScreen> {
             max: 100000,
           ),
           const SizedBox(height: 50),
-          const Button(
+          Button(
             text: 'Continuar',
             gradients: Gradients.green,
-          )
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                OptionsScreen.nameRoute,
+                arguments: OptionsScreenArg(person: store.person, value: store.value),
+              );
+            },
+          ),
         ],
       );
     });

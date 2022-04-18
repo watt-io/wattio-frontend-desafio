@@ -1,9 +1,10 @@
+import 'package:desafio/class/format_price.dart';
 import 'package:desafio/widget/text_with_type_and_body.dart';
 import 'package:flutter/material.dart';
 
 import 'package:desafio/class/plan.dart';
 
-class OptionsTile extends StatelessWidget {
+class OptionsTile extends StatelessWidget with FormatPrice {
   final Plan plan;
   final bool isPar;
 
@@ -33,9 +34,9 @@ class OptionsTile extends StatelessWidget {
           children: [
             TextWithTypeAndBody('Nome', plan.name),
             const SizedBox(height: 5),
-            TextWithTypeAndBody('Valor Mínimo Mensal', 'R\$ ' + plan.valueMinMonthly.toString()),
+            TextWithTypeAndBody('Valor Mínimo Mensal', 'R\$ ' + formatWithDecimal(plan.valueMinMonthly)),
             const SizedBox(height: 5),
-            TextWithTypeAndBody('Valor Máximo Mensal', 'R\$ ' + plan.valueMaxMonthly.toString()),
+            TextWithTypeAndBody('Valor Máximo Mensal', 'R\$ ' + formatWithoutDecimal(plan.valueMaxMonthly)),
             const SizedBox(height: 5),
             TextWithTypeAndBody('Desconto', (plan.discount * 100).toStringAsFixed(2) + '%'),
           ],

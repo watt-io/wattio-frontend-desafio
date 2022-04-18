@@ -1,3 +1,4 @@
+import 'package:desafio/class/format_price.dart';
 import 'package:desafio/enum/person.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mobx/mobx.dart';
@@ -5,7 +6,7 @@ part 'simulation_store.g.dart';
 
 class SimulationStore = _SimulationStoreBase with _$SimulationStore;
 
-abstract class _SimulationStoreBase with Store {
+abstract class _SimulationStoreBase with Store, FormatPrice {
   late TextEditingController controller;
 
   _SimulationStoreBase(this.controller) {
@@ -38,11 +39,7 @@ abstract class _SimulationStoreBase with Store {
       _value = value;
       return;
     }
-    String temp = value.toStringAsFixed(2);
-    temp = temp.replaceAll('.', ',');
-    if (temp.length >= 7) {
-      temp = temp.substring(0, temp.length - 6) + '.' + temp.substring(temp.length - 6, temp.length);
-    }
+    final temp = formatWithDecimal(value);
     _value = temp;
     controller.text = temp;
   }

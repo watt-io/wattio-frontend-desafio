@@ -1,4 +1,5 @@
 import 'package:desafio/screen/home_screen.dart';
+import 'package:desafio/screen/simulation_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.nameRoute,
       routes: {
         ...HomeScreen.route,
+        ...SimulationScreen.route,
       },
     );
   }

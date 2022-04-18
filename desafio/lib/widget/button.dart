@@ -11,8 +11,8 @@ class Button extends StatelessWidget {
   final Gradients? gradients;
 
   const Button({
-    required this.width,
     required this.text,
+    this.width = 180,
     this.height = 60,
     this.color = Colors.black,
     this.gradients,

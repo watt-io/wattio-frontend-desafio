@@ -53,6 +53,24 @@ dev_dependencies:
   build_runner: ^2.1.4
   cloud_firestore: ^3.1.12
   firebase_core: ^1.14.1
+  flutter_launcher_icons: ^0.9.2
+  flutter_native_splash: ^2.1.6
+
+
+flutter_native_splash:
+  color: "#000000"
+  image: "asset/icon3.png"
+  web: true
+  android: true
+  # flutter pub run flutter_native_splash:create
+
+flutter_icons:
+  android: "launcher_icon"
+  web: true
+  image_path: "asset/icon1.jpg"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "asset/icon2.png"
+  # flutter pub run flutter_launcher_icons:main
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

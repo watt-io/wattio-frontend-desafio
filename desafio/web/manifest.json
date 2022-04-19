@@ -1,11 +1,11 @@
 {
-    "name": "desafio",
-    "short_name": "desafio",
+    "name": "WATTio",
+    "short_name": "WATTio",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
+    "background_color": "#000000",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Desafio WATTio de Jackson Galdino",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

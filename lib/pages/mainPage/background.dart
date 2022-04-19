@@ -7,7 +7,7 @@ class BackgroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      "images/background_image.svg",
+      "assets/images/background_image.svg",
       color: Colors.white.withOpacity(0.4),
       colorBlendMode: BlendMode.modulate,
     );

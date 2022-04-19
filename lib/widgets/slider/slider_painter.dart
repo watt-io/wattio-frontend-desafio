@@ -21,7 +21,7 @@ class SliderHandler extends StatelessWidget {
       //     ]),
 //
       child: SvgPicture.asset(
-        'images/light_image.svg',
+        'assets/images/light_image.svg',
         color: Colors.amber,
         fit: BoxFit.contain,
       ),

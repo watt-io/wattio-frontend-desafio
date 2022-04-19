@@ -51,7 +51,7 @@ class _SimulationScreenState extends State<SimulationScreen> {
             minFontSize: 20,
             maxLines: 3,
             textAlign: TextAlign.left,
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600, height: 1.2),
+            style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600, height: 1.2),
           ),
           const SizedBox(height: 22),
           RadioListTile<Person>(

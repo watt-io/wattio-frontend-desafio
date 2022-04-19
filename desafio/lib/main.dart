@@ -1,4 +1,5 @@
 import 'package:desafio/screen/options_screen.dart';
+import 'package:desafio/screen/result_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
       routes: {
         ...HomeScreen.route,
         ...SimulationScreen.route,
-        ...OptionsScreen.route
+        ...OptionsScreen.route,
+        ...ResultScreen.route,
       },
     );
   }

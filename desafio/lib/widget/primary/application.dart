@@ -45,20 +45,16 @@ class _ApplicationState extends State<Application> {
           SingleChildScrollView(
             child: Align(
               alignment: Alignment.topCenter,
-              child: ConstrainedBox(
-                // constraints: BoxConstraints(minHeight: widget.pageSize.height - (widget.appBar.toolbarHeight ?? 0.0)),
-                constraints: BoxConstraints(),
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: widget.paddingHorizontal),
-                  color: Colors.white,
-                  width: widget.pageSize.isWeb ? widget.pageSize.widthDefault : double.infinity,
-                  child: Column(
-                    crossAxisAlignment: widget.crossAxisAlignment,
-                    children: [
-                      if (widget.pageSize.isWeb) widget.appBar.webAppBar(),
-                      ...widget.children,
-                    ],
-                  ),
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: widget.paddingHorizontal),
+                color: Colors.white,
+                width: widget.pageSize.isWeb ? widget.pageSize.widthDefault : double.infinity,
+                child: Column(
+                  crossAxisAlignment: widget.crossAxisAlignment,
+                  children: [
+                    if (widget.pageSize.isWeb) widget.appBar.webAppBar(),
+                    ...widget.children,
+                  ],
                 ),
               ),
             ),

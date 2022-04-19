@@ -1,15 +1,18 @@
-import 'package:desafio/class/format_price.dart';
-import 'package:desafio/widget/text_with_type_and_body.dart';
 import 'package:flutter/material.dart';
 
+import 'package:desafio/class/format_price.dart';
 import 'package:desafio/class/plan.dart';
+import 'package:desafio/screen/result_screen.dart';
+import 'package:desafio/widget/text_with_type_and_body.dart';
 
 class OptionsTile extends StatelessWidget with FormatPrice {
   final Plan plan;
+  final double value;
   final bool isPar;
 
-  const OptionsTile(
-    this.plan, {
+  const OptionsTile({
+    required this.plan,
+    required this.value,
     this.isPar = true,
     Key? key,
   }) : super(key: key);
@@ -19,7 +22,12 @@ class OptionsTile extends StatelessWidget with FormatPrice {
     return InkWell(
       highlightColor: Colors.transparent,
       focusColor: Colors.transparent,
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).pushNamed(
+          ResultScreen.nameRoute,
+          arguments: ResultScreenArg(plan: plan, value: value),
+        );
+      },
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),

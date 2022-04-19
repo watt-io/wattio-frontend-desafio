@@ -6,7 +6,7 @@ class PageSize {
   late BuildContext context;
   late double widthDefault;
   bool? isWebForce;
-  PageSize(this.context, {this.widthDefault = 380, this.isWebForce});
+  PageSize(this.context, {this.widthDefault = 395, this.isWebForce});
 
   bool get isWeb {
     if (isWebForce != null) return isWebForce!;

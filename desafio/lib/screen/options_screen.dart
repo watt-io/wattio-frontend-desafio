@@ -9,6 +9,7 @@ import 'package:desafio/class/page_size.dart';
 import 'package:desafio/enum/person.dart';
 import 'package:desafio/widget/primary/app_bar.dart';
 import 'package:desafio/widget/primary/application.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class OptionsScreenArg {
   final Person person;
@@ -61,7 +62,7 @@ class _OptionsScreenState extends State<OptionsScreen> {
             minFontSize: 20,
             maxLines: 3,
             textAlign: TextAlign.left,
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600, height: 1.2),
+            style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600, height: 1.2),
           ),
         ),
         const SizedBox(height: 22),
@@ -90,7 +91,7 @@ class _OptionsScreenState extends State<OptionsScreen> {
                       Button(
                         text: 'Falar com especialista',
                         gradients: Gradients.blue,
-                        onTap: () {},
+                        onTap: () => launch('http://wattio.com.br/contatowattio'),
                       ),
                     ],
                   ),
@@ -104,7 +105,8 @@ class _OptionsScreenState extends State<OptionsScreen> {
                 separatorBuilder: (_, __) => const SizedBox(height: 40),
                 itemBuilder: (context, index) {
                   return OptionsTile(
-                    snapshot.data![index],
+                    plan: snapshot.data![index],
+                    value: widget.arg.value,
                     isPar: index % 2 == 0,
                   );
                 },

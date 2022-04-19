@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:desafio/enum/gradients.dart';
 import 'package:desafio/screen/simulation_screen.dart';
 import 'package:desafio/widget/button.dart';
@@ -9,7 +8,7 @@ import 'package:desafio/class/page_size.dart';
 import 'package:desafio/widget/primary/app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
-  static String nameRoute = '/home';
+  static String nameRoute = '/';
   static Map<String, Widget Function(BuildContext)> route = {
     nameRoute: (context) => const HomeScreen(),
   };
@@ -41,9 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         const SizedBox(height: 13),
-        const AutoSizeText(
+        const Text(
           'O que deseja fazer hoje?',
-          minFontSize: 20,
           maxLines: 3,
           textAlign: TextAlign.left,
           style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600, height: 1.2),

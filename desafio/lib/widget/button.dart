@@ -6,6 +6,9 @@ import 'package:desafio/enum/gradients.dart';
 class Button extends StatelessWidget {
   final double height;
   final double width;
+  final double paddingHorizontal;
+  final double fontSize;
+  final int? maxLines;
   final String text;
   final Color color;
   final Gradients? gradients;
@@ -14,6 +17,9 @@ class Button extends StatelessWidget {
   const Button({
     required this.text,
     this.onTap,
+    this.maxLines,
+    this.fontSize = 16,
+    this.paddingHorizontal = 0,
     this.width = 180,
     this.height = 60,
     this.color = Colors.black,
@@ -46,12 +52,17 @@ class Button extends StatelessWidget {
                 ],
         ),
         child: Center(
-          child: AutoSizeText(
-            text,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: paddingHorizontal),
+            child: AutoSizeText(
+              text,
+              textAlign: TextAlign.center,
+              maxLines: maxLines,
+              style: TextStyle(
+                fontSize: fontSize,
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+              ),
             ),
           ),
         ),

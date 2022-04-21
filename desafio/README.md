@@ -3,6 +3,7 @@
 Foi desenvolvido um aplicativo em flutter assim como uma página web com o objetivo de cumprir as metas estabelecida pelo [desafio proposto.](../desafio_frontend_wattio.pdf)
 
 Link da versão Web: https://desafio-wattio-jackson.web.app/
+
 Link APK: https://github.com/JacksonECO/Desafio-Front-Wattio/releases/download/v1.0.0/wattio.apk
 
 ## Design

@@ -25,13 +25,17 @@ class AppBarCustom extends AppBar {
                   },
                 )
               else
-                IconButton(
-                  icon: const Icon(
-                    Icons.menu,
-                    color: Colors.black,
-                  ),
-                  onPressed: () {},
-                ),
+                Builder(builder: (context) {
+                  return IconButton(
+                    icon: const Icon(
+                      Icons.menu,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                  );
+                }),
               Expanded(
                 child: Center(
                   child: Image.asset(

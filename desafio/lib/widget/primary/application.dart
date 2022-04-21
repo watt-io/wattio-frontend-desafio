@@ -1,3 +1,4 @@
+import 'package:desafio/widget/primary/drawer_custom.dart';
 import 'package:flutter/material.dart';
 
 import 'package:desafio/class/page_size.dart';
@@ -28,6 +29,7 @@ class _ApplicationState extends State<Application> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: widget.pageSize.isWeb ? null : widget.appBar,
+      drawer: const DrawerCustom(),
       body: Stack(
         alignment: Alignment.topCenter,
         children: [

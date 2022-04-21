@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WATTio',
-      initialRoute: CreatePlanScreen.nameRoute,
+      initialRoute: HomeScreen.nameRoute,
       routes: {
         ...HomeScreen.route,
         ...SimulationScreen.route,

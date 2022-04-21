@@ -44,25 +44,52 @@ class _ApplicationState extends State<Application> {
             color: Colors.white,
             width: widget.pageSize.isWeb ? widget.pageSize.widthDefault : MediaQuery.of(context).size.width,
           ),
-          SingleChildScrollView(
-            child: Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: widget.paddingHorizontal),
-                color: Colors.white,
-                width: widget.pageSize.isWeb ? widget.pageSize.widthDefault : double.infinity,
-                child: Column(
-                  crossAxisAlignment: widget.crossAxisAlignment,
-                  children: [
-                    if (widget.pageSize.isWeb) widget.appBar.webAppBar(),
-                    ...widget.children,
-                  ],
+          Column(
+            children: [
+              if (widget.pageSize.isWeb)
+                SizedBox(
+                  width: widget.pageSize.isWeb ? widget.pageSize.widthDefault : double.infinity,
+                  child: widget.appBar.webAppBar(),
+                ),
+              Expanded(
+                child: Scrollbar(
+                  isAlwaysShown: false,
+                  thickness: 5,
+                  radius: const Radius.circular(10),
+                  child: ScrollConfiguration(
+                    behavior: _NoGlowBehavior(),
+                    child: SingleChildScrollView(
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: widget.paddingHorizontal),
+                          color: Colors.white,
+                          width: widget.pageSize.isWeb ? widget.pageSize.widthDefault : double.infinity,
+                          child: Column(
+                            crossAxisAlignment: widget.crossAxisAlignment,
+                            children: [
+                              // if (widget.pageSize.isWeb) widget.appBar.webAppBar(),
+                              ...widget.children,
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
         ],
       ),
     );
+  }
+}
+
+/// Remove o efeito da Scroll
+class _NoGlowBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }

@@ -1,6 +1,7 @@
 import 'package:desafio/enum/gradients.dart';
 import 'package:desafio/screen/simulation_screen.dart';
 import 'package:desafio/widget/button.dart';
+import 'package:desafio/widget/dialog/sell_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'package:desafio/widget/primary/application.dart';
@@ -62,6 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
               width: pageSize.pWidth * 40,
               text: 'Vender',
               gradients: Gradients.blue,
+              onTap: () => SellDialog.open(context),
             ),
           ],
         ),

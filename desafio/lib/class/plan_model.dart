@@ -2,14 +2,14 @@ import 'dart:convert';
 
 import 'package:desafio/enum/person.dart';
 
-class Plan {
+class PlanModel {
   String name;
   int valueMinMonthly;
   int valueMaxMonthly;
   double discount;
   Person person;
 
-  Plan({
+  PlanModel({
     required this.name,
     required this.valueMinMonthly,
     required this.valueMaxMonthly,
@@ -17,14 +17,14 @@ class Plan {
     required this.person,
   });
 
-  Plan copyWith({
+  PlanModel copyWith({
     String? name,
     int? valueMinMonthly,
     int? valueMaxMonthly,
     double? discount,
     Person? person,
   }) {
-    return Plan(
+    return PlanModel(
       name: name ?? this.name,
       valueMinMonthly: valueMinMonthly ?? this.valueMinMonthly,
       valueMaxMonthly: valueMaxMonthly ?? this.valueMaxMonthly,
@@ -43,8 +43,8 @@ class Plan {
     };
   }
 
-  factory Plan.fromMap(Map<String, dynamic> map) {
-    return Plan(
+  factory PlanModel.fromMap(Map<String, dynamic> map) {
+    return PlanModel(
       name: map['name'],
       valueMinMonthly: map['valueMinMonthly']?.toInt(),
       valueMaxMonthly: map['valueMaxMonthly']?.toInt(),
@@ -55,7 +55,7 @@ class Plan {
 
   String toJson() => json.encode(toMap());
 
-  factory Plan.fromJson(String source) => Plan.fromMap(json.decode(source));
+  factory PlanModel.fromJson(String source) => PlanModel.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -66,7 +66,7 @@ class Plan {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is Plan &&
+    return other is PlanModel &&
         other.name == name &&
         other.valueMinMonthly == valueMinMonthly &&
         other.valueMaxMonthly == valueMaxMonthly &&

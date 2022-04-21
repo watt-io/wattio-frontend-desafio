@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:desafio/class/format_price.dart';
-import 'package:desafio/class/plan.dart';
+import 'package:desafio/class/plan_model.dart';
 import 'package:desafio/screen/result_screen.dart';
 import 'package:desafio/widget/text_with_type_and_body.dart';
 
 class OptionsTile extends StatelessWidget with FormatPrice {
-  final Plan plan;
+  final PlanModel plan;
   final double value;
   final bool isPar;
 

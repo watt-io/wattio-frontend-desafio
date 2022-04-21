@@ -3,7 +3,7 @@ import 'package:desafio/class/options_filter.dart';
 import 'package:desafio/enum/gradients.dart';
 import 'package:desafio/widget/button.dart';
 import 'package:flutter/material.dart';
-import 'package:desafio/class/plan.dart';
+import 'package:desafio/class/plan_model.dart';
 import 'package:desafio/widget/options_tile.dart';
 import 'package:desafio/class/page_size.dart';
 import 'package:desafio/enum/person.dart';
@@ -68,7 +68,7 @@ class _OptionsScreenState extends State<OptionsScreen> {
         const SizedBox(height: 22),
         const Text('Escolha uma das Cooperativas:'),
         const SizedBox(height: 20),
-        FutureBuilder<List<Plan>>(
+        FutureBuilder<List<PlanModel>>(
             future: OptionsFilter.future(person: widget.arg.person, value: widget.arg.value),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {

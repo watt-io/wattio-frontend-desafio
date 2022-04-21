@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 
 import 'package:desafio/class/format_price.dart';
 import 'package:desafio/class/page_size.dart';
-import 'package:desafio/class/plan.dart';
+import 'package:desafio/class/plan_model.dart';
 import 'package:desafio/widget/primary/app_bar.dart';
 import 'package:desafio/widget/primary/application.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ResultScreenArg {
-  final Plan plan;
+  final PlanModel plan;
   final double value;
   const ResultScreenArg({
     required this.plan,

@@ -11,7 +11,13 @@ class PriceInputFormatter extends TextInputFormatter {
 
     if (oldValue.text.replaceAll('.', '').replaceAll(',', '') ==
         newValue.text.replaceAll('.', '').replaceAll(',', '')) {
-      selectionIndex--;
+      if (oldValue.text[selectionIndex + 1] == '.' || oldValue.text[selectionIndex + 1] == ',') {
+        selectionIndex++;
+      }
+      return TextEditingValue(
+        text: oldValue.text,
+        selection: TextSelection.collapsed(offset: selectionIndex),
+      );
     }
 
     if (newValueLength > 8) {
@@ -30,6 +36,12 @@ class PriceInputFormatter extends TextInputFormatter {
       if (newValue.selection.end > 2) selectionIndex++;
     } else {
       newText.write(newValue.text);
+    }
+    if (oldValue.text.length == 8 &&
+        newValue.text.length == 5 &&
+        (oldValue.text[selectionIndex + 1] == '.' || oldValue.text[selectionIndex + 1] == ',') &&
+        selectionIndex > 1) {
+      selectionIndex--;
     }
 
     return TextEditingValue(

@@ -1,3 +1,4 @@
+import 'package:desafio/screen/create_plan_screen.dart';
 import 'package:desafio/screen/options_screen.dart';
 import 'package:desafio/screen/result_screen.dart';
 import 'package:flutter/foundation.dart';
@@ -33,12 +34,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WATTio',
-      initialRoute: HomeScreen.nameRoute,
+      initialRoute: CreatePlanScreen.nameRoute,
       routes: {
         ...HomeScreen.route,
         ...SimulationScreen.route,
         ...OptionsScreen.route,
         ...ResultScreen.route,
+        ...CreatePlanScreen.route,
       },
     );
   }

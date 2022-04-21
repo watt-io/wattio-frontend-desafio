@@ -8,6 +8,7 @@ import 'package:desafio/screen/options_screen.dart';
 import 'package:desafio/widget/button.dart';
 import 'package:desafio/widget/primary/app_bar.dart';
 import 'package:desafio/widget/primary/application.dart';
+import 'package:desafio/widget/text_field_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -44,7 +45,6 @@ class _SimulationScreenState extends State<SimulationScreen> {
         pageSize: pageSize,
         paddingHorizontal: 30,
         children: [
-          Container(),
           const SizedBox(height: 13),
           const AutoSizeText(
             'Simulação',
@@ -72,28 +72,16 @@ class _SimulationScreenState extends State<SimulationScreen> {
             style: TextStyle(fontSize: 16),
           ),
           const SizedBox(height: 30),
-          SizedBox(
+          TextFieldCustom(
             width: 150,
-            child: TextField(
-              controller: store.controller,
-              onChanged: (v) => store.value = v,
-              inputFormatters: [
-                FilteringTextInputFormatter.digitsOnly,
-                PriceInputFormatter(),
-              ],
-              textAlign: TextAlign.center,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                  borderSide: BorderSide(color: Colors.blue),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                  borderSide: BorderSide(color: Colors.black),
-                ),
-                prefixText: 'R\$',
-              ),
-            ),
+            controller: store.controller,
+            onChanged: (v) => store.value = v,
+            inputFormatters: [
+              FilteringTextInputFormatter.digitsOnly,
+              PriceInputFormatter(),
+            ],
+            textInputType: TextInputType.number,
+            prefixText: 'R\$',
           ),
           const SizedBox(height: 15),
           Slider(

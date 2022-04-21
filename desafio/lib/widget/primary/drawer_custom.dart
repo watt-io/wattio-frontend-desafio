@@ -13,8 +13,6 @@ class DrawerCustom extends StatefulWidget {
 class _DrawerCustomState extends State<DrawerCustom> {
   @override
   Widget build(BuildContext context) {
-    // final _altura = MediaQuery.of(context).size.height;
-    final _largura = MediaQuery.of(context).size.width;
     return SafeArea(
       child: ClipRRect(
         borderRadius: const BorderRadius.only(topRight: Radius.circular(35), bottomRight: Radius.circular(35)),

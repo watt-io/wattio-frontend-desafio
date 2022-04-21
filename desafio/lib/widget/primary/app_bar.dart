@@ -15,15 +15,18 @@ class AppBarCustom extends AppBar {
           title: Row(
             children: [
               if (Navigator.canPop(context))
-                IconButton(
-                  icon: const Icon(
-                    Icons.arrow_back,
-                    color: Colors.black,
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                )
+                Builder(builder: (context) {
+                  return IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {
+                      if (Navigator.canPop(context)) return Navigator.of(context).pop();
+                      Scaffold.of(context).openDrawer();
+                    },
+                  );
+                })
               else
                 Builder(builder: (context) {
                   return IconButton(
@@ -32,6 +35,7 @@ class AppBarCustom extends AppBar {
                       color: Colors.black,
                     ),
                     onPressed: () {
+                      if (Navigator.canPop(context)) return Navigator.of(context).pop();
                       Scaffold.of(context).openDrawer();
                     },
                   );

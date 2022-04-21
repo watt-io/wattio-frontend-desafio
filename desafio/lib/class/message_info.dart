@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class MessageInfo {
   final BuildContext context;
 
+  // ignore: unused_element
   MessageInfo._(this.context);
   MessageInfo.of(this.context);
 

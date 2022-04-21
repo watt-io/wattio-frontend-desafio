@@ -7,12 +7,12 @@ Link da versão Web: https://desafio-wattio-jackson.web.app/
 ## Design
 
 Foi desenvolvido uma prototipagem do aplicativo utilizando o [Figma:](https://www.figma.com/file/IK2bVIpih24uLJPn8srTU5/inowatt---watt.io?node-id=0%3A1)
-![Design de todas as telas](/docs/design.png)
+![Design de todas as telas](docs/design.png)
 
 
 Para a versão web não foi implementado responsabilidade mas foi realizado um design com customização do fundo e otimizações.
 
-![Design Web](/docs/web.png)
+![Design Web](docs/web.png)
 
 
 ## Desafio proposto

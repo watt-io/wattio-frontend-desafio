@@ -1,12 +1,12 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:desafio/class/discount_input_formatter.dart';
+import 'package:desafio/class/message_info.dart';
 import 'package:desafio/class/page_size.dart';
 import 'package:desafio/class/price_input_formatter.dart';
 import 'package:desafio/enum/gradients.dart';
 import 'package:desafio/enum/person.dart';
 import 'package:desafio/mobx/create_plan_store.dart';
+import 'package:desafio/screen/home_screen.dart';
 import 'package:desafio/widget/button.dart';
 import 'package:desafio/widget/primary/app_bar.dart';
 import 'package:desafio/widget/primary/application.dart';
@@ -62,9 +62,10 @@ class _CreatePlanScreenState extends State<CreatePlanScreen> {
           Center(
             child: TextFieldCustom(
               initialValue: store.name,
-              onChanged: (v) => store.name,
+              onChanged: (v) => store.name = v,
               textInputType: TextInputType.name,
               width: pageSize.pWidth * 75,
+              hintText: 'Digite o nome da empresa',
             ),
           ),
           const SizedBox(height: 22),
@@ -87,8 +88,8 @@ class _CreatePlanScreenState extends State<CreatePlanScreen> {
           const SizedBox(height: 10),
           Center(
             child: TextFieldCustom(
-              initialValue: store.name,
-              onChanged: (v) => store.name,
+              initialValue: store.discount,
+              onChanged: (v) => store.discount = v,
               width: 100,
               inputFormatters: [
                 FilteringTextInputFormatter.digitsOnly,
@@ -103,8 +104,8 @@ class _CreatePlanScreenState extends State<CreatePlanScreen> {
           const SizedBox(height: 10),
           Center(
             child: TextFieldCustom(
-              initialValue: store.name,
-              onChanged: (v) => store.name,
+              initialValue: store.valueMinMonthly,
+              onChanged: (v) => store.valueMinMonthly = v,
               width: 150,
               inputFormatters: [
                 FilteringTextInputFormatter.digitsOnly,
@@ -119,8 +120,8 @@ class _CreatePlanScreenState extends State<CreatePlanScreen> {
           const SizedBox(height: 10),
           Center(
             child: TextFieldCustom(
-              initialValue: store.name,
-              onChanged: (v) => store.name,
+              initialValue: store.valueMaxMonthly,
+              onChanged: (v) => store.valueMaxMonthly = v,
               width: 150,
               inputFormatters: [
                 FilteringTextInputFormatter.digitsOnly,
@@ -137,10 +138,20 @@ class _CreatePlanScreenState extends State<CreatePlanScreen> {
               gradients: Gradients.green,
               height: 50,
               width: 250,
-              onTap: () {},
+              onTap: () async {
+                final men = store.validate;
+                if (men != null) {
+                  return MessageInfo.of(context).alert(men);
+                }
+                if (await store.save()) {
+                  Navigator.of(context).pushNamedAndRemoveUntil(HomeScreen.nameRoute, (route) => false);
+                  return MessageInfo.of(context).ok('Plano cadastrado com sucesso!');
+                }
+                return MessageInfo.of(context).alert('Infelizmente aconteceu um erro inesperado, tente mais tarde');
+              },
             ),
           ),
-          const SizedBox(height: 22),
+          const SizedBox(height: 50),
         ],
       );
     });

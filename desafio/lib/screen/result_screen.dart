@@ -125,7 +125,7 @@ class _ResultScreenState extends State<ResultScreen> with FormatPrice {
             paddingHorizontal: 25,
             fontSize: 20,
             maxLines: 2,
-            onTap: () => launch('http://wattio.com.br/contatowattio', forceWebView: true),
+            onTap: () => launch('http://wattio.com.br/contatowattio'),
           ),
         ),
       ],

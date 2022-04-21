@@ -9,6 +9,34 @@ part of 'create_plan_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$CreatePlanMobx on _CreatePlanMobxBase, Store {
+  Computed<String>? _$valueMinMonthlyComputed;
+
+  @override
+  String get valueMinMonthly => (_$valueMinMonthlyComputed ??= Computed<String>(
+          () => super.valueMinMonthly,
+          name: '_CreatePlanMobxBase.valueMinMonthly'))
+      .value;
+  Computed<String>? _$valueMaxMonthlyComputed;
+
+  @override
+  String get valueMaxMonthly => (_$valueMaxMonthlyComputed ??= Computed<String>(
+          () => super.valueMaxMonthly,
+          name: '_CreatePlanMobxBase.valueMaxMonthly'))
+      .value;
+  Computed<String>? _$discountComputed;
+
+  @override
+  String get discount =>
+      (_$discountComputed ??= Computed<String>(() => super.discount,
+              name: '_CreatePlanMobxBase.discount'))
+          .value;
+  Computed<PlanModel>? _$toModelComputed;
+
+  @override
+  PlanModel get toModel =>
+      (_$toModelComputed ??= Computed<PlanModel>(() => super.toModel,
+              name: '_CreatePlanMobxBase.toModel'))
+          .value;
   Computed<String?>? _$validateComputed;
 
   @override
@@ -32,50 +60,50 @@ mixin _$CreatePlanMobx on _CreatePlanMobxBase, Store {
     });
   }
 
-  final _$valueMinMonthlyAtom =
-      Atom(name: '_CreatePlanMobxBase.valueMinMonthly');
+  final _$_valueMinMonthlyAtom =
+      Atom(name: '_CreatePlanMobxBase._valueMinMonthly');
 
   @override
-  double get valueMinMonthly {
-    _$valueMinMonthlyAtom.reportRead();
-    return super.valueMinMonthly;
+  double get _valueMinMonthly {
+    _$_valueMinMonthlyAtom.reportRead();
+    return super._valueMinMonthly;
   }
 
   @override
-  set valueMinMonthly(double value) {
-    _$valueMinMonthlyAtom.reportWrite(value, super.valueMinMonthly, () {
-      super.valueMinMonthly = value;
+  set _valueMinMonthly(double value) {
+    _$_valueMinMonthlyAtom.reportWrite(value, super._valueMinMonthly, () {
+      super._valueMinMonthly = value;
     });
   }
 
-  final _$valueMaxMonthlyAtom =
-      Atom(name: '_CreatePlanMobxBase.valueMaxMonthly');
+  final _$_valueMaxMonthlyAtom =
+      Atom(name: '_CreatePlanMobxBase._valueMaxMonthly');
 
   @override
-  double get valueMaxMonthly {
-    _$valueMaxMonthlyAtom.reportRead();
-    return super.valueMaxMonthly;
+  double get _valueMaxMonthly {
+    _$_valueMaxMonthlyAtom.reportRead();
+    return super._valueMaxMonthly;
   }
 
   @override
-  set valueMaxMonthly(double value) {
-    _$valueMaxMonthlyAtom.reportWrite(value, super.valueMaxMonthly, () {
-      super.valueMaxMonthly = value;
+  set _valueMaxMonthly(double value) {
+    _$_valueMaxMonthlyAtom.reportWrite(value, super._valueMaxMonthly, () {
+      super._valueMaxMonthly = value;
     });
   }
 
-  final _$discountAtom = Atom(name: '_CreatePlanMobxBase.discount');
+  final _$_discountAtom = Atom(name: '_CreatePlanMobxBase._discount');
 
   @override
-  double get discount {
-    _$discountAtom.reportRead();
-    return super.discount;
+  double get _discount {
+    _$_discountAtom.reportRead();
+    return super._discount;
   }
 
   @override
-  set discount(double value) {
-    _$discountAtom.reportWrite(value, super.discount, () {
-      super.discount = value;
+  set _discount(double value) {
+    _$_discountAtom.reportWrite(value, super._discount, () {
+      super._discount = value;
     });
   }
 
@@ -97,7 +125,7 @@ mixin _$CreatePlanMobx on _CreatePlanMobxBase, Store {
   final _$saveAsyncAction = AsyncAction('_CreatePlanMobxBase.save');
 
   @override
-  Future<void> save() {
+  Future<bool> save() {
     return _$saveAsyncAction.run(() => super.save());
   }
 
@@ -105,10 +133,11 @@ mixin _$CreatePlanMobx on _CreatePlanMobxBase, Store {
   String toString() {
     return '''
 name: ${name},
+person: ${person},
 valueMinMonthly: ${valueMinMonthly},
 valueMaxMonthly: ${valueMaxMonthly},
 discount: ${discount},
-person: ${person},
+toModel: ${toModel},
 validate: ${validate}
     ''';
   }

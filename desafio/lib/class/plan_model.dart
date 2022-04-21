@@ -4,8 +4,8 @@ import 'package:desafio/enum/person.dart';
 
 class PlanModel {
   String name;
-  int valueMinMonthly;
-  int valueMaxMonthly;
+  double valueMinMonthly;
+  double valueMaxMonthly;
   double discount;
   Person person;
 
@@ -19,8 +19,8 @@ class PlanModel {
 
   PlanModel copyWith({
     String? name,
-    int? valueMinMonthly,
-    int? valueMaxMonthly,
+    double? valueMinMonthly,
+    double? valueMaxMonthly,
     double? discount,
     Person? person,
   }) {
@@ -46,8 +46,8 @@ class PlanModel {
   factory PlanModel.fromMap(Map<String, dynamic> map) {
     return PlanModel(
       name: map['name'],
-      valueMinMonthly: map['valueMinMonthly']?.toInt(),
-      valueMaxMonthly: map['valueMaxMonthly']?.toInt(),
+      valueMinMonthly: map['valueMinMonthly']?.toDouble(),
+      valueMaxMonthly: map['valueMaxMonthly']?.toDouble(),
       discount: map['discount']?.toDouble(),
       person: PersonFrom(map['person']),
     );

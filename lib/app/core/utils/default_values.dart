@@ -1,6 +1,6 @@
-enum OfferListState {
-  loading,
+enum OfferListStateEnum {
   initial,
-  voidState,
-  showing
+  empty,
+  loading,
+  loaded
 }

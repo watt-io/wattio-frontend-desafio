@@ -1,13 +1,12 @@
-import '../../../core/utils/default_values.dart';
 import '../models/models.dart';
 
 abstract class OfferListState {
   List<OfferModel> offerList;
-  OfferListStateEnum state;
+  String? error;
 
   OfferListState({
     this.offerList = const [],
-    this.state = OfferListStateEnum.initial,
+    this.error,
   });
 }
 
@@ -15,7 +14,6 @@ class OfferListStateInitial extends OfferListState {
   OfferListStateInitial()
       : super(
         offerList: [],
-        state: OfferListStateEnum.initial,
       );
 }
 
@@ -23,7 +21,6 @@ class OfferListStateLoading extends OfferListState {
   OfferListStateLoading()
       : super(
         offerList: [],
-        state: OfferListStateEnum.loading,
       );
 }
 
@@ -31,7 +28,6 @@ class OfferListStateEmpty extends OfferListState {
   OfferListStateEmpty()
       : super(
         offerList: [],
-        state: OfferListStateEnum.empty,
       );
 }
 
@@ -40,6 +36,17 @@ class OfferListStateLoaded extends OfferListState {
   OfferListStateLoaded({this.offers = const []})
       : super(
         offerList: offers,
-        state: OfferListStateEnum.loaded,
       );
+}
+
+class OfferListStateError extends OfferListState {
+  OfferListStateError(
+    this.errorText,
+  )
+      : super(
+        offerList: [],
+        error: errorText,
+      );
+  
+  String? errorText;
 }

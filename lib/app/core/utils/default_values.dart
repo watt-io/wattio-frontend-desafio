@@ -2,5 +2,6 @@ enum OfferListStateEnum {
   initial,
   empty,
   loading,
-  loaded
+  loaded,
+  error,
 }

@@ -18,7 +18,10 @@ class ButtonAppWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(32),
         ),
         primary: Theme.of(context).primaryColor,
-        onPrimary: Theme.of(context).colorScheme.background,
+        onPrimary: Theme.of(context).colorScheme.primary,
+        onSurface: Theme.of(context).colorScheme.primary,
+        enableFeedback: true,
+        elevation: 2,
         padding: const EdgeInsets.all(12),
       ),
       onPressed: isLoading

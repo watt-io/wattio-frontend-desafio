@@ -1,8 +1,7 @@
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/core.dart';
 import 'blocs/blocs.dart';
@@ -32,13 +31,13 @@ class _HomeViewState extends State<HomeView> {
   void initState() {
     super.initState();
     bloc = OfferListBloc();
-    bloc.inputOfferList.add(OfferListInitialEvent());
+    bloc.add(OfferListInitialEvent());
   }
 
   @override
   void dispose() {
     super.dispose();
-    bloc.inputOfferList.close();
+    bloc.close();
   }
 
   @override
@@ -138,49 +137,50 @@ class _HomeViewState extends State<HomeView> {
                             ],
                           ),
                           const SizedBox(height: 16.0),
-                          StreamBuilder<OfferListState>(
-                            stream: bloc.stream,
-                            builder: (context, snapshot) => ButtonAppWidget(
-                                isLoading: false,
+                          BlocBuilder<OfferListBloc, OfferListState>(
+                            bloc: bloc,
+                            builder: (context, state) => ButtonAppWidget(
+                                isLoading: state is OfferListStateLoading,
                                 onPressed: () {
-                                  if(valueController.text.isNotEmpty) {
-                                    bloc.inputOfferList
-                                        .add(OfferListLoadingEvent());
+                                  if(valueController.text.isNotEmpty
+                                    && valueOfEnergyAcount > 0) {
+                                    bloc.add(OfferListLoadingEvent());
                                   }
                                 },
                                 child: Text(
                                   'Buscar ofertas',
                                   style: TextStyle(
-                                    color: Theme.of(context).colorScheme.tertiary,
+                                    color: Theme.of(
+                                      context
+                                    ).colorScheme.tertiary,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               )
-                          ),
-                        ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
                   ],
                 ),
                 Expanded(
-                  child: StreamBuilder<OfferListState>(
-                    stream: bloc.stream,
-                    builder: (context, snapshot) {
-                      final state = snapshot.data?.state;
-                      return LayoutBuilder(
+                  child: BlocBuilder<OfferListBloc, OfferListState>(
+                    bloc: bloc,
+                    builder: (context, state) => LayoutBuilder(
                         builder: (context, constraints) {
-                          if (state == OfferListStateEnum.initial) {
+                          if (state is OfferListStateInitial) {
                             return Center(
                               child: InitialStateWidget(
                               sideHeght: 
                                 constraints.maxHeight > constraints.maxWidth
                                     ? constraints.maxWidth * 0.8
                                     : constraints.maxHeight * 0.8,
-                          ),
+                              ),
                             );
-                  
-                          } else if (state == OfferListStateEnum.empty)  {
+                          } 
+                          
+                          else if (state is OfferListStateEmpty)  {
                             return Center(
                               child: VoidStateWidget(
                                 sideHeght: 
@@ -189,28 +189,34 @@ class _HomeViewState extends State<HomeView> {
                                       : constraints.maxHeight * 0.8,
                               ),
                             );
-                          } else if (state == OfferListStateEnum.loading)  {
+                          } 
+                          
+                          else if (state is OfferListStateLoading)  {
                             return const Center(
                               child: CircularProgressIndicator(),
                             );
-                          } else {
-                            return ListView.separated(
-                              itemCount: 10,
-                              itemBuilder: (context, index) => 
-                                OfferListItemWidget(
-                                  onTap: () {},
-                                  title: 'Cooperativa de Energia',
-                                  subtitle: 'R\$ 1000,00',
-                                ),
-                                separatorBuilder: (context, index) => 
-                                const Divider(
-                                    height: 1.0,
-                                  ),
-                            );
+                          } 
+                          
+                          else if (state is OfferListStateError)  {
+                            _buildSnackBar(context, state.error!);
+                            bloc.add(OfferListInitialEvent());
                           }
+
+                          return ListView.separated(
+                            itemCount: 10,
+                            itemBuilder: (context, index) => 
+                              OfferListItemWidget(
+                                onTap: () {},
+                                title: 'Cooperativa de Energia',
+                                subtitle: 'R\$ 1000,00',
+                              ),
+                              separatorBuilder: (context, index) => 
+                              const Divider(
+                                  height: 1.0,
+                                ),
+                          );
                         },
-                      );
-                    }
+                      )
                   ),
                 )
               ],
@@ -219,6 +225,12 @@ class _HomeViewState extends State<HomeView> {
         ),
     ),
   );
+
+  void _buildSnackBar(BuildContext context, String message) {
+    SnackBarApp.showSnackBarApp(
+      context, message, true
+    );
+  }
 
   void _increaseValue(int value) {
     FocusScope.of(context).unfocus();
@@ -229,6 +241,7 @@ class _HomeViewState extends State<HomeView> {
   }
 
   void _decreasingValue(int value) {
+    print(valueOfEnergyAcount);
     FocusScope.of(context).unfocus();
     if (valueOfEnergyAcount > 0 && valueOfEnergyAcount - value > 0) {
       valueOfEnergyAcount -= value;

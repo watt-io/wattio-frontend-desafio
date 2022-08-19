@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'app/app_widget.dart';
+import 'app/my_app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

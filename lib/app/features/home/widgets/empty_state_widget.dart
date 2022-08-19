@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../core/core.dart';
 
-class VoidStateWidget extends StatelessWidget {
-  const VoidStateWidget({
+class EmptyStateWidget extends StatelessWidget {
+  const EmptyStateWidget({
     Key? key, 
     this.sideHeght
   }) : super(key: key);

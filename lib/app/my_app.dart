@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'Marktplace Energia',
       theme: CustomTheme.theme,
       routes: <String, WidgetBuilder>{
-        '/home': (BuildContext context) => HomeView(),
+        '/home': (BuildContext context) => const HomeView(),
       },
       initialRoute: '/home',
     );

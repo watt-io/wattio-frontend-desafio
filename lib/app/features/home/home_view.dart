@@ -1,5 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,21 +15,12 @@ class HomeView extends StatefulWidget  {
 
 class _HomeViewState extends State<HomeView> {
 
-  final currencyFormatter = CurrencyTextInputFormatter(
-    locale: 'pt_BR',
-    name: 'R\$',
-  );
-
-  final TextEditingController valueController = TextEditingController();
-
-  late final OfferListBloc bloc;
-
-  double valueOfEnergyAcount = 0.0;
+  late final HomeBloc bloc;
   
   @override
   void initState() {
     super.initState();
-    bloc = OfferListBloc();
+    bloc = HomeBloc();
     bloc.add(OfferListInitialEvent());
   }
 
@@ -117,13 +107,13 @@ class _HomeViewState extends State<HomeView> {
                               Expanded(
                                 child: TextFieldWidget(
                                   hint: 'Ex: R\$ 1000,00',
-                                  inputFormatters: [currencyFormatter],
+                                  inputFormatters: [bloc.currencyFormatter],
                                   prefix: const Icon(Icons.price_change),
-                                  controller: valueController,
+                                  controller: bloc.valueController,
                                   textInputType: TextInputType.number,
                                   onChanged: (value) {
-                                    valueOfEnergyAcount = 
-                                        currencyFormatter
+                                    bloc.valueOfEnergyAcount = 
+                                        bloc.currencyFormatter
                                         .getUnformattedValue()
                                         .toDouble();
                                   },
@@ -131,19 +121,21 @@ class _HomeViewState extends State<HomeView> {
                               ),
                               const SizedBox(width: 8.0),
                               ButtonGroupChangeValueWidget(
-                                onIncrease: _increaseValue,
-                                onDecreasing: _decreasingValue,
+                                onIncrease: (value) => 
+                                    bloc.increaseValue(value, context),
+                                onDecreasing: (value) => 
+                                    bloc.decreasingValue(value, context),
                               )
                             ],
                           ),
                           const SizedBox(height: 16.0),
-                          BlocBuilder<OfferListBloc, OfferListState>(
+                          BlocBuilder<HomeBloc, OfferListState>(
                             bloc: bloc,
                             builder: (context, state) => ButtonAppWidget(
                                 isLoading: state is OfferListStateLoading,
                                 onPressed: () {
-                                  if(valueController.text.isNotEmpty
-                                    && valueOfEnergyAcount > 0) {
+                                  if(bloc.valueController.text.isNotEmpty
+                                    && bloc.valueOfEnergyAcount > 0) {
                                     bloc.add(OfferListLoadingEvent());
                                   }
                                 },
@@ -165,7 +157,7 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
                 Expanded(
-                  child: BlocBuilder<OfferListBloc, OfferListState>(
+                  child: BlocBuilder<HomeBloc, OfferListState>(
                     bloc: bloc,
                     builder: (context, state) => LayoutBuilder(
                         builder: (context, constraints) {
@@ -182,7 +174,7 @@ class _HomeViewState extends State<HomeView> {
                           
                           else if (state is OfferListStateEmpty)  {
                             return Center(
-                              child: VoidStateWidget(
+                              child: EmptyStateWidget(
                                 sideHeght: 
                                   constraints.maxHeight > constraints.maxWidth
                                       ? constraints.maxWidth * 0.8
@@ -198,7 +190,7 @@ class _HomeViewState extends State<HomeView> {
                           } 
                           
                           else if (state is OfferListStateError)  {
-                            _buildSnackBar(context, state.error!);
+                            bloc.buildSnackBar(context, state.error!);
                             bloc.add(OfferListInitialEvent());
                           }
 
@@ -225,32 +217,4 @@ class _HomeViewState extends State<HomeView> {
         ),
     ),
   );
-
-  void _buildSnackBar(BuildContext context, String message) {
-    SnackBarApp.showSnackBarApp(
-      context, message, true
-    );
-  }
-
-  void _increaseValue(int value) {
-    FocusScope.of(context).unfocus();
-    valueOfEnergyAcount += value;
-    valueController.text = currencyFormatter.format(
-      valueOfEnergyAcount.toStringAsFixed(2),
-    );
-  }
-
-  void _decreasingValue(int value) {
-    print(valueOfEnergyAcount);
-    FocusScope.of(context).unfocus();
-    if (valueOfEnergyAcount > 0 && valueOfEnergyAcount - value > 0) {
-      valueOfEnergyAcount -= value;
-      
-    } else {
-      valueOfEnergyAcount = 0.0;
-    }
-    valueController.text = currencyFormatter.format(
-      valueOfEnergyAcount.toStringAsFixed(2),
-    );
-  }
 }

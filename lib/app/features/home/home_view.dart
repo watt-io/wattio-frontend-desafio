@@ -137,6 +137,7 @@ class _HomeViewState extends State<HomeView> {
                                 onPressed: () {
                                   if(bloc.valueController.text.isNotEmpty
                                     && bloc.valueOfEnergyAcount > 0) {
+                                    FocusScope.of(context).unfocus();
                                     bloc.add(OfferListLoadingEvent());
                                   }
                                 },
@@ -191,7 +192,9 @@ class _HomeViewState extends State<HomeView> {
                           } 
                           
                           else if (state is OfferListStateError)  {
-                            SchedulerBinding.instance.addPostFrameCallback((_) async {
+                            SchedulerBinding
+                                .instance
+                                .addPostFrameCallback((_) async {
                               bloc.buildSnackBar(context, state.error!, true);
                               bloc.add(OfferListInitialEvent());
                             });

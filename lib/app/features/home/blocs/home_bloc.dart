@@ -31,18 +31,22 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
         emit(OfferListStateLoading());
         try {
           final offers = await _homeRepository.getOffers();
-          if (offers.isEmpty) {
+          if (offers.isEmpty 
+          || filterOffers(valueOfEnergyAcount, offers).isEmpty) {
             emit(OfferListStateEmpty());
           } else {
-            emit(OfferListStateLoaded(offers: offers));
+            emit(OfferListStateLoaded(
+                offers: filterOffers(valueOfEnergyAcount, offers)));
           }
         } on AppError catch (e) {
-          emit(OfferListStateError('Erro na comunicação com o servidor: $e'));
-        } 
-        // catch (e) {
-        //   log(e.toString());
-        //   emit(OfferListStateError('Ops, algo deu errado'));
-        // }
+          log(e.toString());
+          emit(OfferListStateError(
+            'Houve um erro na comunicação com o servidor'
+          ));
+        } catch (e) {
+          log(e.toString());
+          emit(OfferListStateError('Ops, algo deu errado'));
+        }
       },
     );
   }
@@ -87,4 +91,12 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
       ),
     );
   }
+
+  List<OfferModel> filterOffers(
+    double valueOfEnergyAcount,
+    List<OfferModel> offers,
+  ) => offers.where((offer) => 
+      offer.minimumMonthlyAmount <= valueOfEnergyAcount
+      && offer.maximumMonthlyAmount >= valueOfEnergyAcount
+  ).toList();
 }

@@ -15,12 +15,6 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-  flutter_lints: ^2.0.0
-
   # state management
   bloc: ^8.1.0
   flutter_bloc: ^8.1.1
@@ -51,6 +45,12 @@ flutter_icons:
   ios: true
   remove_alpha_ios: true
   android: "launcher_icon"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
 
 flutter:
 

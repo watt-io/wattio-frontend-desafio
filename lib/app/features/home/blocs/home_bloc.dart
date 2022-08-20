@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../../../app.dart';
 import '../repository/home_repository.dart';
@@ -10,17 +10,18 @@ import 'offer_list_events.dart';
 import 'offer_list_state.dart';
 
 class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
+
   final HomeRepository _homeRepository = HomeRepository();
 
   final TextEditingController valueController = TextEditingController();
+
+  double valueOfEnergyAcount = 0.0;
 
   final currencyFormatter = CurrencyTextInputFormatter(
     locale: 'pt_BR',
     name: 'R\$',
   );
 
-  double valueOfEnergyAcount = 0.0;
-  
   HomeBloc() : super(OfferListStateInitial()) {
     on<OfferListInitialEvent>(
       (event, emit) => emit(OfferListStateInitial()),
@@ -39,10 +40,17 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
                 offers: filterOffers(valueOfEnergyAcount, offers)));
           }
         } on AppError catch (e) {
-          log(e.toString());
-          emit(OfferListStateError(
-            'Houve um erro na comunicação com o servidor'
-          ));
+          if (e == AppError.timeout) {
+            log(e.toString());
+            emit(OfferListStateError(
+              'Verifique sua conexão com a internet',
+            ));
+          } else {
+            log(e.toString());
+            emit(OfferListStateError(
+              'Houve um erro na comunicação com o servidor'
+            ));
+          }
         } catch (e) {
           log(e.toString());
           emit(OfferListStateError('Ops, algo deu errado'));
@@ -60,7 +68,6 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
   }
 
   void decreasingValue(int value, BuildContext context) {
-    print(valueOfEnergyAcount);
     FocusScope.of(context).unfocus();
     if (valueOfEnergyAcount > 0 && valueOfEnergyAcount - value > 0) {
       valueOfEnergyAcount -= value;
@@ -77,7 +84,10 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
     SnackBarApp.showSnackBarApp(
       context: context,
       message: message,
-      isError: isError,
+      backgroundColor: Theme.of(
+        context
+      ).colorScheme.onBackground.withAlpha(200),
+      isError: false,
     );
   }
 

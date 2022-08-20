@@ -1,12 +1,13 @@
 // ignore_for_file: unnecessary_lambdas
 
 import '../../../app.dart';
+import '../../../models/response_model.dart';
 
 class HomeRepository {
   final HttpClient httpClient = HttpClientImp();
 
   Future<List<OfferModel>> getOffers() async {
-    final Response response = await httpClient.get('/cooperative-offers');
+    final ResponseModel response = await httpClient.get('/cooperative-offers');
 
     if (!response.isOk || response.body == null) throw AppError.api;
     

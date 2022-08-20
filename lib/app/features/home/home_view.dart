@@ -175,6 +175,15 @@ class _HomeViewState extends State<HomeView> {
                           } 
                           
                           else if (state is OfferListStateEmpty)  {
+                            SchedulerBinding
+                                .instance
+                                .addPostFrameCallback((_) async {
+                                bloc.buildSnackBar(
+                                  context, 
+                                  '''Nenhuma oferta encontrada para o valor informado''', 
+                                  false
+                                );
+                            });
                             return Center(
                               child: EmptyStateWidget(
                                 sideHeght: 

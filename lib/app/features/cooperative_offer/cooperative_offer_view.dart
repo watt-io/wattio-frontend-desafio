@@ -16,12 +16,7 @@ class CooperativeOfferView extends StatefulWidget {
 class _CooperativeOfferViewState extends State<CooperativeOfferView> {
 
   late final OfferBloc bloc;
-  late final ArgumentsModel args;
   late final Size size;
-
-  late final String savingsMonthly;
-  late final String savingsYearly;
-  late final String savingsPercentage;
 
   @override
   void initState() {
@@ -31,29 +26,19 @@ class _CooperativeOfferViewState extends State<CooperativeOfferView> {
   }
 
   @override
+  void dispose() {
+    bloc.close();
+    super.dispose();
+  }
+
+  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    args = ModalRoute.of(context)?.settings.arguments as ArgumentsModel;
+    bloc.args = ModalRoute.of(context)?.settings.arguments as ArgumentsModel;
 
     size = MediaQuery.of(context).size;
 
-    final double savingsPercentageDouble =
-          args.offer.savingsPercentage * 100;
-
-      if (savingsPercentageDouble -
-          savingsPercentageDouble.floor() > 0.01) {
-        savingsPercentage =
-            '''${savingsPercentageDouble.toStringAsFixed(2)}%''';
-      } else {
-        savingsPercentage =
-            '''${savingsPercentageDouble.toStringAsFixed(0)}%''';
-      }
-      
-      savingsMonthly = bloc.calculateSavingsMonthly(
-          args.valueOfEnergyAcount, args.offer.savingsPercentage);
-      
-      savingsYearly = bloc.calculateSavingsYearly(
-          args.valueOfEnergyAcount, args.offer.savingsPercentage);
+    bloc.getSavingsValues();
   }
 
   @override
@@ -99,7 +84,7 @@ class _CooperativeOfferViewState extends State<CooperativeOfferView> {
                 Flexible(
                   flex: 1,
                   child: Hero(
-                    tag: args.offer.id ?? 0,
+                    tag: bloc.args.offer.id ?? 0,
                     child: Image.asset(
                       Assets.handLight,
                       fit: BoxFit.cover,
@@ -130,28 +115,31 @@ class _CooperativeOfferViewState extends State<CooperativeOfferView> {
                                 ),
                                 SizedBox(height: size.height * 0.0174),
                                 Text(
-                                  args.offer.title,
+                                  bloc.args.offer.title,
                                   textAlign: TextAlign.center,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
+                                    color: Theme.of(
+                                      context
+                                    ).colorScheme.onPrimary,
                                   ),
                                 ),
                                 SizedBox(height: size.height * 0.0174),
                                 AutoSizeText(
-                                  'Economia de $savingsPercentage',
+                                  'Economia de ${bloc.savingsPercentage}',
                                   maxLines: 1,
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
                                     color: Theme.of(
                                       context
-                                    ).colorScheme.surfaceTint,
+                                    ).colorScheme.primary,
                                   ),
                                 ),
                                 SizedBox(height: size.height * 0.02),
                                 AutoSizeText(
-                                  '''Atualmente você paga aproximadamente ${bloc.formatPrice(args.valueOfEnergyAcount)} por mês e ${bloc.formatPrice(args.valueOfEnergyAcount * 12)} por ano''',
+                                  '''Atualmente você paga em média ${bloc.formatPrice(bloc.args.valueOfEnergyAcount)} por mês e ${bloc.formatPrice(bloc.args.valueOfEnergyAcount * 12)} por ano''',
                                   maxLines: 2,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -163,22 +151,76 @@ class _CooperativeOfferViewState extends State<CooperativeOfferView> {
                                   ),
                                 ),
                                 SizedBox(height: size.height * 0.02),
-                                AutoSizeText(
-                                  'Economize até  $savingsMonthly por mês',
-                                  maxLines: 1,
-                                  style: const TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                                RichText(
+                                  text: TextSpan(
+                                    text: 'Economize até ',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Theme.of(
+                                        context
+                                      ).colorScheme.onPrimary,
+                                    ),
+                                    children: [
+                                      TextSpan(
+                                        text: '${bloc.savingsMonthly} ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Theme.of(
+                                            context
+                                          ).colorScheme.primary,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: 'ao mês',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Theme.of(
+                                            context
+                                          ).colorScheme.onPrimary,
+                                        ),
+                                      ),
+                                    ]
                                   ),
+                                  maxLines: 1,
                                 ),
                                 SizedBox(height: size.height * 0.01),
-                                AutoSizeText(
-                                  'Economize até  $savingsYearly por ano',
-                                  maxLines: 1,
-                                  style: const TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                                RichText(
+                                  text: TextSpan(
+                                    text: 'Economize até ',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Theme.of(
+                                        context
+                                      ).colorScheme.onPrimary,
+                                    ),
+                                    children: [
+                                      TextSpan(
+                                        text: '${bloc.savingsYearly} ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Theme.of(
+                                            context
+                                          ).colorScheme.primary,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: 'ao ano',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Theme.of(
+                                            context
+                                          ).colorScheme.onPrimary,
+                                        ),
+                                      ),
+                                    ]
                                   ),
+                                  maxLines: 1,
                                 ),
                               ],
                             ),

@@ -1,1 +1,4 @@
-enum AppError { api }
+enum AppError {
+  api,
+  timeout
+}

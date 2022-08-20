@@ -34,6 +34,24 @@ dev_dependencies:
   # http communication
   dio: ^4.0.6
 
+  # splash screen
+  flutter_native_splash: ^2.2.7
+
+  # icon
+  flutter_launcher_icons: ^0.10.0
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: "assets/images/splash.png"
+  android: true
+  ios: true
+    
+flutter_icons:
+  image_path: "assets/images/icon.png"
+  ios: true
+  remove_alpha_ios: true
+  android: "launcher_icon"
+
 flutter:
 
   uses-material-design: true

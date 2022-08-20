@@ -22,7 +22,7 @@ extends State<ButtonGroupChangeValueWidget> {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-      width: 38,
+      width: 40,
       child: Column(
         children: [
           GestureDetector(
@@ -36,8 +36,8 @@ extends State<ButtonGroupChangeValueWidget> {
             },
             onLongPressEnd: (_) => setState(() => isIncreasingPressed = false),
             child: Container(
-              height: 28,
-              width: 38,
+              height: 34,
+              width: 40,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(8),
@@ -48,7 +48,6 @@ extends State<ButtonGroupChangeValueWidget> {
               child: Center(
                 child: Text('+', 
                 style: TextStyle(
-                  fontSize: 16,
                   color: Theme.of(context).colorScheme.primary,
                 ),
               ),
@@ -71,8 +70,8 @@ extends State<ButtonGroupChangeValueWidget> {
             },
             onLongPressEnd: (_) => setState(() => isDecreasingPressed = false),
             child: Container(
-              height: 28,
-              width: 38,
+              height: 34,
+              width: 40,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(8),
@@ -83,7 +82,6 @@ extends State<ButtonGroupChangeValueWidget> {
               child: Center(
                 child: Text('-', 
                 style: TextStyle(
-                  fontSize: 16,
                   color: Theme.of(context).colorScheme.primary,
                 ),
               ),

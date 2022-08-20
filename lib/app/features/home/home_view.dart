@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/core.dart';
@@ -190,12 +191,14 @@ class _HomeViewState extends State<HomeView> {
                           } 
                           
                           else if (state is OfferListStateError)  {
-                            bloc.buildSnackBar(context, state.error!, true);
-                            bloc.add(OfferListInitialEvent());
+                            SchedulerBinding.instance.addPostFrameCallback((_) async {
+                              bloc.buildSnackBar(context, state.error!, true);
+                              bloc.add(OfferListInitialEvent());
+                            });
                           }
 
                           return ListView.separated(
-                            itemCount: 10,
+                            itemCount: state.offerList.length,
                             itemBuilder: (context, index) {
                               final double savingsPercentageDouble =
                                   state.offerList[index]

@@ -31,6 +31,9 @@ dev_dependencies:
   # layout utilities
   auto_size_text: ^3.0.0
 
+  # http communication
+  dio: ^4.0.6
+
 flutter:
 
   uses-material-design: true

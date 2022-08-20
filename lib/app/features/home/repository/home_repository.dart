@@ -1,18 +1,17 @@
+// ignore_for_file: unnecessary_lambdas
+
 import '../../../app.dart';
 
 class HomeRepository {
+  final HttpClient httpClient = HttpClientImp();
+
   Future<List<OfferModel>> getOffers() async {
-    final List<OfferModel> offers = [];
-    for (var i = 0; i < 10; i++) {
-      offers.add(OfferModel(
-        title: 'Cooperativa de Energia $i',
-        savingsPercentage: 0.05 * i,
-        onlyForCompanies: false,
-        minimumMonthlyAmount: i * 10,
-        maximumMonthlyAmount: i * 10 + 10,
-      ));
-    }
-    await Future.delayed(const Duration(seconds: 2));
-    return offers;
+    final Response response = await httpClient.get('/cooperative-offers');
+
+    if (!response.isOk || response.body == null) throw AppError.api;
+    
+    return (response.body?['items'] as List)
+        .map((item) => OfferModel.fromJson(item))
+        .toList();
   }
 }

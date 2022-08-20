@@ -1,0 +1,167 @@
+{
+    "cursor": null,
+    "items": [
+        {
+            "cooperative": "Cooperativa Sustentável",
+            "maximumMonthlyAmount": 500,
+            "minimumMonthlyAmount": 100,
+            "savingsPercentage": 0.4
+        },
+        {
+            "cooperative": "Cooperativa Sustentável",
+            "maximumMonthlyAmount": 350,
+            "minimumMonthlyAmount": 50,
+            "savingsPercentage": 0.25
+        },
+        {
+            "cooperative": "Cooperativa Sustentável",
+            "maximumMonthlyAmount": 700,
+            "minimumMonthlyAmount": 300,
+            "savingsPercentage": 0.4
+        },
+        {
+            "cooperative": "Cooperativa Sustentável",
+            "maximumMonthlyAmount": 600,
+            "minimumMonthlyAmount": 200,
+            "savingsPercentage": 0.3
+        },
+        {
+            "cooperative": "Compania de Produtos Energéticos",
+            "maximumMonthlyAmount": 500,
+            "minimumMonthlyAmount": 100,
+            "savingsPercentage": 0.3
+        },
+        {
+            "cooperative": "Coop Energy",
+            "maximumMonthlyAmount": 350,
+            "minimumMonthlyAmount": 50,
+            "savingsPercentage": 0.35
+        },
+        {
+            "cooperative": "Sua Luz Cooperativa de Energia",
+            "maximumMonthlyAmount": 700,
+            "minimumMonthlyAmount": 300,
+            "savingsPercentage": 0.4
+        },
+        {
+            "cooperative": "Cooperativa Dois Irmãos",
+            "maximumMonthlyAmount": 600,
+            "minimumMonthlyAmount": 200,
+            "savingsPercentage": 0.3
+        },
+        {
+            "cooperative": "Eletro Amazonia",
+            "maximumMonthlyAmount": 500,
+            "minimumMonthlyAmount": 100,
+            "savingsPercentage": 0.35
+        },
+        {
+            "cooperative": "Sustentável Cooperativa",
+            "maximumMonthlyAmount": 350,
+            "minimumMonthlyAmount": 50,
+            "savingsPercentage": 0.25
+        },
+        {
+            "cooperative": "Eletro Energia Sul",
+            "maximumMonthlyAmount": 700,
+            "minimumMonthlyAmount": 300,
+            "savingsPercentage": 0.4
+        },
+        {
+            "cooperative": "Cooperativa Santo Antonio",
+            "maximumMonthlyAmount": 600,
+            "minimumMonthlyAmount": 200,
+            "savingsPercentage": 0.25
+        },
+        {
+            "cooperative": "Eletro Bela",
+            "maximumMonthlyAmount": 5000,
+            "minimumMonthlyAmount": 1000,
+            "savingsPercentage": 0.3
+        },
+        {
+            "cooperative": "Cooperativa UsiNorte",
+            "maximumMonthlyAmount": 350,
+            "minimumMonthlyAmount": 50,
+            "savingsPercentage": 0.25
+        },
+        {
+            "cooperative": "Eletro Ecolimpeza",
+            "maximumMonthlyAmount": 7000,
+            "minimumMonthlyAmount": 3000,
+            "savingsPercentage": 0.37
+        },
+        {
+            "cooperative": "Cooperativa Bem Energia",
+            "maximumMonthlyAmount": 600,
+            "minimumMonthlyAmount": 200,
+            "savingsPercentage": 0.25
+        },
+        {
+            "cooperative": "Eletro Grande Cooperativa",
+            "maximumMonthlyAmount": 500,
+            "minimumMonthlyAmount": 100,
+            "savingsPercentage": 0.28
+        },
+        {
+            "cooperative": "Coop Watts",
+            "maximumMonthlyAmount": 350,
+            "minimumMonthlyAmount": 50,
+            "savingsPercentage": 0.15
+        },
+        {
+            "cooperative": "Eletro Ecológica",
+            "maximumMonthlyAmount": 7000,
+            "minimumMonthlyAmount": 3000,
+            "savingsPercentage": 0.25
+        },
+        {
+            "cooperative": "Cooperativa Eletro",
+            "maximumMonthlyAmount": 600,
+            "minimumMonthlyAmount": 200,
+            "savingsPercentage": 0.3
+        },
+        {
+            "cooperative": "Eletro Nós Lmtd",
+            "maximumMonthlyAmount": 5000,
+            "minimumMonthlyAmount": 1000,
+            "savingsPercentage": 0.15
+        },
+        {
+            "cooperative": "Eletro Limpa",
+            "maximumMonthlyAmount": 350,
+            "minimumMonthlyAmount": 50,
+            "savingsPercentage": 0.25
+        },
+        {
+            "cooperative": "EnerEco",
+            "maximumMonthlyAmount": 6000,
+            "minimumMonthlyAmount": 2000,
+            "savingsPercentage": 0.4
+        },
+        {
+            "cooperative": "CoopEnergia",
+            "maximumMonthlyAmount": 5000,
+            "minimumMonthlyAmount": 300,
+            "savingsPercentage": 0.2
+        },
+        {
+            "cooperative": "EnerGrande",
+            "maximumMonthlyAmount": 500,
+            "minimumMonthlyAmount": 100,
+            "savingsPercentage": 0.3
+        },
+        {
+            "cooperative": "EnerLimpa",
+            "maximumMonthlyAmount": 4000,
+            "minimumMonthlyAmount": 2000,
+            "savingsPercentage": 0.3
+        },
+        {
+            "cooperative": "EnerFácil",
+            "maximumMonthlyAmount": 4000,
+            "minimumMonthlyAmount": 1000,
+            "savingsPercentage": 0.2
+        }
+    ]
+}

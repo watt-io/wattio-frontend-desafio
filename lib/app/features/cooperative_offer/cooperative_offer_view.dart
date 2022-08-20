@@ -19,7 +19,6 @@ class _CooperativeOfferViewState extends State<CooperativeOfferView> {
   late final ArgumentsModel args;
   late final Size size;
 
-  //TODO: to adjust later
   late final String savingsMonthly;
   late final String savingsYearly;
   late final String savingsPercentage;
@@ -132,6 +131,7 @@ class _CooperativeOfferViewState extends State<CooperativeOfferView> {
                                 SizedBox(height: size.height * 0.0174),
                                 Text(
                                   args.offer.title,
+                                  textAlign: TextAlign.center,
                                   style: const TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/cupertino.dart';
@@ -28,15 +30,19 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
       (event, emit) async {
         emit(OfferListStateLoading());
         try {
-          final List<OfferModel> offers = await _homeRepository.getOffers();
+          final offers = await _homeRepository.getOffers();
           if (offers.isEmpty) {
             emit(OfferListStateEmpty());
           } else {
             emit(OfferListStateLoaded(offers: offers));
           }
-        } catch (e) {
-          emit(OfferListStateError('Houve um erro: $e'));
-        }
+        } on AppError catch (e) {
+          emit(OfferListStateError('Erro na comunicação com o servidor: $e'));
+        } 
+        // catch (e) {
+        //   log(e.toString());
+        //   emit(OfferListStateError('Ops, algo deu errado'));
+        // }
       },
     );
   }

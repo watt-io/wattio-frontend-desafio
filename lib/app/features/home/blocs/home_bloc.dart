@@ -17,6 +17,8 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
 
   double valueOfEnergyAcount = 0.0;
 
+  bool stateEmptySnackbarDisplayed = false;
+
   final currencyFormatter = CurrencyTextInputFormatter(
     locale: 'pt_BR',
     name: 'R\$',
@@ -34,6 +36,7 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
           final offers = await _homeRepository.getOffers();
           if (offers.isEmpty 
           || filterOffers(valueOfEnergyAcount, offers).isEmpty) {
+            stateEmptySnackbarDisplayed = false;
             emit(OfferListStateEmpty());
           } else {
             emit(OfferListStateLoaded(

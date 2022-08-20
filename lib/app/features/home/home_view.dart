@@ -96,7 +96,7 @@ class _HomeViewState extends State<HomeView> {
                       child: Column(
                         children: [
                           AutoSizeText(
-                            'Insira o valor médio da sua conta de energia',
+                            '''Insira o valor médio mensal da sua conta de energia''',
                             style: Theme.of(context).textTheme.headline6,
                             maxFontSize: 16,
                             maxLines: 2,
@@ -175,15 +175,18 @@ class _HomeViewState extends State<HomeView> {
                           } 
                           
                           else if (state is OfferListStateEmpty)  {
-                            SchedulerBinding
-                                .instance
-                                .addPostFrameCallback((_) async {
-                                bloc.buildSnackBar(
-                                  context, 
-                                  '''Nenhuma oferta encontrada para o valor informado''', 
-                                  false
-                                );
-                            });
+                            if (!bloc.stateEmptySnackbarDisplayed) {
+                              SchedulerBinding
+                                  .instance
+                                  .addPostFrameCallback((_) async {
+                                  bloc.buildSnackBar(
+                                    context, 
+                                    '''Nenhuma oferta encontrada para o valor informado''', 
+                                    false
+                                  );
+                              });
+                              bloc.stateEmptySnackbarDisplayed = true;
+                            }
                             return Center(
                               child: EmptyStateWidget(
                                 sideHeght: 

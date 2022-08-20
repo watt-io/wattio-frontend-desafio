@@ -2,8 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../../../core/core.dart';
-import '../models/models.dart';
+import '../../../app.dart';
 import '../repository/home_repository.dart';
 import 'offer_list_events.dart';
 import 'offer_list_state.dart';
@@ -64,9 +63,22 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
     );
   }
 
-  void buildSnackBar(BuildContext context, String message) {
+  void buildSnackBar(BuildContext context, String message, bool isError) {
     SnackBarApp.showSnackBarApp(
-      context, message, true
+      context: context,
+      message: message,
+      isError: isError,
+    );
+  }
+
+  void goToOffer(BuildContext context, OfferModel offer) {
+    Navigator.pushNamed(
+      context, 
+      '/cooperative_offer', 
+      arguments: ArgumentsModel(
+        offer: offer,
+        valueOfEnergyAcount: valueOfEnergyAcount,
+      ),
     );
   }
 }

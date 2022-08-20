@@ -190,20 +190,60 @@ class _HomeViewState extends State<HomeView> {
                           } 
                           
                           else if (state is OfferListStateError)  {
-                            bloc.buildSnackBar(context, state.error!);
+                            bloc.buildSnackBar(context, state.error!, true);
                             bloc.add(OfferListInitialEvent());
                           }
 
                           return ListView.separated(
                             itemCount: 10,
-                            itemBuilder: (context, index) => 
-                              OfferListItemWidget(
-                                onTap: () {},
-                                title: 'Cooperativa de Energia',
-                                subtitle: 'R\$ 1000,00',
-                              ),
-                              separatorBuilder: (context, index) => 
-                              const Divider(
+                            itemBuilder: (context, index) {
+                              final double savingsPercentageDouble =
+                                  state.offerList[index]
+                                    .savingsPercentage * 100;
+                              
+                              final String savingsPercentage;
+
+                              if (savingsPercentageDouble -
+                                  savingsPercentageDouble.floor() > 0.01) {
+                                savingsPercentage =
+                                    '''${savingsPercentageDouble.toStringAsFixed(2)}%''';
+                              } else {
+                                savingsPercentage =
+                                    '''${savingsPercentageDouble.toStringAsFixed(0)}%''';
+                              }
+
+
+                              return OfferListItemWidget(
+                                onTap: () =>
+                                    bloc.goToOffer(
+                                      context,
+                                      state.offerList[index]..id = index,
+                                    ),
+                                title: state.offerList[index].title,
+                                subtitle: 'Economia: $savingsPercentage',
+                                leading: Hero(
+                                  tag: index,
+                                  child: SizedBox(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    child: ClipRRect(
+                                      borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(12.0),
+                                        bottomLeft: Radius.circular(12.0),
+                                        topRight: Radius.circular(12.0),
+                                        bottomRight: Radius.circular(12.0),
+                                      ),
+                                      child: Image.asset(
+                                        Assets.handLight,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                            separatorBuilder: (context, index) => 
+                                const Divider(
                                   height: 1.0,
                                 ),
                           );

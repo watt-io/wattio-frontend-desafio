@@ -1,4 +1,4 @@
-import '../models/models.dart';
+import '../../../app.dart';
 
 abstract class OfferListState {
   List<OfferModel> offerList;

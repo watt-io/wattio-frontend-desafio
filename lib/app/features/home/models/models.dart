@@ -1,1 +1,0 @@
-export 'offer_model.dart';

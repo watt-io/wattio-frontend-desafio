@@ -1,4 +1,4 @@
-import '../models/models.dart';
+import '../../../app.dart';
 
 class HomeRepository {
   Future<List<OfferModel>> getOffers() async {
@@ -6,6 +6,8 @@ class HomeRepository {
     for (var i = 0; i < 10; i++) {
       offers.add(OfferModel(
         title: 'Cooperativa de Energia $i',
+        savingsPercentage: 0.05 * i,
+        onlyForCompanies: false,
         minimumMonthlyAmount: i * 10,
         maximumMonthlyAmount: i * 10 + 10,
       ));

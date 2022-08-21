@@ -125,7 +125,7 @@ class _HomeViewState extends State<HomeView> {
                                 onIncrease: (value) => 
                                     bloc.increaseValue(value, context),
                                 onDecreasing: (value) => 
-                                    bloc.decreasingValue(value, context),
+                                    bloc.decreaseValue(value, context),
                               )
                             ],
                           ),

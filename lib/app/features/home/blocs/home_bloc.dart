@@ -70,7 +70,7 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
     );
   }
 
-  void decreasingValue(int value, BuildContext context) {
+  void decreaseValue(int value, BuildContext context) {
     FocusScope.of(context).unfocus();
     if (valueOfEnergyAcount > 0 && valueOfEnergyAcount - value > 0) {
       valueOfEnergyAcount -= value;

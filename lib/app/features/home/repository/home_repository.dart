@@ -1,7 +1,6 @@
 // ignore_for_file: unnecessary_lambdas
 
 import '../../../app.dart';
-import '../../../models/response_model.dart';
 
 class HomeRepository {
   final HttpClient httpClient = HttpClientImp();

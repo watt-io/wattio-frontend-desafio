@@ -31,14 +31,13 @@ linter:
     evitar_redundant_argument_values: true
     directives_ordering: true
     flutter_style_todos: true
-    lines_longer_than_80_chars: true
+    # lines_longer_than_80_chars: true
     prefer_expression_function_bodies: true
     prefer_interpolation_to_compose_strings: true
     sort_constructors_first: false
     prefer_final_locals: true
     unnecessary_await_in_return: true
     unnecessary_const: true
-    unnecessary_lambdas: true
     unnecessary_late: true
     unnecessary_null_aware_assignments: true
     unnecessary_parenthesis: true

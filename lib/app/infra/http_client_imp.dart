@@ -1,5 +1,3 @@
-// ignore_for_file: unnecessary_lambdas
-
 import 'package:dio/dio.dart' as dio;
 
 import '../app.dart';

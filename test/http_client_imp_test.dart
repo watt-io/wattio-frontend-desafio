@@ -20,8 +20,9 @@ void main() {
       );
   
   final HttpClient httpClient = HttpClientImp(client: client);
-  
-  test('Should get a Response', () async {
+
+  group('httpClient |', () {
+    test('Should get a Response', () async {
 
     when(() => client.get(apiEndpoint))
         .thenAnswer((invocation) async => dio.Response(
@@ -58,6 +59,8 @@ void main() {
       throwsA(equals(AppError.api))
     );
   });
+  });
+  
 }
 
 

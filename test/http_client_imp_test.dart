@@ -22,7 +22,7 @@ void main() {
   final HttpClient httpClient = HttpClientImp(client: client);
 
   group('httpClient |', () {
-    test('Should get a Response', () async {
+    test('Should get a ResponseModel', () async {
 
     when(() => client.get(apiEndpoint))
         .thenAnswer((invocation) async => dio.Response(
@@ -60,7 +60,6 @@ void main() {
     );
   });
   });
-  
 }
 
 

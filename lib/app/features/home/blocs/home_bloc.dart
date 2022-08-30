@@ -1,17 +1,14 @@
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app.dart';
-import '../repository/home_repository.dart';
-import 'offer_list_events.dart';
-import 'offer_list_state.dart';
+import '../repository/repository.dart';
+import 'blocs.dart';
 
 class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
 
-  final HomeRepository _homeRepository = HomeRepository();
+  final HomeRepository repository;
 
   final TextEditingController valueController = TextEditingController();
 
@@ -24,38 +21,38 @@ class HomeBloc extends Bloc<OfferListEvents, OfferListState> {
     name: 'R\$',
   );
 
-  HomeBloc() : super(OfferListStateInitial()) {
-    on<OfferListInitialEvent>(
+  HomeBloc({required this.repository}) : super(OfferListStateInitial()) {
+    on<OfferListEventInitial>(
       (event, emit) => emit(OfferListStateInitial()),
     );
 
-    on<OfferListLoadingEvent>(
+    on<OfferListEventLoading>(
       (event, emit) async {
         emit(OfferListStateLoading());
         try {
-          final offers = await _homeRepository.getOffers();
+          final offers = await repository.getOffers();
+          
           if (offers.isEmpty 
-          || filterOffers(valueOfEnergyAcount, offers).isEmpty) {
+              || filterOffers(valueOfEnergyAcount, offers).isEmpty) {
+            
             stateEmptySnackbarDisplayed = false;
             emit(OfferListStateEmpty());
+
           } else {
             emit(OfferListStateLoaded(
                 offers: filterOffers(valueOfEnergyAcount, offers)));
           }
         } on AppError catch (e) {
           if (e == AppError.timeout) {
-            log(e.toString());
             emit(OfferListStateError(
               'Verifique sua conexão com a internet',
             ));
           } else {
-            log(e.toString());
             emit(OfferListStateError(
               'Houve um erro na comunicação com o servidor'
             ));
           }
         } catch (e) {
-          log(e.toString());
           emit(OfferListStateError('Ops, algo deu errado'));
         }
       },

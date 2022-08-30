@@ -8,10 +8,10 @@ class OfferListLoadedEvent extends OfferListEvents {
   OfferListLoadedEvent({this.offers = const []});
 }
 
-class OfferListLoadingEvent extends OfferListEvents {}
+class OfferListEventLoading extends OfferListEvents {}
 
-class OfferListInitialEvent extends OfferListEvents {}
+class OfferListEventInitial extends OfferListEvents {}
 
-class OfferListEmptyEvent extends OfferListEvents {}
+class OfferListEventEmpty extends OfferListEvents {}
 
-class OfferListErrorEvent extends OfferListEvents {}
+class OfferListEventError extends OfferListEvents {}

@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/core.dart';
 import 'blocs/blocs.dart';
+import 'repository/repository.dart';
 import 'widgets/widgets.dart';
 
 class HomeView extends StatefulWidget  {
@@ -21,8 +22,8 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     super.initState();
-    bloc = HomeBloc();
-    bloc.add(OfferListInitialEvent());
+    bloc = HomeBloc(repository: HomeRepository());
+    bloc.add(OfferListEventInitial());
   }
 
   @override
@@ -138,7 +139,7 @@ class _HomeViewState extends State<HomeView> {
                                   if(bloc.valueController.text.isNotEmpty
                                     && bloc.valueOfEnergyAcount > 0) {
                                     FocusScope.of(context).unfocus();
-                                    bloc.add(OfferListLoadingEvent());
+                                    bloc.add(OfferListEventLoading());
                                   }
                                 },
                                 child: Text(
@@ -208,7 +209,7 @@ class _HomeViewState extends State<HomeView> {
                                 .instance
                                 .addPostFrameCallback((_) async {
                               bloc.buildSnackBar(context, state.error!, true);
-                              bloc.add(OfferListInitialEvent());
+                              bloc.add(OfferListEventInitial());
                             });
                           }
 

@@ -10,7 +10,6 @@ class HomeRepositoryMock extends Mock implements HomeRepository {}
 class BuildContextMock extends Mock implements BuildContext {}
 
 void main() {
-
   final repository = HomeRepositoryMock();
 
   late final OfferModel offer;

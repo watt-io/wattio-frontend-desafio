@@ -9,7 +9,8 @@ import 'repository/repository.dart';
 import 'widgets/widgets.dart';
 
 class HomeView extends StatefulWidget  {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({Key? key, this.bloc}) : super(key: key);
+  final HomeBloc? bloc;
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -22,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     super.initState();
-    bloc = HomeBloc(repository: HomeRepository());
+    bloc = widget.bloc ?? HomeBloc(repository: HomeRepository());
     bloc.add(OfferListEventInitial());
   }
 

@@ -1,5 +1,11 @@
 # WATTio app
 
+<p>Versões usadas</p>
+
+<p>Dart:2.18.0</p>
+<p>Flutter:3.3.0</p>
+
+
 <p>O app foi feito usando somente as coisas nativas do flutter sem nenhum packge ou plugin, o projeto foi dividido entre mobile e web ambos com layouts diferentes eles consomem os dados do mesmo repository, o app conta com animações de transição de tela(somente mobile).</p>
 
 # Estrutura do projeto

@@ -1,0 +1,42 @@
+[
+  {
+    "nome": "Melhor Energia",
+    "valorMinMensal":10000,
+    "valorMaxMensal":50000,
+    "desconto": 0.2,
+    "cliente": "pf",
+    "regiaoCliente": ["todas"]
+  },
+  {
+    "nome": "Blast Energia",
+    "valorMinMensal":2000,
+    "valorMaxMensal":50000,
+    "desconto": 0.6,
+    "cliente": "pj",
+    "regiaoCliente": ["todas"]
+  },
+  {
+    "nome": "Palacio Energia",
+    "valorMinMensal":5000,
+    "valorMaxMensal":20000,
+    "desconto": 0.5,
+    "cliente": "pj",
+    "regiaoCliente": ["região norte", "região nordeste"]
+  },
+  {
+    "nome": "Essense Energia",
+    "valorMinMensal":3000,
+    "valorMaxMensal":60000,
+    "desconto": 0.1,
+    "cliente": "pf",
+    "regiaoCliente": ["região centro-oeste", "região sul"]
+  },
+  {
+    "nome": "Forum Energia",
+    "valorMinMensal":6000,
+    "valorMaxMensal":40000,
+    "desconto": 0.3,
+    "cliente": "pj",
+    "regiaoCliente": ["região sudeste", "região sul"]
+  }
+]

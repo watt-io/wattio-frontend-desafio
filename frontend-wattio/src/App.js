@@ -1,10 +1,13 @@
 import { BrowserRouter } from 'react-router-dom'
+import ContextoClienteProvider from '@store/ContextoCliente'
 import Rotas from '@routes'
 
 function App() {
   return (
     <BrowserRouter>
-      <Rotas/>
+      <ContextoClienteProvider>
+        <Rotas/>
+      </ContextoClienteProvider>
     </BrowserRouter>
   );
 }

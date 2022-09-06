@@ -1,8 +1,11 @@
+import { BrowserRouter } from 'react-router-dom'
+import Rotas from '@routes'
+
 function App() {
   return (
-    <div>
-      <h1>Testando</h1>
-    </div>
+    <BrowserRouter>
+      <Rotas/>
+    </BrowserRouter>
   );
 }
 

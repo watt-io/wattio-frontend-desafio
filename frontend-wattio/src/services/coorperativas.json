@@ -1,37 +1,50 @@
 [
   {
+    "id": 1,
     "nome": "Melhor Energia",
-    "valorMinMensal":10000,
+    "valorMinMensal":1000,
     "valorMaxMensal":50000,
     "desconto": 0.2,
-    "cliente": "pf"
+    "tipoCliente": "PF"
   },
   {
+    "id": 2,
     "nome": "Blast Energia",
     "valorMinMensal":2000,
-    "valorMaxMensal":50000,
+    "valorMaxMensal":60000,
     "desconto": 0.6,
-    "cliente": "pj"
+    "tipoCliente": "PF"
   },
   {
+    "id": 3,
     "nome": "Palacio Energia",
     "valorMinMensal":5000,
-    "valorMaxMensal":20000,
-    "desconto": 0.5,
-    "cliente": "pj"
+    "valorMaxMensal":100000,
+    "desconto": 0.4,
+    "tipoCliente": "PF"
   },
   {
+    "id": 4,
     "nome": "Essense Energia",
     "valorMinMensal":3000,
     "valorMaxMensal":60000,
     "desconto": 0.1,
-    "cliente": "pf"
+    "tipoCliente": "PJ"
   },
   {
+    "id": 5,
     "nome": "Forum Energia",
     "valorMinMensal":6000,
     "valorMaxMensal":40000,
+    "desconto": 0.5,
+    "tipoCliente": "PJ"
+  },
+  {
+    "id": 6,
+    "nome": "Forum Energia",
+    "valorMinMensal":2000,
+    "valorMaxMensal":100000,
     "desconto": 0.3,
-    "cliente": "pj"
+    "tipoCliente": "PJ"
   }
 ]

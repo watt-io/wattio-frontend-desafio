@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "nome": "Forum Energia",
+    "nome": "Mega Energia",
     "valorMinMensal":2000,
     "valorMaxMensal":100000,
     "desconto": 0.3,

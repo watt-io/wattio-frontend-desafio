@@ -3,12 +3,16 @@ import { ContextoCliente } from '@store/ContextoCliente'
 import coorperativas from '@services/coorperativas.json'
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import ModalContratar from './components/ModalContratar';
 
 export default function CompararCoorperativas(){
 
   const { pegarDadosCliente } = useContext(ContextoCliente)
   const [carregarCoorperativas, setCarregarCoorperativas] = useState(<></>)
   const dadosCliente = pegarDadosCliente()
+  const [mostrarModalContrato, setMostrarModalContrato] = useState({
+    mostrar: false
+  })
 
   useEffect(() =>{
     //dadosCliente = {nomeEmpresa: '', valorMensal: '', tipoCliente: ''} 
@@ -45,19 +49,24 @@ export default function CompararCoorperativas(){
             </p>
           <p>
             <span className='text-warning fw-bold'>Valor mensal com desconto: </span> 
-            R$ {valorMensalComDesconto}
+            R$ {valorMensalComDesconto.toFixed(0)}
             </p>
           <p>
-            <span className='text-warning fw-bold'>Valor anual com desconto: </span> R$ {valorMensalComDesconto * 12}
+            <span className='text-warning fw-bold'>Valor anual com desconto: </span> R$ {(valorMensalComDesconto * 12).toFixed(0)}
           </p>
           <p>
-            <span className='text-warning fw-bold'>Tipo cliente: </span>
+            <span className='text-warning fw-bold'>Tipo de cliente: </span>
             {coor.tipoCliente}
           </p>
           <Button 
             className='fw-bold w-100' 
             variant={`${coorMaiorDesconto ? 'warning':'light'}`} 
-            onClick={() => console.log(coor)}>
+            onClick={() => {
+              setMostrarModalContrato({
+                mostrar: true,
+                coorperativaContratada: coor
+              })
+            }}>
             Contratar
           </Button>
         </div>
@@ -77,18 +86,25 @@ export default function CompararCoorperativas(){
         </p>
         <p>
           <span className='text-warning fw-bold'>Valor mensal: </span> 
-          R$ {dadosCliente.valorMensal}
+          R$ {(dadosCliente.valorMensal).toFixed(0)}
         </p>
         <p>
           <span className='text-warning fw-bold'>Valor anual: </span> 
-          R$ {dadosCliente.valorMensal * 12}
+          R$ {(dadosCliente.valorMensal * 12).toFixed(0)}
         </p>
         <p>
-          <span className='text-warning fw-bold'>Tipo cliente: </span> 
+          <span className='text-warning fw-bold'>Tipo de cliente: </span> 
           {dadosCliente.tipoCliente}
         </p>
       </div>
-      <div className='mt-4 d-flex flex-column text-light py-4 px-0 px-sm-3' style={{backgroundColor: 'rgba(5, 5, 130, .8)'}}>
+      {mostrarModalContrato.mostrar ? 
+      <ModalContratar 
+        nome={mostrarModalContrato.coorperativaContratada.nome}
+        mostrar={mostrarModalContrato.mostrar}
+        setMostrar={setMostrarModalContrato}
+      />
+      :<></>}
+      <div className='mt-3 d-flex flex-column text-light py-4 px-0 px-sm-3' style={{backgroundColor: 'rgba(5, 5, 130, .8)'}}>
         <h2 className='text-warning fw-bold align-self-center mb-4'>Coorperativas</h2>
         <div className='d-flex flex-wrap justify-content-around' style={{gap:'15px'}}>
           {carregarCoorperativas}

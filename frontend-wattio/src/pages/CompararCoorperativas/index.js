@@ -88,7 +88,7 @@ export default function CompararCoorperativas(){
           {dadosCliente.tipoCliente}
         </p>
       </div>
-      <div className='mt-4 d-flex flex-column text-light p-3' style={{backgroundColor: 'rgba(5, 5, 130, .8)'}}>
+      <div className='mt-4 d-flex flex-column text-light py-4 px-0 px-sm-3' style={{backgroundColor: 'rgba(5, 5, 130, .8)'}}>
         <h2 className='text-warning fw-bold align-self-center mb-4'>Coorperativas</h2>
         <div className='d-flex flex-wrap justify-content-around' style={{gap:'15px'}}>
           {carregarCoorperativas}

@@ -2,6 +2,7 @@ import { useEffect,useContext, useState } from 'react'
 import { ContextoCliente } from '@store/ContextoCliente'
 import coorperativas from '@services/coorperativas.json'
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
 export default function CompararCoorperativas(){
 
@@ -27,15 +28,38 @@ export default function CompararCoorperativas(){
     const criarComponentes = analisarCoorperativas.map((coor)=>{
 
       const valorMensalComDesconto = dadosCliente.valorMensal * (1 - coor.desconto)
+      const coorMaiorDesconto = coor.desconto === maiorDesconto
 
       return (
-        <div key={coor.id} id={coor.id} className={`border ms-2 ${coor.desconto === maiorDesconto ? 'border-primary order-first' : ''}`}>
-          <p>Nome: {coor.nome}</p>
-          <p>Desconto: {coor.desconto * 100}%</p>
-          <p>Valor mensal com desconto: R$ {valorMensalComDesconto}</p>
-          <p>Valor anual com desconto: R$ {valorMensalComDesconto * 12}</p>
-          <p>Tipo cliente: {coor.tipoCliente}</p>
-          <button onClick={() => console.log(coor)}>Contratar</button>
+        <div 
+          key={coor.id} 
+          id={coor.id} 
+          className={`border rounded-2 border-2 p-3 ${coorMaiorDesconto ? 'border-warning border-3 order-first' : ''}`}>
+          <p>
+            <span className='text-warning fw-bold'>Nome: </span>
+            {coor.nome}
+          </p>
+          <p className={`${coorMaiorDesconto ? 'bg-warning':'bg-light'} text-dark fw-bold`}>
+            <span>Economia: </span>
+            {coor.desconto * 100}%
+            </p>
+          <p>
+            <span className='text-warning fw-bold'>Valor mensal com desconto: </span> 
+            R$ {valorMensalComDesconto}
+            </p>
+          <p>
+            <span className='text-warning fw-bold'>Valor anual com desconto: </span> R$ {valorMensalComDesconto * 12}
+          </p>
+          <p>
+            <span className='text-warning fw-bold'>Tipo cliente: </span>
+            {coor.tipoCliente}
+          </p>
+          <Button 
+            className='fw-bold w-100' 
+            variant={`${coorMaiorDesconto ? 'warning':'light'}`} 
+            onClick={() => console.log(coor)}>
+            Contratar
+          </Button>
         </div>
       )
     })
@@ -44,17 +68,31 @@ export default function CompararCoorperativas(){
   },[])
 
   return(
-    <Container>
-      <div>
-        <h2>Dados do cliente</h2>
-        <p>Nome: {dadosCliente.nomeEmpresa}</p>
-        <p>Valor mensal: R$ {dadosCliente.valorMensal}</p>
-        <p>Valor anual: R$ {dadosCliente.valorMensal * 12}</p>
-        <p>Tipo cliente: {dadosCliente.tipoCliente}</p>
+    <Container fluid className='px-0'>
+      <div className='d-flex flex-column p-3 text-light' style={{backgroundColor: 'rgba(5, 5, 130, .8)'}}>
+        <h2 className='text-warning fw-bold align-self-center'>Dados do cliente</h2>
+        <p>
+          <span className='text-warning fw-bold'>Nome: </span> 
+          {dadosCliente.nomeEmpresa}
+        </p>
+        <p>
+          <span className='text-warning fw-bold'>Valor mensal: </span> 
+          R$ {dadosCliente.valorMensal}
+        </p>
+        <p>
+          <span className='text-warning fw-bold'>Valor anual: </span> 
+          R$ {dadosCliente.valorMensal * 12}
+        </p>
+        <p>
+          <span className='text-warning fw-bold'>Tipo cliente: </span> 
+          {dadosCliente.tipoCliente}
+        </p>
       </div>
-      <h2>Coorperativas</h2>
-      <div className='d-flex'>
-        {carregarCoorperativas}
+      <div className='mt-4 d-flex flex-column text-light p-3' style={{backgroundColor: 'rgba(5, 5, 130, .8)'}}>
+        <h2 className='text-warning fw-bold align-self-center mb-4'>Coorperativas</h2>
+        <div className='d-flex flex-wrap justify-content-around' style={{gap:'15px'}}>
+          {carregarCoorperativas}
+        </div>
       </div>
     </Container>
   )

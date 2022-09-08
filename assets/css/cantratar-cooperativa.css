@@ -1,0 +1,75 @@
+.cantratar-cooperativa {
+    text-align: center;
+    background: var(--cinza-bg);
+    padding: 3rem 10%;
+}
+
+.cantratar-cooperativa__minha-economia {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--preto);  
+}
+
+.cantratar-cooperativa__economia-anual {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--verde-claro);
+    margin-top: 0.3rem;
+}
+
+.cantratar-cooperativa__economia-mensal {
+    margin: 1.8rem 0 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--preto);  
+}
+
+.cantratar-cooperativa__aviso {
+    font-weight: 400;
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+}
+
+.cantratar-cooperativa__botao-contratar {
+    width: 28rem;
+    height: 2.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 3.1rem;
+    background: var(--verde-claro);
+    border: none;
+    cursor: pointer;
+}
+
+.cantratar-cooperativa__botao-contratar:hover {
+    box-shadow: 2px 2px 5px rgb(121, 121, 121);
+}
+
+.cantratar-cooperativa_modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.cantratar-cooperativa_modal-caixa {
+    background-color: white;
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--azul-escuro);
+}

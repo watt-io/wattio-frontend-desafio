@@ -26,8 +26,8 @@ export default function Home(){
       <Container fluid className='px-0 text-justify d-flex justify-content-center' style={{backgroundColor: 'rgba(5, 5, 130, .8)'}}>
         <Container className='px-0 m-0'>
           <div className='text-light p-2 px-sm-4'>
-            <div className='d-flex flex-column'>
-              <h1 className='align-self-center'>O que são Coorperativas de Energia ?</h1>
+            <div className='d-flex flex-column mt-3'>
+              <h1 className='align-self-center'>O que são <span className='text-warning'>Coorperativas de Energia</span> ?</h1>
               <p>
                 No Brasil já é possível gerar a própria energia, deixando de comprar das distribuidoras tradicionais como CEMIG, Energia, CPFL, etc.
               </p>
@@ -52,11 +52,11 @@ export default function Home(){
               </p>
               <p>É ai que entramos !</p>
               <p>
-                A <span className='text-warning fw-bold'>"Marketplace de Energia"</span> surgiu com o objetivo de criar a ponte entre clientes e coorperativas de energias, dessa maneira o cliente só se preocupa em localizar a coorperativa que atende as suas necessidades e o processo de contratação fica sobre nossa responsabilidade.
+                A <span className='text-warning fw-bold'>Marketplace de Energia</span> surgiu com o objetivo de criar a ponte entre clientes e coorperativas de energias, dessa maneira o cliente só se preocupa em localizar a coorperativa que atende as suas necessidades e o processo de contratação fica sobre nossa responsabilidade.
               </p>
             </div>
-            <div className='d-flex flex-column'>
-              <h2 className='align-self-center'>Como usar a <span className='text-warning'>"Marketplace de Energia"</span> ?</h2>
+            <div className='d-flex flex-column mt-3'>
+              <h2 className='align-self-center'>Como usar a <span className='text-warning'>Marketplace de Energia</span> ?</h2>
               <div className='d-flex flex-column'>
                 <p>Basta preencher seus dados corretamente nos campos abaixo, dessa maneira será feito a busca de coorperativas cadastradas na plataforma <span className='text-warning fw-bold'>"Marketplace de Energia"</span>.</p>
                 <p>Finalizado a busca você será redirecionado para uma nova página que mostrará quais coorperativas corresponderam com suas necessidades.</p>

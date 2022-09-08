@@ -45,7 +45,7 @@ export default function Home(){
               <p>
               <span className='text-warning fw-bold'>Já existe uma maneira:</span> através das <span className='text-warning fw-bold'>Cooperativas de Energia.</span></p>
               <p>
-                As <span className='text-warning fw-bold'>Cooperativas de Energia.</span> são empresas que compram energia excedente de usinas e outras casas/empresas com sistemas de geração; e vendem para consumidores a <span className='text-warning fw-bold'>preços mais baixos</span> que os das distribuidoras tradicionais.
+                As <span className='text-warning fw-bold'>Cooperativas de Energia</span> são empresas que compram energia excedente de usinas e outras casas/empresas com sistemas de geração; e vendem para consumidores a <span className='text-warning fw-bold'>preços mais baixos</span> que os das distribuidoras tradicionais.
               </p>
               <p>
                 Porém como este é um mercado muito novo, os consumidores ainda não possuem muita informação a respeito de quem são as empresas que se denominam <span className='text-warning fw-bold'>Cooperativas de Energia</span> e o que elas fazem.

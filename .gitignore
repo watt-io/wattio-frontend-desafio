@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+yarn.lock
+.DS_Store
+
+.cache/
+.pnp.js
+.log
+
+/dist

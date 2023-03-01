@@ -1,25 +1,4 @@
-O Desafio Frontend Wattio é um projeto que busca fazer a conexão entre as ofertas das Cooperativas que vendem energia e as demandas dos Clientes.
-
-<details>
-<summary><strong>Como rodar</strong></summary><br />
-
-**Dependências:**
-
-- Dentro da pasta ./desafio_frontend rode o comando `npm install` para instalar as dependências do projeto.
-
-**Start up:**
-
-- Com as dependências baixadas rode o comando `npm start` para iniciar a aplicação, caso tudo de certo ela estará disponivel na rota `http://localhost:3000`.
-
-</details>
-
-<details>
-<summary><strong>Mock API</strong></summary><br />
-
-**Para o desenvolvimento do projeto utilizei o seguinte mock de API:**
-
-```
-[
+const mockAPI = [
   {
     name: "EnerFacil",
     imgLink:
@@ -116,8 +95,6 @@ O Desafio Frontend Wattio é um projeto que busca fazer a conexão entre as ofer
     maxValue: 100000,
     discount: 25,
   },
-]
+];
 
-```
-
-</details>
+export default mockAPI;

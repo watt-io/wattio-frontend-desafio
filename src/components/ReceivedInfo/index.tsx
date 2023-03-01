@@ -2,13 +2,16 @@ import Text from "../../styles/Typography";
 import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
 import PersonIcon from "@mui/icons-material/Person";
 import BusinessIcon from "@mui/icons-material/Business";
-import Chip from "@mui/material/Chip";
+import SearchIcon from "@mui/icons-material/Search";
 import OptionsCard from "../OptionsCard";
 import OptionsSlider from "../OptionsSlider";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import FilledInput from "@mui/material/FilledInput";
+import StyledLink from "../../styles/components/Link";
 import { StyledReceivedInfo } from "./style";
 import { useMainContext } from "../../contexts/ContextApp";
 import { formatCurrency } from "../../services/support";
-import { Link } from "react-router-dom";
 
 const ReceivedInfo = () => {
   const { personEntries } = useMainContext();
@@ -16,32 +19,39 @@ const ReceivedInfo = () => {
 
   return (
     <StyledReceivedInfo>
-      <div>
-        <ScreenSearchDesktopIcon fontSize="large" />
+      <div className="received__info--header">
         <Text tag="h2" fontSize="text2">
           Encontre as melhores ofertas das nossas coperativas.
         </Text>
       </div>
 
       <form onSubmit={(e) => e.preventDefault()}>
-        <div>
+        <div className="received__info--card">
           <OptionsCard IconComponent={PersonIcon} name="natural" />
           <OptionsCard IconComponent={BusinessIcon} name="juridical" />
         </div>
-        <div>
-          <Text fontSize="text3">
-            O valor médio mensal da minha conta de energia é:
-          </Text>
-          <Chip label={formatCurrency(energyValue)} />
+        <Text fontSize="text3">
+          O valor médio mensal da minha conta de energia é:
+        </Text>
+        <FormControl variant="filled" sx={{ gap: "0.5rem" }}>
+          <InputLabel htmlFor="filled-adornment-amount">
+            Digite o valor abaixo ou mova a barra.
+          </InputLabel>
+          <FilledInput
+            id="filled-adornment-amount"
+            value={formatCurrency(energyValue)}
+          />
           {person == "natural" && (
             <OptionsSlider min={1000} max={100000} defaultValue={1000} />
           )}
           {person == "juridical" && (
             <OptionsSlider min={100000} max={1000000} defaultValue={100000} />
           )}
-        </div>
-
-        <Link to={"/ofertas"}>Buscar ofertas</Link>
+        </FormControl>
+        <StyledLink to={"/ofertas"}>
+          <Text color="white">Buscar Ofertas</Text>
+          <SearchIcon />
+        </StyledLink>
       </form>
     </StyledReceivedInfo>
   );

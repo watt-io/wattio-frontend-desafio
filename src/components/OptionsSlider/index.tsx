@@ -15,8 +15,10 @@ const OptionsSlider = ({ min, max, defaultValue }: IOptionsSliderProps) => {
       }
       aria-label="Default"
       defaultValue={defaultValue}
+      size="small"
       min={min}
       max={max}
+      step={250}
     />
   );
 };

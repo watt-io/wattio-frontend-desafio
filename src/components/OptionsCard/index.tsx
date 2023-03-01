@@ -1,13 +1,16 @@
 import StyledOptionsCard from "./style";
 import { IOptionsCardProps } from "../../interfaces/Home";
 import { useMainContext } from "../../contexts/ContextApp";
-import { handleEnergyValue } from "../../services/support";
+import { formatCurrency, handleEnergyValue } from "../../services/support";
+import Text from "../../styles/Typography";
 
 const OptionsCard = ({ name, IconComponent }: IOptionsCardProps) => {
   const { personEntries, setPersonEntries } = useMainContext();
   const { person } = personEntries;
 
   const handleCardOptions = () => {
+    if (person == name) return;
+
     setPersonEntries({
       energyValue: handleEnergyValue(name),
       person: name,
@@ -17,7 +20,11 @@ const OptionsCard = ({ name, IconComponent }: IOptionsCardProps) => {
   return (
     <StyledOptionsCard colorized={name == person} onClick={handleCardOptions}>
       <IconComponent />
-      {`Pessoa ${name == "juridical" ? "Jurídica" : "Física"}`}
+      <Text>{`Pessoa ${name == "juridical" ? "Jurídica" : "Física"}`}</Text>
+      <Text fontSize="text4" color="grey4">
+        Valor Mínimo:{" "}
+        {name == "juridical" ? formatCurrency(100000) : formatCurrency(1000)}
+      </Text>
     </StyledOptionsCard>
   );
 };

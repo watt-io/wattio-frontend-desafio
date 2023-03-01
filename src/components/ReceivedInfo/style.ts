@@ -5,13 +5,13 @@ const StyledReceivedInfo = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   gap: 2rem;
 
-  div {
-    width: 75%;
+  .received__info--header,
+  .received__info--card {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
   }
@@ -19,12 +19,18 @@ const StyledReceivedInfo = styled.section`
   form {
     display: flex;
     flex-direction: column;
-
-    :nth-child(2) {
-      align-items: center;
-    }
-
+    width: 100%;
     gap: 2rem;
+
+    a {
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .received__info--card {
+      flex-wrap: wrap;
+    }
   }
 `;
 

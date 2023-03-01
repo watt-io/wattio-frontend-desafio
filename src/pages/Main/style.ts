@@ -6,13 +6,7 @@ const StyledMainContainer = styled.main`
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  height: 100vh;
-  padding: 0 1rem;
-  background: linear-gradient(
-    45deg,
-    var(--color-primary) 0,
-    var(--color-negative) 110%
-  );
+  padding: 2rem 0.8rem;
 `;
 
 const StyledLogo = styled.header`
@@ -23,6 +17,7 @@ const StyledLogo = styled.header`
 
   img {
     width: 90px;
+    filter: brightness(120%);
   }
 
   div {
@@ -36,7 +31,7 @@ const StyledMainIntern = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 490px;
+  max-width: 440px;
   width: 100%;
   padding: 2rem;
   border-radius: 6px;

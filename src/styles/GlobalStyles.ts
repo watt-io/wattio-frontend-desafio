@@ -7,9 +7,10 @@ const GlobalStyles = createGlobalStyle`
     --color-primary: rgb(0, 4, 202);
     --color-secondary: rgba(0, 121, 163, 1);
     --color-negative: #00ff8c;
+    --color-blue-1: #2196f3;
     //Grey Scale Palette
     --color-white: #ffffff;
-    --color-grey-1: #1C1C1C;
+    --color-grey-1: #121212;
     --color-grey-2: #363636;
     --color-grey-3: #4F4F4F;
     --color-grey-4: #808080;
@@ -32,7 +33,6 @@ const GlobalStyles = createGlobalStyle`
     figure, figcaption, footer, header, hgroup, 
     menu, nav, output, ruby, section, summary,
     time, mark, audio, video, input, button, select{
-        box-sizing: border-box;
         background: none;
         margin: 0;
         padding: 0;
@@ -51,8 +51,12 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         line-height: 1;
-        height: 100vh;
+        min-height: 100vh;
+        background-color: var(--color-grey-1);
     }
 
     ol, ul, li {
@@ -69,6 +73,10 @@ const GlobalStyles = createGlobalStyle`
         content: none;
     }
 
+    * {
+        box-sizing: border-box;
+    }
+
     table {
         border-collapse: collapse;
         border-spacing: 0;
@@ -78,6 +86,21 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         border-radius: 4px;
     }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+ 
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+   
 `;
 
 export default GlobalStyles;

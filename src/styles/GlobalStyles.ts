@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
     //Primary Palette
     --color-primary: rgb(0, 4, 202);
     --color-secondary: rgba(0, 121, 163, 1);
-    --color-negative: rgba(0, 182, 142, 1);
+    --color-negative: #00ff8c;
     //Grey Scale Palette
     --color-white: #ffffff;
     --color-grey-1: #1C1C1C;

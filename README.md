@@ -36,6 +36,8 @@ npm install
 npm run dev
 ```
 
+link padrão para acessar no navegador http://127.0.0.1:5173/
+
 ## :handshake: Colaboradores
 
 Guilherme Vaz

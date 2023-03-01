@@ -1,0 +1,62 @@
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.home {
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+
+  padding: 2rem 3rem;
+}
+
+.searchSection {
+  width: 70%;
+  margin: 2rem 0 3.5rem;
+  padding: 2rem 2.6rem;
+
+  border: 1px solid #808080;
+  border-radius: 1rem;
+
+  gap: 1rem;
+
+  text-align: center;
+}
+.searchSection span {
+  font-size: 2rem;
+}
+
+.searchSection h2 {
+  font-size: 5rem;
+}
+
+.searchSection input {
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.searchSection input[type="number"] {
+  padding: 0.5rem 1.6rem;
+  cursor: text;
+}
+
+.itenRadio {
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: #808080;
+}
+
+.labelRadio {
+  margin-left: 2rem;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}

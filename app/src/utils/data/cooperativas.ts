@@ -1,0 +1,58 @@
+import { ICooperativa } from '@/interfaces/ICooperativa';
+
+export const cooperativas: ICooperativa[] = [
+    {
+        id: 1,
+        nome: 'EnerBásico',
+        valorMinimoMensal: 0.0,
+        valorMaximoMensal: 1500.0,
+        desconto: 0.1,
+        contratoPF: true,
+        contratoPJ: false,
+    },
+    {
+        id: 2,
+        nome: 'EnerPopular',
+        valorMinimoMensal: 0.0,
+        valorMaximoMensal: 2500.0,
+        desconto: 0.15,
+        contratoPF: true,
+        contratoPJ: false,
+    },
+    {
+        id: 3,
+        nome: 'EnerFácil',
+        valorMinimoMensal: 1000.0,
+        valorMaximoMensal: 40000.0,
+        desconto: 0.18,
+        contratoPF: true,
+        contratoPJ: true,
+    },
+    {
+        id: 4,
+        nome: 'EnerPro',
+        valorMinimoMensal: 2000.0,
+        valorMaximoMensal: 10000.0,
+        desconto: 0.2,
+        contratoPF: false,
+        contratoPJ: true,
+    },
+    {
+        id: 5,
+        nome: 'EnerLimpa',
+        valorMinimoMensal: 10000.0,
+        valorMaximoMensal: 80000.0,
+        desconto: 0.25,
+        contratoPF: true,
+        contratoPJ: true,
+    },
+    {
+        id: 6,
+        nome: 'EnerGrande',
+        valorMinimoMensal: 40000.0,
+        valorMaximoMensal: 100000.0,
+        desconto: 0.3,
+        contratoPF: false,
+        contratoPJ: true,
+    },
+];

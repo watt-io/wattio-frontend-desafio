@@ -42,6 +42,7 @@ const GlobalStyles = createGlobalStyle`
         outline: none;
         font-family: 'Roboto', sans-serif;
         text-decoration: none;
+        color: inherit
     }
 
     article, aside, details, figcaption, figure, 

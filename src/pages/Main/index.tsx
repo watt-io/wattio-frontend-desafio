@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
-import { StyledLogo, StyledMainContainer, StyledMainIntern } from "./style";
 import Logo from "../../assets/inowatt-icon.png";
 import Text from "../../styles/Typography";
+import { Outlet } from "react-router-dom";
+import { StyledLogo, StyledMainContainer, StyledMainIntern } from "./style";
 
 const Main = () => {
   return (

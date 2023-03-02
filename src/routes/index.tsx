@@ -1,8 +1,8 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import Main from "../pages/Main";
 import ReceivedInfo from "../components/ReceivedInfo";
 import ReceivedOffers from "../components/ReceivedOffers";
 import ReceivedProposal from "../components/ReceivedProposal";
-import Main from "../pages/Main";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 const RoutesApp = () => {
   return (

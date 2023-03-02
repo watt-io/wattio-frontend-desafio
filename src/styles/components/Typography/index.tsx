@@ -1,6 +1,5 @@
 import { ITitleComponent } from "../../../interfaces/Styles";
 
-
 const TitleComponent = ({ tag, children, className }: ITitleComponent) => {
   return (
     <>

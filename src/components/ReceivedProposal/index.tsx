@@ -2,15 +2,25 @@ import Text from "../../styles/Typography";
 import StyledReceivedProposal from "./style";
 import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import HomeIcon from "@mui/icons-material/Home";
 import { LoadingButton } from "@mui/lab";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useMainContext } from "../../contexts/ContextApp";
+import {
+  StyledNavigationHomeLink,
+  StyledNavigationLink,
+} from "../../styles/components/Link";
 
 const ReceivedProposal = () => {
-  const { sendEmail } = useMainContext();
+  const { sendEmail, modalData, setModalData } = useMainContext();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const { loading, setLoading} = useMainContext();
+  const { loading, setLoading } = useMainContext();
+
+  useEffect(() => {
+    setModalData({ ...modalData, open: false });
+  }, []);
 
   const handleEmail = (e: ChangeEvent<HTMLInputElement>) =>
     setEmail(e.target.value);
@@ -36,6 +46,12 @@ const ReceivedProposal = () => {
 
   return (
     <StyledReceivedProposal>
+      <StyledNavigationLink to={"/ofertas"}>
+        <ArrowBackIcon />
+      </StyledNavigationLink>
+      <StyledNavigationHomeLink to={"/"}>
+        <HomeIcon />
+      </StyledNavigationHomeLink>
       <Text tag="h2" fontSize="title3">
         Contato
       </Text>

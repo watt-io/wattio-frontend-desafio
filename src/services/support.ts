@@ -13,10 +13,10 @@ const handleDiscount = (
   discountJuridical: number
 ) => {
   if (person == "natural") {
-    return discountNatural * 100;
+    return Math.round(discountNatural * 100);
   }
 
-  return discountJuridical * 100;
+  return Math.round(discountJuridical * 100);
 };
 
 export { formatCurrency, handleEnergyValue, handleDiscount };

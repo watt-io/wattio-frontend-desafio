@@ -16,4 +16,16 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export default StyledLink;
+const StyledNavigationLink = styled(Link)`
+  position: absolute;
+  left: 15px;
+  top: 15px;
+`;
+
+const StyledNavigationHomeLink = styled(Link)`
+  position: absolute;
+  right: 15px;
+  top: 15px;
+`;
+
+export { StyledLink, StyledNavigationLink, StyledNavigationHomeLink };

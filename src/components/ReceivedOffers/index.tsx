@@ -4,10 +4,12 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ModalEconomy from "../ModalEconomy";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { handleDiscount } from "../../services/support";
 import { useEffect } from "react";
 import { useMainContext } from "../../contexts/ContextApp";
 import { StyledCard, StyledOffersList, StyledReceivedOffers } from "./style";
+import { StyledNavigationLink } from "../../styles/components/Link";
 
 const ReceivedOffers = () => {
   const {
@@ -24,10 +26,17 @@ const ReceivedOffers = () => {
 
   return (
     <StyledReceivedOffers>
+      <StyledNavigationLink to={"/"}>
+        <ArrowBackIcon />
+      </StyledNavigationLink>
       <Text>Ofertas encontradas:</Text>
       <Text fontSize="text3">
         Veja as ofertas disponíveis e descubra quanto você pode economizar.
         Contrate agora um dos nossos pacotes e comece a economizar hoje mesmo!
+      </Text>
+      <Text fontSize="text4" color="grey4">
+        * Se os valores de busca não forem informados, a pesquisa será realizada
+        considerando uma pessoa física com média de R$ 1000.00,00 em gastos.
       </Text>
       <StyledOffersList>
         {offers?.map(

@@ -7,7 +7,7 @@ import OptionsSlider from "../OptionsSlider";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import FilledInput from "@mui/material/FilledInput";
-import StyledLink from "../../styles/components/Link";
+import { StyledLink } from "../../styles/components/Link";
 import { StyledReceivedInfo } from "./style";
 import { useMainContext } from "../../contexts/ContextApp";
 import { formatCurrency } from "../../services/support";

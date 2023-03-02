@@ -4,12 +4,15 @@ import RoutesApp from "./routes";
 import GlobalStyles from "./styles/GlobalStyles";
 import { BrowserRouter } from "react-router-dom";
 import { MainContextProvider } from "./contexts/ContextApp";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <GlobalStyles />
       <MainContextProvider>
+        <ToastContainer />
         <RoutesApp />
       </MainContextProvider>
     </BrowserRouter>

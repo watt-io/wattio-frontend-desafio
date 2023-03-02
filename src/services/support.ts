@@ -7,4 +7,16 @@ const handleEnergyValue = (person: string): number => {
   return person == "natural" ? 1000 : 100000;
 };
 
-export { formatCurrency, handleEnergyValue };
+const handleDiscount = (
+  person: string,
+  discountNatural: number,
+  discountJuridical: number
+) => {
+  if (person == "natural") {
+    return discountNatural * 100;
+  }
+
+  return discountJuridical * 100;
+};
+
+export { formatCurrency, handleEnergyValue, handleDiscount };

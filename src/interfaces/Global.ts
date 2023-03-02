@@ -4,6 +4,7 @@ export interface IChildrenNode {
 
 export interface IDatabase {
   name: string;
+  description: string;
   minValue: number;
   maxValue: number;
   discountNatural: number | null;

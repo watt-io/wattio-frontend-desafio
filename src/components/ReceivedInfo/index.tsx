@@ -1,5 +1,4 @@
 import Text from "../../styles/Typography";
-import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
 import PersonIcon from "@mui/icons-material/Person";
 import BusinessIcon from "@mui/icons-material/Business";
 import SearchIcon from "@mui/icons-material/Search";
@@ -35,11 +34,12 @@ const ReceivedInfo = () => {
         </Text>
         <FormControl variant="filled" sx={{ gap: "0.5rem" }}>
           <InputLabel htmlFor="filled-adornment-amount">
-            Digite o valor abaixo ou mova a barra.
+            Mova a barra para definir a média da sua conta de energia:
           </InputLabel>
           <FilledInput
             id="filled-adornment-amount"
             value={formatCurrency(energyValue)}
+            onChange={() => formatCurrency}
           />
           {person == "natural" && (
             <OptionsSlider min={1000} max={100000} defaultValue={1000} />

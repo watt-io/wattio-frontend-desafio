@@ -18,7 +18,7 @@ const OptionsSlider = ({ min, max, defaultValue }: IOptionsSliderProps) => {
       size="small"
       min={min}
       max={max}
-      step={250}
+      step={50}
     />
   );
 };

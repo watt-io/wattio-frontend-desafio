@@ -25,12 +25,16 @@
 - Feedback pro usuário com toastify.
 
 ## 📱 Preview 
+<p align="center"> - <a target="_blank" href="https://frontend-watt-io-gabriel-malafaia.vercel.app/">Link do projeto</a> </p>
 
 ![main](https://i.imgur.com/0VJnjv9.png)
 
-![Kenziehub1](https://i.imgur.com/10xVHfl.png)
+![Inowatt1](https://i.imgur.com/10xVHfl.png)
 
-![KenzieHub2](https://i.imgur.com/5dMJkto.png)
+<div align="center">
+  <img src="https://i.imgur.com/5dMJkto.png">
+</div>
+
 
 ## Vamos nos conectar?
 

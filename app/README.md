@@ -2,6 +2,8 @@
 
 Desafio Watt.IO Front
 
+**[DEMO](https://desafio-wattio-andre-cabral.vercel.app/)** - Acesse a demo do projeto, atualmente hospedada na Vercel
+
 ## Installation
 
 ```bash

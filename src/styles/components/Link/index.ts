@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.button`
   width: 100%;
   display: flex;
   align-items: center;

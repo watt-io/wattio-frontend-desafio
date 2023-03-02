@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import ModalEconomy from "../ModalEconomy";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { handleDiscount } from "../../services/support";
-import { useEffect } from "react";
 import { useMainContext } from "../../contexts/ContextApp";
 import { StyledCard, StyledOffersList, StyledReceivedOffers } from "./style";
 import { StyledNavigationLink } from "../../styles/components/Link";
@@ -14,15 +13,12 @@ import { StyledNavigationLink } from "../../styles/components/Link";
 const ReceivedOffers = () => {
   const {
     personEntries,
-    handleSearchOffers,
     offers,
     modalData,
     setModalData,
     handleOpenModal,
   } = useMainContext();
   const { person } = personEntries;
-
-  useEffect(() => handleSearchOffers, []);
 
   return (
     <StyledReceivedOffers>

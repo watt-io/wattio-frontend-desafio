@@ -2,7 +2,7 @@ import data from "../database";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { IChildrenNode, IDatabase } from "../interfaces/Global";
 import { IModalCompanyProps, IModalEconomyState } from "../interfaces/Modal";
 import { handleDiscount } from "../services/support";
@@ -29,15 +29,18 @@ const MainContextProvider = ({ children }: IChildrenNode) => {
     person: "natural",
   };
 
-  const [personEntries, setPersonEntries] = useState<IPersonEntries>(personEntriesDefault);
-  const [modalData, setModalData] = useState<IModalEconomyState>(modalDataDefault);
+  const [personEntries, setPersonEntries] =
+    useState<IPersonEntries>(personEntriesDefault);
+  const [modalData, setModalData] =
+    useState<IModalEconomyState>(modalDataDefault);
   const [offers, setOffers] = useState<IDatabase[]>();
   const [loading, setLoading] = useState(false);
-  
+
   const navigate = useNavigate();
-  
+
   const handleSearchOffers = () => {
     const { energyValue, person } = personEntries;
+
     const Offers = data.filter(({ maxValue, minValue, models }) => {
       return (
         energyValue >= minValue &&

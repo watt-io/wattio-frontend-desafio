@@ -11,10 +11,17 @@ import { StyledLink } from "../../styles/components/Link";
 import { StyledReceivedInfo } from "./style";
 import { useMainContext } from "../../contexts/ContextApp";
 import { formatCurrency } from "../../services/support";
+import { useNavigate } from "react-router-dom";
 
 const ReceivedInfo = () => {
-  const { personEntries } = useMainContext();
+  const { personEntries, handleSearchOffers } = useMainContext();
   const { energyValue, person } = personEntries;
+  const navigate = useNavigate();
+
+  const renderOffers = () => {
+    handleSearchOffers();
+    navigate("/ofertas");
+  };
 
   return (
     <StyledReceivedInfo>
@@ -48,7 +55,7 @@ const ReceivedInfo = () => {
             <OptionsSlider min={100000} max={1000000} defaultValue={100000} />
           )}
         </FormControl>
-        <StyledLink to={"/ofertas"}>
+        <StyledLink onClick={renderOffers}>
           <Text color="white">Buscar Ofertas</Text>
           <SearchIcon />
         </StyledLink>

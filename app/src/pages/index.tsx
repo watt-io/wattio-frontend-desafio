@@ -1,9 +1,9 @@
+import Head from 'next/head';
 import { InputDinheiro } from '@/components/form/InputMask';
 import { IModalSimplesRef, ModalSimples } from '@/components/modal/ModalSimples';
 import { regexDinheiro } from '@/components/text/regex';
 import { ICooperativa } from '@/interfaces/ICooperativa';
 import { cooperativas } from '@/utils/data/cooperativas';
-import Head from 'next/head';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
@@ -33,17 +33,13 @@ export default function Home() {
     const mediaEconomia = () => {
         if (!cooperativaSelecionada) return null;
 
-        const v = Number(valor.replace('R$', '').replace('.', '').replace(',', '.'));
-
         return {
-            anual: v * cooperativaSelecionada.desconto * 12,
-            mensal: v * cooperativaSelecionada.desconto,
+            anual: valorNumber * cooperativaSelecionada.desconto * 12,
+            mensal: valorNumber * cooperativaSelecionada.desconto,
         };
     };
 
     const modalRef = useRef<IModalSimplesRef>(null);
-
-    console.log(valorNumber);
 
     return (
         <>

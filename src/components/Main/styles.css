@@ -1,0 +1,82 @@
+.main_container {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #F8F8F8;
+}
+
+.main_describe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 60vw;
+}
+
+.main_describe h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+.main_describe p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+.main_calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.main_calculator button{
+  width: 441px;
+  height: 46px;
+  background: #005C53;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+.main_calculator_input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3;
+}
+
+.main_calculator_input input{
+  width: 374px;
+  height: 64px;
+  left: 564px;
+  top: 458px;
+
+  border: 1px solid #BED1DD;
+  border-radius: 50px;
+}
+
+.main_calculator_input input[type=text]{
+  color: #042940;
+  font-size: 46px;
+  font-weight: bold;
+  text-align: center;
+}
+.main_calculator_input label{
+  color: #042940;
+  font-size: 36px;
+  font-weight: 800;
+  align-items: center;
+  align-items: center;
+}

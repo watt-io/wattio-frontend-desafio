@@ -1,0 +1,38 @@
+.cooperative_container{
+  width: 100vw;
+  height: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.cooperative_section{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cooperative_section button{
+  align-items: center;
+  justify-self: center;
+  width: 441px;
+  height: 46px;
+  background: #005C53;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cooperative_item_container{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}

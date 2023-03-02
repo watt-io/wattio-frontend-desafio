@@ -1,0 +1,15 @@
+.header_container{
+  display: flex;
+  justify-content: center;
+  width: 100vh;
+  height: 130px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header_items{
+  display: flex;
+  flex: row;
+  align-items: center;
+  gap: 10px;
+}

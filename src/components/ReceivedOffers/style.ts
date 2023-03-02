@@ -24,7 +24,7 @@ const StyledOffersList = styled.div`
 const StyledCard = styled(Card)`
   display: flex;
   flex-direction: column;
-  min-width: 280px;
+  min-width: 230px;
 
   button {
     align-self: flex-end;

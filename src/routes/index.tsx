@@ -10,7 +10,7 @@ const RoutesApp = () => {
       <Route path="/" element={<Main />}>
         <Route path="/" element={<ReceivedInfo />} />
         <Route path="/ofertas" element={<ReceivedOffers />} />
-        <Route path="/propostas" element={<ReceivedProposal />} />
+        <Route path="/contrato" element={<ReceivedProposal />} />
       </Route>
       <Route path="*" element={<Navigate to={"/"} />} />
     </Routes>

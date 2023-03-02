@@ -3,17 +3,25 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import ModalEconomy from "../ModalEconomy";
 import { handleDiscount } from "../../services/support";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useMainContext } from "../../contexts/ContextApp";
 import { StyledCard, StyledOffersList, StyledReceivedOffers } from "./style";
 
 const ReceivedOffers = () => {
-  const { personEntries, handleSearchOffers, offers } = useMainContext();
+  const {
+    personEntries,
+    handleSearchOffers,
+    offers,
+    modalData,
+    setModalData,
+    handleOpenModal,
+  } = useMainContext();
   const { person } = personEntries;
-  const [selectedValue, setSelectedValue] = useState("EnerFácil");
 
   useEffect(() => handleSearchOffers, []);
+
   return (
     <StyledReceivedOffers>
       <Text>Ofertas encontradas:</Text>
@@ -43,7 +51,19 @@ const ReceivedOffers = () => {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button onClick={() => setSelectedValue(name)} size="small">
+                  <Button
+                    onClick={() =>
+                      handleOpenModal(
+                        {
+                          name,
+                          discountNatural: discountNatural || 0,
+                          discountJuridical: discountJuridical || 0,
+                        },
+                        personEntries
+                      )
+                    }
+                    size="small"
+                  >
                     Calcular Economia
                   </Button>
                 </CardActions>
@@ -52,6 +72,7 @@ const ReceivedOffers = () => {
           }
         )}
       </StyledOffersList>
+      <ModalEconomy state={modalData} setState={setModalData} />
     </StyledReceivedOffers>
   );
 };

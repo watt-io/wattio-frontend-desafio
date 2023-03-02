@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/ofertas", "destination": "/routes/ofertas" },
+    { "source": "/contrato", "destination": "/routes/contrato" },
+    { "source": "/:path*", "destination": "/index.html" }
+  ]
+}

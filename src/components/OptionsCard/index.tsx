@@ -1,8 +1,8 @@
 import StyledOptionsCard from "./style";
+import Text from "../../styles/Typography";
 import { IOptionsCardProps } from "../../interfaces/Home";
 import { useMainContext } from "../../contexts/ContextApp";
 import { formatCurrency, handleEnergyValue } from "../../services/support";
-import Text from "../../styles/Typography";
 
 const OptionsCard = ({ name, IconComponent }: IOptionsCardProps) => {
   const { personEntries, setPersonEntries } = useMainContext();

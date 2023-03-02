@@ -22,6 +22,8 @@ const StyledOptionsCard = styled.button`
       return css`
         box-shadow: 1px 1px 1px 2px var(--color-blue-1);
         opacity: 1;
+        animation: pulse;
+        animation-duration: 0.3s;
       `;
     }
   }}

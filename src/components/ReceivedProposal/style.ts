@@ -8,6 +8,8 @@ const StyledReceivedProposal = styled.section`
   gap: 2rem;
   max-width: 526px;
   width: 100%;
+  animation: fadeIn;
+  animation-duration: 0.4s;
 
   form {
     width: 100%;

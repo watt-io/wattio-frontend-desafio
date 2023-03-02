@@ -9,6 +9,8 @@ const StyledReceivedOffers = styled.section`
   gap: 2rem;
   max-width: 960px;
   width: 100%;
+  animation: fadeIn;
+  animation-duration: 0.4s;
 `;
 
 const StyledOffersList = styled.div`

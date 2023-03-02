@@ -6,6 +6,8 @@ const StyledReceivedInfo = styled.section`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  animation: fadeIn;
+  animation-duration: 0.4s;
 
   .received__info--header,
   .received__info--card {

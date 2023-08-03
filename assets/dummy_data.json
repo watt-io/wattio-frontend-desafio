@@ -1,0 +1,44 @@
+{
+    "company": [
+        {
+            "nome": "EnerFácil",
+            "valor_minimo_mensal": 1000,
+            "valor_maximo_mensal": 40000,
+            "desconto": 0.2,
+            "forma_contratacao": "PJ",
+            "plano_contratacao": "Mensal",
+            "avaliacoes": 3.8,
+            "prazo_de_pagamento": 15
+        },
+        {
+            "nome": "EnerLimpa",
+            "valor_minimo_mensal": 10000,
+            "valor_maximo_mensal": 80000,
+            "forma_contratacao": "PJ",
+            "desconto": 0.25,
+            "plano_contratacao": "Mensal",
+            "avaliacoes": 3.5,
+            "prazo_de_pagamento": 15
+        },
+        {
+            "nome": "EnerGrande",
+            "valor_minimo_mensal": 40000,
+            "valor_maximo_mensal": 100000,
+            "forma_contratacao": "CLT",
+            "desconto": 0.3,
+            "plano_contratacao": "Anual",
+            "avaliacoes": 4.8,
+            "prazo_de_pagamento": 10
+        },
+        {
+            "nome": "EnerGigante",
+            "valor_minimo_mensal": 60000,
+            "valor_maximo_mensal": 120000,
+            "forma_contratacao": "CLT",
+            "desconto": 0.35,
+            "plano_contratacao": "Trimestre",
+            "avaliacoes": 4.7,
+            "prazo_de_pagamento": 10
+        }
+    ]
+}

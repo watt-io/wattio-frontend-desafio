@@ -37,6 +37,13 @@ class CustomSliderWithTextFieldWidgetState
             textAlign: TextAlign.center,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             controller: controller,
+            inputFormatters: [
+              CurrencyTextInputFormatter(
+                locale: 'pt',
+                symbol: "R\$",
+                decimalDigits: 2,
+              )
+            ],
             keyboardType: TextInputType.number,
             decoration: const InputDecoration(
               labelText: 'Valor',

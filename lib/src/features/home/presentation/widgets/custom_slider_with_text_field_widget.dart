@@ -26,6 +26,12 @@ class CustomSliderWithTextFieldWidgetState
     controller = TextEditingController(text: "R\$ 1.000,00");
   }
 
+  double parseCurrencyToDouble(String text) {
+    final cleanText =
+        text.replaceAll(RegExp(r'[^\d,]'), '').replaceAll(',', '.');
+    return double.parse(cleanText);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -51,7 +57,8 @@ class CustomSliderWithTextFieldWidgetState
             ),
             onChanged: (text) {
               setState(() {
-                sliderValue = double.tryParse(text) ?? 1000;
+                sliderValue = parseCurrencyToDouble(text);
+                widget.onValueChanged(sliderValue);
                 if (sliderValue >= 100000) {
                   sliderValue = 100000;
                 }

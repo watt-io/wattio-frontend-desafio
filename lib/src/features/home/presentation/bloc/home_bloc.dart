@@ -34,7 +34,10 @@ class HomeBloc extends Bloc {
       dispatchState(BlocErrorState(l.message));
     }, (r) {
       if (r.isEmpty) {
-        showSnack(context, 'Insira o valor minimo de R\$ 1.000,00', null);
+        showSnack(
+            context,
+            'Insira o valor minimo de R\$ 1.000,00, E maximo de R\$ 100.000,00',
+            null);
       } else {
         dispatchState(BlocStableState(
             data: HomeStableData(listOffer: r, economyModel: null)));

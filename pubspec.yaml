@@ -1,0 +1,32 @@
+name: projeto_teste_wattio
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.1 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  
+  projeto_teste_wattio_dependencies:
+      #path: ../teste-dependencies-guilherme
+    git:
+      url: git@bitbucket.org:guiklisman/teste-dependencies-guilherme.git
+      ref: master
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:  
+    - assets/images/
+  uses-material-design: true
+

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +31,8 @@ class CustomSliderWithTextFieldWidgetState
   double parseCurrencyToDouble(String text) {
     final cleanText =
         text.replaceAll(RegExp(r'[^\d,]'), '').replaceAll(',', '.');
-    return double.parse(cleanText);
+
+    return double.tryParse(cleanText) ?? 0;
   }
 
   @override

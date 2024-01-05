@@ -1,0 +1,57 @@
+[{
+    "id":1,
+    "nome":"EnerFacil",
+    "desconto": 0.2,
+    "valorMin": 1000,
+    "valorMa": 40000,
+    "visao":"economia na ponta do lapis.",
+    "foto":"https:\/\/static.preparaenem.com\/2022\/06\/painel-solar.jpg"
+    
+},
+{
+    "id":2,
+    "nome":"EnerLimpa",
+    "desconto": 0.25,
+    "valorMin": 10000,
+    "valorMa": 80000,
+    "visao":"economia na ponta do lapis.",
+    "foto":"https:\/\/www.sescooprs.coop.br\/app\/uploads\/2022\/01\/coops-ufv-2-730x440.png"
+}, 
+{ 
+    "id":3, 
+    "nome":"EnerGrande",
+    "desconto": 0.3, 
+    "valorMin": 40000,
+    "valorMa": 100000,
+    "visao":"economia na ponta do lapis.",
+    "foto":"https:\/\/thegreenestpost.com\/wp-content\/uploads\/2022\/07\/energia-solar-e-a-terceira-maior-fonte-na-matriz-eletrica-brasileira.jpg"
+},
+{
+    "id":4,
+    "nome":"FontSolar",
+    "desconto": 0.2,
+    "valorMin": 1000,
+    "valorMa": 20000,
+    "visao":"economia na ponta do lapis.",
+    "foto":"https:\/\/www.nhssolar.com.br\/wp-content\/uploads\/2019\/04\/cooperativa.jpg"
+},
+{
+    "id":5,
+    "nome":"EnerMonte",
+    "desconto": 0.35,
+    "valorMin": 40000,
+    "valorMa": 100000,
+    "visao":"economia na ponta do lapis.",
+    "foto":"https:\/\/insolenergia.com.br\/site\/views\/data\/blog\/cooperativa-de-energia-solar-x-consorcio-de-energia-solar-image-1621432683.jpg"
+},
+{
+    "id":6,
+    "nome":"Solfacil",
+    "desconto": 0.3,
+    "valorMin": 3000,
+    "valorMa": 20000,
+    "visao":"economia na ponta do lapis.", 
+    "foto":"https:\/\/www.way2.com.br\/wp-content\/uploads\/2022\/05\/Img-Post-2-1024x397.png"
+}
+
+]

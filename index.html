@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thiago Terra">
+
+    <title>Marketplace de Energia</title>
+    <link rel="shortcut icon" href="./assets/img/favicon-marketplace-de-energia.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/cabecalho.css">
+    <link rel="stylesheet" href="./assets/css/busca-economica.css">
+    <link rel="stylesheet" href="./assets/css/rodape.css">
+    <link rel="stylesheet" href="./assets/css/resultado-busca.css">
+    <link rel="stylesheet" href="./assets/css/cantratar-cooperativa.css">
+    
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="" src="./assets/img/logo-marketplace-de-energia.png" alt="Logo da Marketplace de Energia">
+    </header>
+
+    <main>
+        <section class="busca-economica">
+            <article class="busca-economica__texto">
+                <h1 class="busca-economica__texto_titulo">Calcule a <strong>economia na conta</strong> de energia em sua casa ou empresa.</h1>
+
+                <p class="busca-economica__texto_explicacao">As Cooperativas de Energia são empresas que compram energia excedente de usinas e outras casas/empresas com sistemas de geração e vendem para consumidores a preços mais baixos que os das distribuidoras tradicionais.</p>
+                
+                <p class="busca-economica__texto_chamada">Encontre a <strong>melhor oferta</strong> entre as Cooperativas de Energia do Brasil e <strong>contrate agora!</strong></p>
+            </article>
+            <article class="busca-economica__calc">
+
+                <form id="form">
+                <label class="busca-economica__calc_label" for="valor-conta">Informe o valor médio mensal de sua conta de energia:</label>
+                <div class="busca-economica__calc_campo-valor">
+                    <p class="busca-economica__calc_simbolo-dinheiro">R$</p>
+                    <input class="busca-economica__calc_valor" name="valor-conta" type="text" placeholder="0,00" maxlength="9" required>
+                </div>
+
+                <button class="busca-economica__calc_botao-buscar">Buscar ofertas!</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="resultado-busca">
+                <label class="resultado-busca__selecionar-oferta">Selecione a Cooperativa com a oferta desejada:</label>
+                <p id="resultado-busca__sem-busca">Nada encontrado</p>
+                <div id="resultado-busca__cooperativas"></div>
+                <button class="resultado-busca__botao-calc-economia">Calcular economia</button>
+        </section>
+
+        <section class="cantratar-cooperativa">
+            <p class="cantratar-cooperativa__minha-economia">Sua economia anual será de até</p>
+            <p class="cantratar-cooperativa__economia-anual" id="resultado__calc_economia-anual">R$0,00</p>
+            <p class="cantratar-cooperativa__economia-mensal" id="resultado__calc_economia-mensal">Em médio R$ 0,00 por mês*</p>
+            <p class="cantratar-cooperativa__aviso">*Essa é apenas uma simulação e não configura garantia do desconto.</p>
+
+            <button class="cantratar-cooperativa__botao-contratar">Quero contratar!</button>
+
+            <div class="cantratar-cooperativa_modal">
+                <div class="cantratar-cooperativa_modal-caixa">
+                  <p class="cantratar-cooperativa_modal-parabens">Parabéns!</p>
+                </div>
+              </div>
+        </section>
+
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__container">
+            <div>
+                <p class="rodape__inf desafio">Desafio Front-End Wattio</p>
+                <p class="rodape__inf">Projetado e Desenvolvido por Thiago Terra</p>
+            </div>
+            <img class="rodape__logo" src="./assets/img/logo-wattio.png" alt="Logo da WattIO">
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

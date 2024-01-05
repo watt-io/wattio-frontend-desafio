@@ -1,0 +1,25 @@
+.rodape {
+    margin-top: auto;
+}
+
+.rodape__container {
+    margin: 3.5rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape__inf {
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: var(--preto);
+}
+
+.desafio {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.rodape__logo {
+    height: 100%;
+}

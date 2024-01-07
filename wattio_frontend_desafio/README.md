@@ -1,16 +1,19 @@
 # wattio_frontend_desafio
 
-A new Flutter project.
+Projeto desenvolvido para o desafio da vaga de front-end com Flutter.
 
-## Getting Started
+## Descrição
 
-This project is a starting point for a Flutter application.
+App contruído usando a abordagem de Clean Dart para definições de camadas e responsabilidades; utilizado o ValueNotifier, um recurso nativo da ferramenta, para gerênciamento de estados de forma; cada camada foi desenvolvida de forma a evitar acoplamento, visando garantir fácil manutenção e possibilidade de expansão.
 
-A few resources to get you started if this is your first Flutter project:
+## Funcionalides
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Usuário pode digitar o valor médio da sua conta de energia e encontrar cooperativas que oferecem descontos no valor da conta.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Framework 
+
+- Flutter
+
+## Bibliotecas
+
+- GetIt: para injeção de dependências

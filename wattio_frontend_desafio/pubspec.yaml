@@ -1,0 +1,36 @@
+name: wattio_frontend_desafio
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  get_it: ^7.6.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/shared/mock_data/cooperative_mock_data.json
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: lib/shared/assets/fonts/noto_sans/NotoSans-Light.ttf
+          weight: 300
+        - asset: lib/shared/assets/fonts/noto_sans/NotoSans-Regular.ttf
+          weight: 400
+        - asset: lib/shared/assets/fonts/noto_sans/NotoSans-Medium.ttf
+          weight: 500
+        - asset: lib/shared/assets/fonts/noto_sans/NotoSans-SemiBold.ttf
+          weight: 600
+

@@ -1,0 +1,72 @@
+[
+    {
+        "id": 0,
+        "name": "EnerFácil",
+        "minMonthlyAmount": 1000,
+        "maxMonthlyAmount": 40000,
+        "discount": 0.2
+    },
+    {
+        "id": 1,
+        "name": "EnerFácil Plus",
+        "minMonthlyAmount": 1500,
+        "maxMonthlyAmount": 35000,
+        "discount": 0.18
+    },
+    {
+        "id": 2,
+        "name": "EnerFácil Premium",
+        "minMonthlyAmount": 2500,
+        "maxMonthlyAmount": 45000,
+        "discount": 0.25
+    },
+    {
+        "id": 3,
+        "name": "EnerSimples",
+        "minMonthlyAmount": 1800,
+        "maxMonthlyAmount": 32000,
+        "discount": 0.12
+    },
+    {
+        "id": 4,
+        "name": "EnerSmart",
+        "minMonthlyAmount": 2200,
+        "maxMonthlyAmount": 28000,
+        "discount": 0.22
+    },
+    {
+        "id": 5,
+        "name": "EnerPro",
+        "minMonthlyAmount": 2100,
+        "maxMonthlyAmount": 40000,
+        "discount": 0.2
+    },
+    {
+        "id": 6,
+        "name": "EnerEconomic",
+        "minMonthlyAmount": 1900,
+        "maxMonthlyAmount": 33000,
+        "discount": 0.17
+    },
+    {
+        "id": 7,
+        "name": "EnerElite",
+        "minMonthlyAmount": 2700,
+        "maxMonthlyAmount": 38000,
+        "discount": 0.3
+    },
+    {
+        "id": 8,
+        "name": "EnerOptimum",
+        "minMonthlyAmount": 2400,
+        "maxMonthlyAmount": 42000,
+        "discount": 0.28
+    },
+    {
+        "id": 9,
+        "name": "EnerValue",
+        "minMonthlyAmount": 1600,
+        "maxMonthlyAmount": 36000,
+        "discount": 0.16
+    }
+]

@@ -14,10 +14,10 @@ Energy Solutions é um aplicativo mobile desenvolvido em Flutter que tem como ob
 
 ## Telas
 <div style="display: flex; justify-content: space-between;">
-  <img src="Screenshot_1705170379-3.png" alt="Imagem 1" width="30%">
+  <img src="images/Screenshot_1705170379-3.png" alt="Imagem 1" width="30%">
 
-  <img src="Screenshot_1705170412.png" alt="Imagem 2" width="30%">
-  <img src="Screenshot_1705170428.png" 
+  <img src="images/Screenshot_1705170412.png" alt="Imagem 2" width="30%">
+  <img src="images/Screenshot_1705170428.png" 
   alt="Imagem 3" width="30%">
 </div>
 

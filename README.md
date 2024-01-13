@@ -23,3 +23,6 @@ Energy Solutions é um aplicativo mobile desenvolvido em Flutter que tem como ob
 
 ## Usabilidade
 Basta que você encontre a sua média de custo mensal de eletricidade pelo Slider e logo em seguida, escolha uma das cooperativas e clique para obter mais detalhes.
+
+## Download APK
+https://drive.google.com/file/d/1PqU93kiqDMnU--A0oEyOAnRoGo3oseTE/view?usp=drive_link

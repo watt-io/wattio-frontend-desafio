@@ -7,9 +7,11 @@ import '../../util/theme/colors_app.dart';
 
 class AppBarCustom extends StatefulWidget implements PreferredSizeWidget {
   final bool _buttonPagePop;
+  final bool shadow;
 
-  const AppBarCustom({bool? buttonPagePop, super.key})
-      : _buttonPagePop = buttonPagePop ?? false;
+  const AppBarCustom({bool? buttonPagePop, bool? shadow, super.key})
+      : _buttonPagePop = buttonPagePop ?? false,
+        shadow = shadow ?? true;
 
   @override
   State<AppBarCustom> createState() => _AppBarCustomState();
@@ -22,6 +24,7 @@ class _AppBarCustomState extends State<AppBarCustom> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      elevation: widget.shadow ? 4 : 0,
       leading: widget._buttonPagePop
           ? GestureDetector(
               onTap: () => Modular.to.pop(),

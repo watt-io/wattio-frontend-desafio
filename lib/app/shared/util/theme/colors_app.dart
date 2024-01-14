@@ -8,4 +8,6 @@ abstract class ColorsApp {
   static const gray = Color(0xFFE3E3E3);
   static const gray2 = Color(0xFF87898C);
   static const black = Color(0xFF272727);
+  static const red = Color.fromARGB(255, 255, 0, 66);
+
 }

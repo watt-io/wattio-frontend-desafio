@@ -1,0 +1,1 @@
+enum PropertType { house, company}

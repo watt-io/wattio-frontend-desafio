@@ -46,6 +46,22 @@ dependencies:
   bloc: ^8.1.2
   modular_bloc_bind: ^1.0.1
   lottie: ^2.6.0
+  flutter_native_splash: ^2.3.7
+  flutter_launcher_icons: ^0.13.1
+
+flutter_native_splash:
+  color: "#00303F"
+  image: "assets/img/app/logo2.png"
+  android: true
+  ios: true
+
+flutter_icons:
+  image_path: "assets/img/app/logo.png"
+  ios: true
+  remove_alpha_ios: true
+  android: "launcher_icon"
+  adaptive_icon_background: "#00303F"
+  adaptive_icon_foreground: "assets/img/app/logo.png"
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +88,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/img/
+    - assets/img/app/
     - assets/lottie/
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -9,7 +9,7 @@ import 'app/shared/util/routes_app.dart';
 
 void main(List<String> args) async {
   Modular.setInitialRoute(
-    '${RoutesApp.Analysis}/',
+    '${RoutesApp.Splash_screen}/',
   );
 
   runApp(

@@ -7,6 +7,18 @@ class State {
 
   @override
   String toString() => '$name - $acronym';
+
+  @override
+  bool operator ==(covariant State other) {
+    if (identical(this, other)) return true;
+  
+    return 
+      other.acronym == acronym &&
+      other.name == name;
+  }
+
+  @override
+  int get hashCode => acronym.hashCode ^ name.hashCode;
 }
 
 class BrazilianStates {

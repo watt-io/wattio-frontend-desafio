@@ -6,6 +6,9 @@
 
 Energy Solutions é um aplicativo mobile desenvolvido em Flutter que tem como objetivo permitir que os clientes possam encontrar corporações que vendem energia com desconto.
 
+## Desenvolvimento
+Durante o processo de desenvolvimento deste projeto, dediquei-me à aplicação de boas práticas de programação, visando criar um código robusto, eficiente e de fácil manutenção. A filosofia de manter o código simples e seguir os princípios da orientação a objetos foram pilares essenciais na construção deste sistema.
+
 ## Funcionalidades
 
 - **Conexão Direta:** Conecte-se facilmente a corporações de energia.

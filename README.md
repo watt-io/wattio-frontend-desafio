@@ -12,6 +12,9 @@ Energy Solutions é um aplicativo mobile desenvolvido em Flutter que tem como ob
 - **Compra Simples:** Realize compras de energia com desconto.
 - **Design Moderno:** Interface bonita e moderna para uma experiência de usuário agradável.
 
+## Estrutura do Projeto (MVC)
+![Alt text](images/estrutura.png)
+
 ## Telas
 <div style="display: flex; justify-content: space-between;">
   <img src="images/home.png" alt="Imagem 1" width="30%">
@@ -20,6 +23,11 @@ Energy Solutions é um aplicativo mobile desenvolvido em Flutter que tem como ob
   <img src="images/parabens.png" 
   alt="Imagem 3" width="30%">
 </div>
+
+## Teste
+Aqui eu faço um teste para verificar se o repositório foi inicializado.
+
+![Alt text](images/teste.png)
 
 ## Usabilidade
 Basta que você encontre a sua média de custo mensal de eletricidade pelo Slider e logo em seguida, escolha uma das cooperativas e clique para obter mais detalhes.

@@ -26,10 +26,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   // Declarando variáveis.
   late double _valorSlider;
-  late double _valorMaximoSlider;
-  late double _valorMinimoSlider;
-  late CooperativaController _cooperativaController;
-  late HomeController _controller;
+  late final double _valorMaximoSlider;
+  late final double _valorMinimoSlider;
+  late final CooperativaController _cooperativaController;
+  late final HomeController _controller;
   late final PageController _pageController;
   int _currentPage = 0;
 

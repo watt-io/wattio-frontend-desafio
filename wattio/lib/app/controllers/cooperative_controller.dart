@@ -7,7 +7,10 @@ import 'package:wattio/app/models/repositories/cooperativa_repository.dart';
 
 class CooperativaController {
   // Instânciando o repositório de Cooperativas
-  CooperativaRepository data = CooperativaRepository();
+  final CooperativaRepository _data = CooperativaRepository();
+
+  // Aplicando encapsulamento
+  CooperativaRepository get data => _data;
 
   // Dados mockados (pode ter vindo de uma api, sei lá)
   final List<Map<String, dynamic>> _cooperativas = [
@@ -40,9 +43,9 @@ class CooperativaController {
     }
   ];
 
-  // Método que inicializa o repositório de Cooperativa criando objetos Cooperativa
+  // Método que inicializa o repositório de Cooperativa.
   void inicializeRepository() {
-    data.cooperativas = inicializeData(_cooperativas);
+    _data.cooperativas = inicializeData(_cooperativas);
 
     // CONTÉM TESTE UNITÁRIO
   }
@@ -50,7 +53,7 @@ class CooperativaController {
   // Método que transforma uma cooperativa em um objeto Cooperativa
   List<Cooperativa> inicializeData(List<Map<String, dynamic>> data) {
     return data.map((cooperativaData) {
-      // Criando objetos Cooperativa com base nos valores
+      // Criando objetos Cooperativa com base nos valores do Map
       return Cooperativa(
         nome: cooperativaData['nome'] ?? '',
         valorMinimo: cooperativaData['minimo'] ?? 0,

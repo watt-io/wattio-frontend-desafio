@@ -1,0 +1,288 @@
+
+
+
+{
+    "company": [
+      
+        {
+            "name": "EnerFácilHome",
+            "minimum_value_month": 100,
+            "maximum_value_month": 4000,
+            "discount": 0.2,
+            "form_of_hiring": "PF",
+            "contract_plan": "Mensal",
+            "assessments": 3.5,
+            "payment_term": 30
+        },
+        {
+            "name": "EnerFácilHome",
+            "minimum_value_month": 100,
+            "maximum_value_month": 4000,
+            "discount": 0.25,
+            "form_of_hiring": "PF",
+            "contract_plan": "Trimestral",
+            "assessments": 4.5,
+            "payment_term": 30
+        },
+        {
+            "name": "EnerFácilHome",
+            "minimum_value_month": 100,
+            "maximum_value_month": 4000,
+            "discount": 0.30,
+            "form_of_hiring": "PF",
+            "contract_plan": "Semestral",
+            "assessments": 2.5,
+            "payment_term": 30
+        },
+        {
+            "name": "EnerFácilHome",
+            "minimum_value_month": 100,
+            "maximum_value_month": 4000,
+            "discount": 0.35,
+            "form_of_hiring": "PF",
+            "contract_plan": "Anual",
+            "assessments": 4.0,
+            "payment_term": 30
+        },
+
+        {
+            "name": "EnerFácilHome",
+            "minimum_value_month": 100,
+            "maximum_value_month": 4000,
+            "discount": 0.25,
+            "form_of_hiring": "PF",
+            "contract_plan": "Mensal",
+            "assessments": 3.0,
+            "payment_term": 15
+        },
+        {
+            "name": "EnerFácilHome",
+            "minimum_value_month": 100,
+            "maximum_value_month": 4000,
+            "discount": 0.30,
+            "form_of_hiring": "PF",
+            "contract_plan": "Trimestral",
+            "assessments": 4.0,
+            "payment_term": 15
+        },
+        {
+            "name": "EnerFácilHome",
+            "minimum_value_month": 100,
+            "maximum_value_month": 4000,
+            "discount": 0.35,
+            "form_of_hiring": "PF",
+            "contract_plan": "Semestral",
+            "assessments": 5.0,
+            "payment_term": 15
+        },
+        {
+            "name": "EnerFácilHome",
+            "minimum_value_month": 100,
+            "maximum_value_month": 4000,
+            "discount": 0.40,
+            "form_of_hiring": "PF",
+            "contract_plan": "Anual",
+            "assessments": 4.0,
+            "payment_term": 15
+        },
+
+        {
+            "name": "EnerFácilEmpresarial",
+            "minimum_value_month": 500,
+            "maximum_value_month": 50000,
+            "discount": 0.25,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Mensal",
+            "assessments": 4.5,
+            "payment_term": 15
+        },
+        {
+            "name": "EnerFácilEmpresarial",
+            "minimum_value_month": 500,
+            "maximum_value_month": 50000,
+            "discount": 0.30,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Trimestral",
+            "assessments": 5.0,
+            "payment_term": 15
+        },
+        {
+            "name": "EnerFácilEmpresarial",
+            "minimum_value_month": 500,
+            "maximum_value_month": 5000,
+            "discount": 0.35,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Semestral",
+            "assessments": 3.0,
+            "payment_term": 15
+        },
+        {
+            "name": "EnerFácilEmpresarial",
+            "minimum_value_month": 500,
+            "maximum_value_month": 5000,
+            "discount": 0.40,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Anual",
+            "assessments": 4.0,
+            "payment_term": 15
+        },
+
+        {
+            "name": "EnerFácilEmpresarial",
+            "minimum_value_month": 500,
+            "maximum_value_month": 50000,
+            "discount": 0.20,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Mensal",
+            "assessments": 3.5,
+            "payment_term": 30
+        },
+        {
+            "name": "EnerFácilEmpresarial",
+            "minimum_value_month": 500,
+            "maximum_value_month": 50000,
+            "discount": 0.25,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Trimestral",
+            "assessments": 4.5,
+            "payment_term": 30
+        },
+        {
+            "name": "EnerFácilEmpresarial",
+            "minimum_value_month": 500,
+            "maximum_value_month": 50000,
+            "discount": 0.30,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Semestral",
+            "assessments": 5.0,
+            "payment_term": 30
+        },
+        {
+            "name": "EnerFácilEmpresarial",
+            "minimum_value_month": 500,
+            "maximum_value_month": 50000,
+            "discount": 0.35,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Anual",
+            "assessments": 4.0,
+            "payment_term": 30
+        },
+     
+        {
+            "name": "SuperEner",
+            "minimum_value_month": 200,
+            "maximum_value_month": 5000,
+            "discount": 0.22,
+            "form_of_hiring": "PF",
+            "contract_plan": "Trimestral",
+            "assessments": 4.5,
+            "payment_term": 30
+        },
+
+        {
+            "name": "SuperEnerPlus",
+            "minimum_value_month": 600,
+            "maximum_value_month": 10000,
+            "discount": 0.30,
+            "form_of_hiring": "PF",
+            "contract_plan": "Semestral",
+            "assessments": 4.5,
+            "payment_term": 15
+        },
+
+        {
+            "name": "EnergyPremium",
+            "minimum_value_month": 1000,
+            "maximum_value_month": 10000,
+            "discount": 0.15,
+            "form_of_hiring": "PF",
+            "contract_plan": "Mensal",
+            "assessments": 4.5,
+            "payment_term": 30
+        },
+       
+        {
+            "name": "EnergyPremiumEmpresarial",
+            "minimum_value_month": 1000,
+            "maximum_value_month": 100000,
+            "discount": 0.30,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Mensal",
+            "assessments": 4.0,
+            "payment_term": 30
+        },
+        {
+            "name": "PlusEnerHome",
+            "minimum_value_month": 200,
+            "maximum_value_month": 10000,
+            "discount": 0.30,
+            "form_of_hiring": "PF",
+            "contract_plan": "Mensal",
+            "assessments": 4.0,
+            "payment_term": 15
+        },
+        {
+            "name": "BigEnergy",
+            "minimum_value_month": 800,
+            "maximum_value_month": 6000,
+            "discount": 0.18,
+            "form_of_hiring": "PF",
+            "contract_plan": "Trimestral",
+            "assessments": 5.0,
+            "payment_term": 30
+        },
+        {
+            "name": "BigEnergy",
+            "minimum_value_month": 800,
+            "maximum_value_month": 6000,
+            "discount": 0.22,
+            "form_of_hiring": "PF",
+            "contract_plan": "Semestral",
+            "assessments": 3.0,
+            "payment_term": 15
+        },
+        {
+            "name": "BigEnergy",
+            "minimum_value_month": 800,
+            "maximum_value_month": 10000,
+            "discount": 0.29,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Anual",
+            "assessments": 2.5,
+            "payment_term": 15
+        },
+
+
+        {
+            "name": "EnerMaster",
+            "minimum_value_month": 1000,
+            "maximum_value_month": 50000,
+            "discount": 0.22,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Mensal",
+            "assessments": 3.0,
+            "payment_term": 30
+        },
+        {
+            "name": "EnerLogic",
+            "minimum_value_month": 10,
+            "maximum_value_month": 20000,
+            "discount": 0.30,
+            "form_of_hiring": "PF",
+            "contract_plan": "Anual",
+            "assessments": 3.5,
+            "payment_term": 15
+        },
+        {
+            "name": "MasterEnergy",
+            "minimum_value_month": 1000,
+            "maximum_value_month": 40000,
+            "discount": 0.27,
+            "form_of_hiring": "PJ",
+            "contract_plan": "Trimestral",
+            "assessments": 3.0,
+            "payment_term": 30
+        }
+        
+    ]
+}

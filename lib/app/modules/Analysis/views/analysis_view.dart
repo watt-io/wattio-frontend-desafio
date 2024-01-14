@@ -1,9 +1,11 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 import '../../../shared/enum/property_type.dart';
 import '../../../shared/util/brazilian_states.dart' as bs;
+import '../../../shared/util/routes_app.dart';
 import '../../../shared/util/snackBarCustom/snackBarCustom.dart';
 import '../../../shared/util/theme/colors_app.dart';
 import '../../../shared/widget/app_bar/app_bar_custom.dart';
@@ -52,7 +54,10 @@ class _AnalysisViewState extends State<AnalysisView> {
       state: _state!,
     );
 
-    print(analysis);
+    Modular.to.pushNamed(
+      RoutesApp.AnalysisChooseOffert,
+      arguments: analysis,
+    );
   }
 
   @override

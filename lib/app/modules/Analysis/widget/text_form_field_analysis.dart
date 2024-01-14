@@ -24,6 +24,8 @@ class _TextFormFieldAnalysisState extends State<TextFormFieldAnalysis> {
   late Function(double) _onChanged;
   late TextEditingController _controller;
 
+  final double _maxValueSlider = 30000;
+
   @override
   void initState() {
     _value = 0;
@@ -131,9 +133,9 @@ class _TextFormFieldAnalysisState extends State<TextFormFieldAnalysis> {
             ),
           ),
           child: SfSlider(
-            value: _value > 1000000 ? 1000000 : _value,
+            value: _value > _maxValueSlider ? _maxValueSlider : _value,
             min: 1000,
-            max: 1000000,
+            max: _maxValueSlider,
             stepSize: 1.0,
             onChanged: (dynamic newValue) {
               _onChanged(newValue);

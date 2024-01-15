@@ -1,0 +1,178 @@
+{
+  "empresas": [
+    {
+      "nome": "EnerLimpa",
+      "valorMinimoMensal": 100,
+      "valorMaximoMensal": 500,
+      "desconto": 5
+    },
+    {
+      "nome": "EcoEnergia",
+      "valorMinimoMensal": 180,
+      "valorMaximoMensal": 600,
+      "desconto": 4
+    },
+    {
+      "nome": "SustentaPower",
+      "valorMinimoMensal": 10,
+      "valorMaximoMensal": 700,
+      "desconto": 3
+    },
+    {
+      "nome": "GreenTech",
+      "valorMinimoMensal": 250,
+      "valorMaximoMensal": 800,
+      "desconto": 2
+    },
+    {
+      "nome": "RenovaEco",
+      "valorMinimoMensal": 170,
+      "valorMaximoMensal": 550,
+      "desconto": 5
+    },
+    {
+      "nome": "EcoPower",
+      "valorMinimoMensal": 190,
+      "valorMaximoMensal": 620,
+      "desconto": 4
+    },
+    {
+      "nome": "NaturezaViva",
+      "valorMinimoMensal": 220,
+      "valorMaximoMensal": 680,
+      "desconto": 3
+    },
+    {
+      "nome": "LimpEnergia",
+      "valorMinimoMensal": 280,
+      "valorMaximoMensal": 750,
+      "desconto": 2
+    },
+    {
+      "nome": "VerdeSustentável",
+      "valorMinimoMensal": 160,
+      "valorMaximoMensal": 530,
+      "desconto": 5
+    },
+    {
+      "nome": "EcoFriendlyPower",
+      "valorMinimoMensal": 200,
+      "valorMaximoMensal": 690,
+      "desconto": 4
+    },
+    {
+      "nome": "LimpaEnergia",
+      "valorMinimoMensal": 240,
+      "valorMaximoMensal": 770,
+      "desconto": 3
+    },
+    {
+      "nome": "SustainableSolutions",
+      "valorMinimoMensal": 210,
+      "valorMaximoMensal": 730,
+      "desconto": 2
+    },
+    {
+      "nome": "EnergiaVerde",
+      "valorMinimoMensal": 190,
+      "valorMaximoMensal": 620,
+      "desconto": 5
+    },
+    {
+      "nome": "CleanPowerCo",
+      "valorMinimoMensal": 160,
+      "valorMaximoMensal": 530,
+      "desconto": 4
+    },
+    {
+      "nome": "EcoSource",
+      "valorMinimoMensal": 230,
+      "valorMaximoMensal": 700,
+      "desconto": 3
+    },
+    {
+      "nome": "GreenGenius",
+      "valorMinimoMensal": 250,
+      "valorMaximoMensal": 780,
+      "desconto": 2
+    },
+    {
+      "nome": "RenewableEnergyCorp",
+      "valorMinimoMensal": 210,
+      "valorMaximoMensal": 730,
+      "desconto": 5
+    },
+    {
+      "nome": "PureEcoPower",
+      "valorMinimoMensal": 180,
+      "valorMaximoMensal": 600,
+      "desconto": 4
+    },
+    {
+      "nome": "GreenHarmony",
+      "valorMinimoMensal": 200,
+      "valorMaximoMensal": 650,
+      "desconto": 3
+    },
+    {
+      "nome": "EcoWave",
+      "valorMinimoMensal": 240,
+      "valorMaximoMensal": 720,
+      "desconto": 2
+    },
+    {
+      "nome": "CleanEnergySolutions",
+      "valorMinimoMensal": 170,
+      "valorMaximoMensal": 550,
+      "desconto": 5
+    },
+    {
+      "nome": "SustainablePowerCo",
+      "valorMinimoMensal": 230,
+      "valorMaximoMensal": 770,
+      "desconto": 4
+    },
+    {
+      "nome": "EcoBright",
+      "valorMinimoMensal": 210,
+      "valorMaximoMensal": 730,
+      "desconto": 3
+    },
+    {
+      "nome": "GreenEnergize",
+      "valorMinimoMensal": 190,
+      "valorMaximoMensal": 620,
+      "desconto": 2
+    },
+    {
+      "nome": "RenewablePowerSolutions",
+      "valorMinimoMensal": 160,
+      "valorMaximoMensal": 530,
+      "desconto": 5
+    },
+    {
+      "nome": "EcoSpark",
+      "valorMinimoMensal": 180,
+      "valorMaximoMensal": 600,
+      "desconto": 4
+    },
+    {
+      "nome": "PureGreenEnergy",
+      "valorMinimoMensal": 220,
+      "valorMaximoMensal": 680,
+      "desconto": 3
+    },
+    {
+      "nome": "GreenTechSolutions",
+      "valorMinimoMensal": 250,
+      "valorMaximoMensal": 800,
+      "desconto": 2
+    },
+    {
+      "nome": "EcoInnovate",
+      "valorMinimoMensal": 240,
+      "valorMaximoMensal": 720,
+      "desconto": 5
+    }
+  ]
+}

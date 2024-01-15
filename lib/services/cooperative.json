@@ -1,0 +1,158 @@
+{
+    "cooperatives": [
+        {
+            "nome": "EnerFácil",
+            "valorMinimoMensal": 1000,
+            "valorMaximoMensal": 40000,
+            "desconto": 0.2,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "MG",
+                "cidade": "Itajubá"
+            },
+            "contato": "+55 (35) 9873-1450",
+            "contrato": "Mensal",
+            "modelo": "PJ"
+        },
+        {
+            "nome": "EnerLimpa",
+            "valorMinimoMensal": 10000,
+            "valorMaximoMensal": 80000,
+            "desconto": 0.25,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "RJ",
+                "cidade": "Rio de Janeiro"
+            },
+            "contato": "+55 (21) 9781-4269",
+            "contrato": "Anual",
+            "modelo": "PF"
+        },
+        {
+            "nome": "EnerGrande",
+            "valorMinimoMensal": 40000,
+            "valorMaximoMensal": 100000,
+            "desconto": 0.3,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "SP",
+                "cidade": "São Paulo"
+            },
+            "contato": "+55 (11) 9473-1059",
+            "contrato": "Mensal",
+            "modelo": "PJ"
+        },
+        {
+            "nome": "EnerLimpa Residencial",
+            "valorMinimoMensal": 500,
+            "valorMaximoMensal": 2000,
+            "desconto": 0.15,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "SP",
+                "cidade": "São Paulo"
+            },
+            "contato": "+55 (11) 8765-4321",
+            "contrato": "Anual",
+            "modelo": "PF"
+        },
+        {
+            "nome": "EnerSustentável Comercial",
+            "valorMinimoMensal": 3000,
+            "valorMaximoMensal": 15000,
+            "desconto": 0.18,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "RJ",
+                "cidade": "Rio de Janeiro"
+            },
+            "contato": "+55 (21) 9456-7890",
+            "contrato": "Mensal",
+            "modelo": "PJ"
+        },
+        {
+            "nome": "EnerVerde Industrial",
+            "valorMinimoMensal": 10000,
+            "valorMaximoMensal": 50000,
+            "desconto": 0.25,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "RS",
+                "cidade": "Porto Alegre"
+            },
+            "contato": "+55 (51) 9123-6789",
+            "contrato": "Anual",
+            "modelo": "PJ"
+        },
+        {
+            "nome": "EnerNova",
+            "valorMinimoMensal": 1500,
+            "valorMaximoMensal": 45000,
+            "desconto": 0.22,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "MG",
+                "cidade": "Belo Horizonte"
+            },
+            "contato": "+55 (31) 9876-5432",
+            "contrato": "Mensal",
+            "modelo": "PJ"
+        },
+        {
+            "nome": "EnerSolar Residencial",
+            "valorMinimoMensal": 800,
+            "valorMaximoMensal": 2500,
+            "desconto": 0.12,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "SP",
+                "cidade": "Campinas"
+            },
+            "contato": "+55 (19) 8765-4321",
+            "contrato": "Anual",
+            "modelo": "PF"
+        },
+        {
+            "nome": "EnerComércio Eficiente",
+            "valorMinimoMensal": 3500,
+            "valorMaximoMensal": 18000,
+            "desconto": 0.17,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "SC",
+                "cidade": "Florianópolis"
+            },
+            "contato": "+55 (48) 9456-1234",
+            "contrato": "Mensal",
+            "modelo": "PJ"
+        },
+        {
+            "nome": "EnerVital Residencial",
+            "valorMinimoMensal": 600,
+            "valorMaximoMensal": 3000,
+            "desconto": 0.14,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "RJ",
+                "cidade": "Niterói"
+            },
+            "contato": "+55 (21) 9876-5432",
+            "contrato": "Anual",
+            "modelo": "PF"
+        },
+        {
+            "nome": "EnerTech Industrial",
+            "valorMinimoMensal": 12000,
+            "valorMaximoMensal": 60000,
+            "desconto": 0.28,
+            "localidade": {
+                "pais": "Brasil",
+                "estado": "PR",
+                "cidade": "Curitiba"
+            },
+            "contato": "+55 (41) 9123-4567",
+            "contrato": "Mensal",
+            "modelo": "PJ"
+        }
+    ]
+}

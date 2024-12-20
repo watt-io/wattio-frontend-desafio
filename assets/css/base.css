@@ -1,0 +1,25 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+:root {
+    --preto: rgba(27, 27, 27, 1);
+    --azul-escuro: rgba(4, 41, 64, 1);
+    --verde: rgba(0, 92, 83, 1);
+    --verde-musgo: rgba(33, 153, 141, 1);
+    --verde-claro: rgba(159, 193, 49, 1);
+    --cinza-barra: rgba(154, 175, 188, 1);
+    --cinza-borda: rgba(190, 209, 221, 1);
+    --cinza-bg: rgba(248, 248, 248, 1);
+    --verde-cinza: rgba(241, 249, 248, 1);
+}

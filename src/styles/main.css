@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1a0b2e;
+  user-select: none;
+}
+
+body {
+  font-family: "Electrolize", sans-serif;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.container h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #ecc030;
+  white-space: nowrap;
+}
+
+.container img {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #ecc030;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: 20px;
+  font-weight: 500;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ecc030, transparent);
+}
+
+input[type="number"] {
+  font-family: "Electrolize", sans-serif;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ecc030;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  font-family: "Exo 2", sans-serif;
+  padding: 10px 20px;
+  background-color: #e13232;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #9a3535;
+}
+
+#ofertasForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.oferta {
+  background: linear-gradient(145deg, #2e1b4c, #1a0b2e);
+  border: 2px solid #ecc030;
+  border-radius: 15px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.oferta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #ecc030, transparent);
+  animation: slideBorder 3s infinite linear;
+}
+
+@keyframes slideBorder {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.oferta h3 {
+  background: linear-gradient(145deg, #2e1b4c, #1a0b2e);
+  font-size: 1.5rem;
+  color: #ecc030;
+  margin-bottom: 15px;
+}
+
+.oferta p {
+  background: linear-gradient(145deg, #2e1b4c, #1a0b2e);
+  font-size: 1rem;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.oferta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px rgba(0.4, 0.4, 0.4, 0.4);
+  border-color: #1f19206b;
+}
+
+input[type="radio"] {
+  margin-top: 2px;
+  margin-bottom: 10px;
+  transform: scale(1.3);
+  accent-color: #ecc030;
+}
+
+#contratarBtn {
+  margin-top: 20px;
+  padding: 13px 17px;
+  background-color: #28a745;
+  font-size: 1.5rem;
+  display: block;
+  margin: 20px auto;
+}
+
+#contratarBtn:hover {
+  background-color: #218838;
+}
+

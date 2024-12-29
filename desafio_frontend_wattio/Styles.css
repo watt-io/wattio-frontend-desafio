@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.title-section {
+  display: flex; /* Alinha o conteúdo horizontalmente */
+  align-items: center; /* Centraliza verticalmente o texto e o ícone */
+  justify-content: center; 
+  gap: 10px; 
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.icon {
+  width: 70px; /* definir tamanho icon */
+  height: auto; /* Mantém a proporção da imagem */
+  filter: brightness(0) invert(1); /* icon branco */
+}
+
+
+.hint {
+  font-size: 12px;
+  color: #bbb;
+  margin: 10px 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+}
+
+input[type="range"] {
+  width: 250px;
+  margin: 20px auto;
+  display: block;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #444;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f90;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f90;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f90;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e80;
+}
+
+.result, .economy {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  width: 400px;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.result p, .economy p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.offer {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.offer:hover {
+  background-color: #444;
+  transform: scale(1.02);
+}
+
+.offer.selected {
+  background-color: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+}

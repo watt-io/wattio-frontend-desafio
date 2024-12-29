@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace de Energia</title>
+  <link rel="icon" href="/img/bolt.png" type="icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="title-section">
+      <img src="/img/analysis.png" alt="Ícone de análise" class="icon">
+      <h1>Calcule a economia<br>da sua empresa</h1>
+    </div>
+
+    <p>Digite o valor médio mensal da sua conta de energia:</p>
+    <input type="number" id="energyCost" placeholder="R$ 1000,00" min="1000" step="100">
+    <p class="hint">Digite o valor acima ou mova a barra abaixo. Mínimo de R$ 1000.</p>
+    <input type="range" id="energySlider" min="1000" max="100000" step="1000" value="1000" oninput="syncInputs()">
+    <button onclick="calculateOffers()">Calcular ofertas!</button>
+
+    <div class="result" id="offers" style="display: none;">
+      <h2>Ofertas disponíveis</h2>
+      <div id="offersList"></div>
+      <button onclick="calculateOffers()">Recalcular ofertas</button>
+      <button onclick="calculateEconomy()">Calcular economia</button>
+    </div>
+
+    <div class="economy" id="economy" style="display: none;">
+      <h2>Minha economia</h2>
+      <p>Minha economia anual será de até <span class="highlight" id="annualEconomy">R$ 0,00</span></p>
+      <p>Em média <span class="highlight" id="monthlyEconomy">R$ 0,00</span> por mês</p>
+      <button id="hireButton" onclick="hireOffer()">Quero contratar!</button>
+      <p id="successMessage" style="display: none; color: #4caf50; font-weight: bold;">Parabéns! Você contratou a oferta.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

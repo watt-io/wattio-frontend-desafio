@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #393939;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 13px;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid rgb(0, 92, 83);
+}
+
+header h1 .destaque {
+    color: #9FC131;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+
+div h2 .destaque {
+    color: #9FC131;
+    font-size: 24px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+.calculo {
+    display: flex;            
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    height: 50vh;            
+    text-align: center;
+    padding: 26px;
+}
+
+.calculo h2 {
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.calculo h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.calculo form {
+    display: inline-block;
+    text-align: center;
+}
+
+
+input[type="range"] {
+    width: 300px;
+}
+
+.range-output {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 14px;
+    color: white;
+}
+
+
+input[type="submit"] {
+    background-color: #005C53;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #4b7a4b;
+}
+
+
+.text-padrao {
+    text-align: center;
+    padding: 30px;
+    background-color: #F8F8F8;
+
+}
+
+.cooperativas {
+    margin-top: 0;
+}
+
+.cooperativas .tabela {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cooperativas .opcao {
+    background-color: #9FC1311A;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+}
+
+
+.cooperativas .opcao h6 {
+    font-size: 20px;
+    color: #393939;
+    margin-bottom: 10px;
+    padding: 15px;
+    margin-top: auto;
+}
+
+.cooperativas .opcao p {
+    font-size: 14px;
+    color:#7A7A7A;
+}
+
+.container{
+    background-color: #F8F8F8;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    padding: 40px;
+}
+
+.container h3{
+    color: #393939;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container h1{
+    font-size:50px;
+    padding: 0 0;
+    gap: 30px;
+    color: #9FC131;
+    margin-top: 0;
+}
+
+.container h2{
+    color: #393939;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 17px;
+    border: 2px solid#9FC131;
+    border-radius: 20px;
+    font-family:inherit;
+    text-align: center;
+}
+
+.container p{
+    padding: 10px;
+    font-size: 12px;
+}
+
+.botao {
+    background-color: #9FC131;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px 30px;
+    border: none;
+    border-radius: 20px;
+}
+

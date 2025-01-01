@@ -1,0 +1,492 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+}
+
+body {
+  font-family: poppins, sans-serif;
+  color: white;
+  text-align: center;
+
+
+}
+
+
+
+/*  Estilização NavBar */
+.header-nav {
+
+  background: #ffffff;
+  width: 100%;
+  float: left;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+}
+
+.navbar {
+
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+
+}
+
+.nav-container {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 70px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 23px;
+  right: 5%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 23px;
+  right: 5%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+
+  padding-top: 120px;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/*  Animações NavBar  */
+.nav-container input[type="checkbox"]:checked~.menu-items {
+  transform: translateX(0);
+}
+
+/* Animação do ícone, gira para formar de "X" */
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.logo {
+
+  position: absolute;
+  top: 12px;
+  left: 5%;
+  font-size: 1em;
+  color: #002F44;
+  z-index: 2;
+
+}
+
+.calcular {
+  margin-top: 5px;
+  color: rgb(0, 0, 0);
+}
+
+.calcular strong {
+  color: #005c53;
+}
+
+/* Estilização dos conteudos dentro da main */
+
+.container {
+  max-width: 500px;
+  margin: 15px auto;
+  margin-bottom: 80px;
+  font-size: 67%;
+  background-color: #2c2b2b;
+  box-shadow: 0px 4px 15px #002f44;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.container h1,
+h2 {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+
+.placeholder {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  margin-top: 30px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #bdbbbb;
+  border-radius: 10px;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Remove o estilo padrão do navegador */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #002f44;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #002f44;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+
+.cards {
+  display: flex;
+  margin-top: 25px;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #002f44;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.economiaAnual {
+  color: #ffbf10;
+  font-size: 30px;
+}
+
+.economiaMensal {
+  font-size: 15px;
+}
+
+
+.card p {
+  margin: 5px 0;
+}
+
+.textoEconomia {
+  margin-top: 13px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #002f44;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+@media (max-width: 768px) {
+
+  /* Ajuste para telas menores */
+  .modal-content {
+    max-width: 350px;
+  }
+}
+
+.modal-content p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.modal-content button {
+  background-color: #004d40;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-content button:hover {
+  background-color: #00695c;
+}
+
+.card.selecionada {
+  border: 2px solid #ffa600;
+  background-color: #002f44;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+
+.input-box,
+.cooperativas,
+.result {
+  margin: 20px 0;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+  border: 2px solid #ffa600;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button {
+  background-color: #005c53;
+  font-weight: bold;
+  color: #ffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #d29a00;
+  color: #ffffff;
+}
+
+.result {
+  padding: 10px;
+  background-color: #3c3c3c;
+  border-radius: 5px;
+}
+
+.textoInformativo {
+  font-weight: bold;
+  color: #ffbf10;
+}
+
+#parabens {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+}
+
+
+/* Estilização da Pagina Sobre */
+.textoSobre h1 {
+  color: #002F44;
+}
+
+.textoSobre p {
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 17px;
+  color: #002F44;
+  margin: 0 15px;
+
+}
+
+@media (max-width: 768px) {
+  .textoSobre p {
+    font-size: 1.2rem;
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .textoSobre p {
+    font-size: 0.9rem;
+    margin: 0 12px;
+  }
+}
+
+.textoSobre img {
+  margin-top: 50px;
+}
+
+
+/*Estilização da pagina Contatos*/
+
+.contatos {
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 100px;
+  color: #002F44;
+}
+
+.contatos a {
+  text-decoration: none;
+}
+
+.contatos img {
+  width: 70px;
+  margin: 30px;
+}
+
+
+.tecnologias {
+  align-items: center;
+  justify-content: center;
+  margin: 55px;
+}
+
+.tecnologias img {
+  width: 70px;
+  margin-left: 50px;
+}
+
+@media (max-width: 768px) {
+  .tecnologias img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .tecnologias img {
+    display: none;
+  }
+}
+
+
+/*Estilizacao da minha navbar*/
+
+
+/*Estilização Footer*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #002F44;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  z-index: 1000;
+}

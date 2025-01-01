@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="img/logo-raio.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krona+One&family=Manjari:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Numans&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <title>Wattio Desafio</title>
+</head>
+<div class="header-nav">
+  <div class="navbar">
+    <div class="nav-container">
+      <input class="checkbox" type="checkbox" name="" id="" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo Wattio">
+        </a>
+      </div>
+      <div class="menu-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </div>
+    </div>
+  </div>
+
+  <body>
+    <p class="calcular">Calcule a <strong>economia</strong> da sua empresa:</p>
+    <main class="container">
+      <h1>Informe o valor médio mensal de sua conta de energia</h1>
+
+      <div class="input-container">
+        <input type="text" id="valorConta" placeholder="R$ 1.000,00" oninput="formatarMoeda(this)">
+        <input class="slider" type="range" id="sliderValor" min="1" max="150000" step="1" value="1000"
+          oninput="atualizarCampoSliderDinamico()">
+        <div class="placeholder">
+          <span>R$ 1,00</span>
+          <span>R$ 150.000,00</span>
+        </div>
+        <p><span id="valorSlider" style="display: none;">0,00</span></p>
+      </div>
+
+      <button onclick="consultarOfertas()">Consultar ofertas</button>
+      <section id="ofertas" class="ofertas-container" style="display: none;">
+        <h2>Selecione a Cooperativa com a oferta desejada:</h2>
+        <div id="cards" class="cards">
+          <!-- Cartões dinâmicos serão gerados aqui -->
+        </div>
+        <div id="economia" style="display: none;" class="textoEconomia">
+          <h3>Sua economia anual será de até:</h3>
+          <p id="valorEconomia"></p>
+          <button id="contratar">Contratar agora!!!</button>
+        </div>
+      </section>
+
+      <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+          <p>Parabéns, você acaba de contratar a cooperativa <strong id="nomeCooperativa"></strong></p>
+          <button id="fecharModal">Fechar</button>
+          <p>Para fechar pressione ESC</p>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Wattio Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+
+</html>

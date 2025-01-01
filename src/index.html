@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace de Energia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Calcule a economia da sua empresa!</h1>
+    <button type="button" id="open-modal-btn">Adicionar Nova Empresa</button>
+
+    <div id="add-cooperative-modal" class="modal">
+      <div class="modal-content">
+        <h2>Adicionar Nova Empresa</h2>
+        <form id="add-cooperative-form">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required />
+
+          <label for="valorMinimoMensal">Valor Mínimo Mensal:</label>
+          <input type="number" id="valorMinimoMensal" required />
+
+          <label for="valorMaximoMensal">Valor Máximo Mensal:</label>
+          <input type="number" id="valorMaximoMensal" required />
+
+          <label for="desconto">Desconto (%):</label>
+          <input type="number" id="desconto" step="0.01" required />
+
+          <label for="estadoEmpresa">Estado:</label>
+          <select id="estadoEmpresa" required>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="Ambos">Ambos</option>
+          </select>
+          
+          <button type="button" id="add-cooperative-btn">Adicionar Empresa</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <h2>O valor médio mensal da minha conta de energia é:</h2>
+      <label for="energy-bill">Valor médio da conta de energia (R$):</label>
+      <input type="number" id="energy-bill" placeholder="Ex: 500" />
+      <label for="estado">Estado:</label>
+      <select id="estado">
+        <option value="SP">São Paulo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="Ambos">Ambos</option>
+      </select>
+
+      <button id="calculate-btn">Ver Ofertas</button>
+    </section>
+
+    <section id="offers-section" class="hidden">
+      <h2>Ofertas Disponíveis</h2>
+      <div id="offers-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Marketplace de Energia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

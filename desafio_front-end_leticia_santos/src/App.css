@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header{
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0; 
+  z-index: 1000;
+  background-color: #00303F;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-family: Poppins, sans-serif;
+}
+
+.logo{
+  height: 2.2rem;
+  max-width: 100%;
+  margin: auto;
+}
+
+.container-links-header{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  
+}
+
+.link-header{
+  padding: 0 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.link-header:hover, .link-header.active{
+  color: white;
+}
+
+.container-buttons{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.container-buttons-contact{
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  border: none;
+  background-color: white;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  color: #00303F;
+  cursor: pointer;
+}
+
+.container-buttons-login{
+  display: flex;
+  height: 2rem;
+  min-width: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  border: 1px solid white;
+  color: white;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+}
+
+.container-buttons-contact:hover, .container-buttons-login:hover {
+  border-color: #F7EC00;
+  background-color: #F7EC00;
+  font-weight: bold;
+  color: #00303F;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+  font-family: Poppins, sans-serif;
+}
+
+.calculate-offer, .calculate-economy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculate-offer-title{
+  font-weight: 600;
+  color: #00303F;
+}
+
+.calculate-offer-p1{
+  margin: .6rem 0;
+  font-weight: 600;
+}
+
+.calculate-offer-input{
+  width: 85%;
+  height: 2.5rem;
+  margin: 0.8rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 1.8rem;
+  border: 2px solid #00303F;
+  border-radius: 2rem;
+}
+
+.calculate-offer-p2{
+  font-weight: 300;
+  font-size: .75rem;
+  margin-bottom: 1rem;
+}
+
+.calculate-offer-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px; 
+  background: #00303F; 
+  outline: none; 
+  border-radius: 2rem; 
+  cursor: pointer;
+}
+
+.calculate-offer-range::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 20px; 
+  height: 20px; 
+  background: #F7EC00; 
+  border-radius: 50%; 
+  cursor: pointer;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); 
+}
+
+.calculate-offer-restriction{
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.calculate-offer-restriction-label{
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.calculate-offer-restriction-input{
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: .5rem;
+  border-radius: 2rem;
+  border: 1px solid #000000;
+  margin-right: .5rem;
+}
+
+.calculate-offer-restriction-input:checked {
+  background-color: #F7EC00;
+}
+
+.calculate-offer-button, .calculate-economy-button, .modal-hire{
+  width: 16rem;
+  height: 2.5rem;
+  margin: .8rem 0;
+  border-radius: 2rem;
+  border: none;
+  background-color: #00303F;
+  padding: 0 1rem;
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+}
+
+.calculate-offer-button:hover, .calculate-economy-button:hover, .modal-hire:hover{
+  font-size: 1.25rem;
+}
+
+.calculate-offer-button.clicked, .calculate-economy-button.clicked{
+  background-color: white;
+  color: #00303F;
+  border: solid 2px #00303F;
+  font-weight: 500;
+}
+
+.calculate-offer-button.clicked:disabled, .calculate-economy-button.clicked:disabled{
+  cursor: not-allowed;
+  opacity: 0.63;
+  font-size: 1.2rem;
+}
+
+.coop-card{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border: 1px solid #00303F;
+  border-radius: 0.5rem;
+}
+
+.coop-card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.coop-card-header-input{
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: .5rem;
+  border-radius: 2rem;
+  border: 1px solid #00303F;
+}
+
+.coop-card-header-input:checked {
+  background-color: #F7EC00;
+}
+
+.coop-card-header-h3{
+  font-weight: 600;
+}
+
+.coop-card-data{
+  margin-left: .2rem;
+  font-size: 1rem;
+}
+
+.coop-card-data .highlight{
+  font-weight: 600;
+}
+
+.calculate-economy-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.63;
+  font-size: 1.2rem;
+}
+
+.calculate-economy-p1{
+  margin: .5rem 0;
+  font-weight: 600;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-economy {
+  background: #eff2f3;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  margin: 0 .5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #858383;
+}
+
+.modal-close:hover {
+  color: #00303F;
+}
+
+.modal-content {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.modal-content-annual{
+  margin: 1rem 0;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #00303F;
+}
+
+.modal-content-monthly{
+  font-weight: 500;
+}
+
+.modal-content-monthly-value{
+  color: #cec405;
+  text-shadow: 0px 3px 5px #ffffff; 
+}
+
+.modal-content-warning{
+  margin: .5rem;
+  font-size: .7rem;
+}
+
+.modal-contact {
+  background: #eff2f3;
+  padding: 3rem 3.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.modal-content-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  font-size: 1rem;
+  color: #00303F;
+}
+
+.modal-content-contact-img{
+  margin-right: .5rem;
+}

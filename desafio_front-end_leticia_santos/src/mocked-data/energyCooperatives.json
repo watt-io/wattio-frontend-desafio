@@ -1,0 +1,66 @@
+[
+    {
+      "nome": "EnerInicio",
+      "valorMinimoMensal": 0,
+      "valorMaximoMensal": 2000,
+      "desconto": 0.15,
+      "restricao": ["PF"]
+    },
+    {
+      "nome": "EnerFácil",
+      "valorMinimoMensal": 1000,
+      "valorMaximoMensal": 40000,
+      "desconto": 0.2,
+      "restricao": ["PF"]
+    },
+    {
+      "nome": "EnerLimpa",
+      "valorMinimoMensal": 10000,
+      "valorMaximoMensal": 80000,
+      "desconto": 0.25,
+      "restricao": ["PF", "PJ"]
+    },
+    {
+      "nome": "EnerGrande",
+      "valorMinimoMensal": 40000,
+      "valorMaximoMensal": 100000,
+      "desconto": 0.3,
+      "restricao": ["PF", "PJ"]
+    },
+    {
+      "nome": "EnerMaxima",
+      "valorMinimoMensal": 90000,
+      "valorMaximoMensal": 200000,
+      "desconto": 0.35,
+      "restricao": ["PJ"]
+    },
+    {
+      "nome": "EnerProgresso",
+      "valorMinimoMensal": 150000,
+      "valorMaximoMensal": 400000,
+      "desconto": 0.35,
+      "restricao": ["PJ"]
+    },
+    {
+      "nome": "EnerAvancada",
+      "valorMinimoMensal": 350000,
+      "valorMaximoMensal": 600000,
+      "desconto": 0.4,
+      "restricao": ["PJ"]
+    },
+    {
+      "nome": "EnerElite",
+      "valorMinimoMensal": 500000,
+      "valorMaximoMensal": 850000,
+      "desconto": 0.45,
+      "restricao": ["PJ"]
+    },
+    {
+      "nome": "EnerSuprema",
+      "valorMinimoMensal": 800000,
+      "valorMaximoMensal": 1000000,
+      "desconto": 0.5,
+      "restricao": ["PJ"]
+    }
+  ]
+  

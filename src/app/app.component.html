@@ -1,0 +1,40 @@
+<div class="pai">
+  <div class="content" role="main" style="background-color:  #041A45; width: 40%; height: 100vh;">
+    <div class="logo">
+      <img id="logo" style="scale: 5" width="40" alt="Logo Inowatt" src="assets/logo.png" />
+    </div>
+    <div class="text">
+      <p class="texto-maior">
+        Economize na sua conta de energia
+      </p>
+      <p class="texto-menor">
+        Insira o valor médio da sua conta de energia e descubra quanto você pode ganhar de desconto
+      </p>
+    </div>
+    <div class="form">
+      <label for="valor">Valor médio da conta de energia</label>
+      <input (keyup)="mudaValor($event)" prefix="R$" mask="separator.2" thousandSeparator="." id="valor" type="text"
+        name="valor" #valor>
+      <button (click)="encontraCorporativa(valor.value)" id="buscar">Buscar</button>
+    </div>
+  </div>
+  <div class="card-container">
+    <p *ngIf="buscou" class="texto-reposta">Encontre a melhor cooperativa para sua empresa</p>
+    <p *ngIf="nenhumaEncontrada" class="texto-reposta">Ainda não encontramos uma cooperativa que se encaixe com esse valor</p>
+
+    <div class="cards">
+      <div class="card-resposta" (click)="escolhe(corp.nome)" *ngFor="let corp of corpResposta">
+
+        <p id="nomeCard">{{corp.nome}}</p>
+        <p id="economiaMensal">Sua economia mensal será de</p>
+        <p id="economiaEstimada">R$ {{gastoMensal*corp.desconto}}</p>
+        <p id="desconto">{{corp.desconto*100}}% de desconto</p>
+
+        <button id="queroEsse"> Quero esse </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

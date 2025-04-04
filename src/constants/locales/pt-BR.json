@@ -1,0 +1,27 @@
+{
+  "offers": "Ofertas",
+  "main-title": "Calcule a economia da sua empresa.",
+  "positive-points": {
+    "point-0": "Melhores ofertas.",
+    "point-1": "Ótimizando sua vida.",
+    "point-2": "Energia totalmente limpa.",
+    "point-3": "WATTio a melhor escolha."
+  },
+  "average-monthly-value": "Valor médio mensal",
+  "yearly-savings": "Economia anual",
+  "per-month": "Por mês",
+  "empty-no-offers": "Nenhuma oferta foi encontrada para este valor!",
+  "cooperative": "Cooperativa",
+  "economics": "Economia",
+  "rate-of-percent": "Taxa de {{percent}}%",
+  "offer-number": "Oferta {{number}}",
+  "settings": "Configurações",
+  "theme": "Tema",
+  "language": "Linguagem",
+  "pt-br": "Português",
+  "en": "Inglês",
+  "app-pwa": "Aplicação PWA",
+  "request": "Solicitar",
+  "hire": "Contratar",
+  "successfully-acquired": "Adquirido com sucesso!"
+}

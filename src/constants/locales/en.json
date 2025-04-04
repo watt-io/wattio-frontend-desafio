@@ -1,0 +1,27 @@
+{
+  "offers": "Offers",
+  "main-title": "Calculate your company's savings.",
+  "positive-points": {
+    "point-0": "The best offers.",
+    "point-1": "Optimizing your life.",
+    "point-2": "Completely clean energy.",
+    "point-3": "WATTio the best choice."
+  },
+  "average-monthly-value": "Average monthly value",
+  "yearly-savings": "Yearly savings",
+  "per-month": "Per month",
+  "empty-no-offers": "No offer could be found for this value!",
+  "cooperative": "Cooperative",
+  "economics": "Economics",
+  "rate-of-percent": "Rate of {{percent}}%",
+  "offer-number": "Offer {{number}}",
+  "settings": "Settings",
+  "theme": "Theme",
+  "language": "Language",
+  "pt-br": "Portuguese",
+  "en": "English",
+  "app-pwa": "Application PWA",
+  "request": "Request",
+  "hire": "Hire now",
+  "successfully-acquired": "Successfully acquired!"
+}

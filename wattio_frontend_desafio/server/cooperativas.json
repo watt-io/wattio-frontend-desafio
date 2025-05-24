@@ -1,0 +1,40 @@
+{
+    "cooperativas": [
+        {
+            "nome": "EnerFácil",
+            "valorMinimoMensal": 1000,
+            "valorMaximoMensal": 40000,
+            "desconto": 0.2
+        },
+        {
+            "nome": "EnerLimpa",
+            "valorMinimoMensal": 10000,
+            "valorMaximoMensal": 80000,
+            "desconto": 0.25
+        },
+        {
+            "nome": "EnerGrande",
+            "valorMinimoMensal": 40000,
+            "valorMaximoMensal": 100000,
+            "desconto": 0.3
+        },
+               {
+            "nome": "Solux",
+            "valorMinimoMensal": 5000,
+            "valorMaximoMensal": 70000,
+            "desconto": 0.15
+        },
+               {
+            "nome": "EcoLuz",
+            "valorMinimoMensal": 20000,
+            "valorMaximoMensal": 200000,
+            "desconto": 0.35
+        },
+               {
+            "nome": "Greenergy",
+            "valorMinimoMensal": 50000,
+            "valorMaximoMensal": 300000,
+            "desconto": 0.45
+        }
+    ]
+}
